@@ -1,16 +1,47 @@
 
+* {
+    box-sizing: border-box;
+}
+  
 
+/* :root{
+  Establish variables here
+} */
+
+
+.div-padding{
+    padding: .5rem;
+}
 
 .navbar-section-holds-everything{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
 }
 
-/* .navbar-section-img{
-} */
+.logo-navbar{
+    width: 25%;
+    height: auto;
+}
 
 .navbar-section-nav{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
+.not-loggedin-navbar{
+    display: flex;
+    padding: 1rem;
+}
+
+.navbar-button{
+    color: black;
+    background-color: transparent;
+    padding: .5rem;
+}
+
+  

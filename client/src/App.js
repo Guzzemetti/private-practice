@@ -9,16 +9,22 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-// import Home from './pages/Home';
+import { StoreProvider } from './utils/GlobalState';
+// Pages to import
+import Home from './pages/Home';
+import Profile from "../src/pages/Profile";
 // import Detail from './pages/Detail';
 // import NoMatch from './pages/NoMatch';
-import Navbar from "../src/components/Nav/index";
 // import Login from './pages/Login';
 // import Signup from './pages/Signup';
-// import Nav from './components/Nav';
-import { StoreProvider } from './utils/GlobalState';
 // import Success from './pages/Success';
 // import OrderHistory from './pages/OrderHistory';
+
+// Components to import
+import Navbar from "../src/components/Nav/index";
+// import Nav from './components/Nav';
+
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,19 +49,19 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
+        <main>
           <StoreProvider>
             <Navbar />
             <Routes>
-              {/* <Route 
+              <Route 
                 path="/" 
                 element={<Home />} 
-              /> */}
-              {/* <Route 
-                path="/login" 
-                element={<NA />} 
               />
               <Route 
+                path="/login" 
+                element={<Profile />} 
+              />
+              {/* <Route 
                 path="/signup" 
                 element={<NA />} 
               />
@@ -78,7 +84,7 @@ function App() {
               /> */}
             </Routes>
           </StoreProvider>
-        </div>
+        </main>
       </Router>
     </ApolloProvider>
   );
