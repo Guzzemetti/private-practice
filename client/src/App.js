@@ -12,6 +12,7 @@ import { setContext } from '@apollo/client/link/context';
 // import Home from './pages/Home';
 // import Detail from './pages/Detail';
 // import NoMatch from './pages/NoMatch';
+import Navbar from "../src/components/Nav/index";
 // import Login from './pages/Login';
 // import Signup from './pages/Signup';
 // import Nav from './components/Nav';
@@ -44,13 +45,13 @@ function App() {
       <Router>
         <div>
           <StoreProvider>
-            <Nav />
+            <Navbar />
             <Routes>
-              <Route 
+              {/* <Route 
                 path="/" 
-                element={<NA />} 
-              />
-              <Route 
+                element={<Home />} 
+              /> */}
+              {/* <Route 
                 path="/login" 
                 element={<NA />} 
               />
@@ -69,12 +70,12 @@ function App() {
               <Route 
                 path="/products/:id" 
                 element={<NA />} 
-              />
+              /> */}
               {/* 404 */}
-              <Route
+              {/* <Route
                 path="*" 
                 element={<NA />} 
-              />
+              /> */}
             </Routes>
           </StoreProvider>
         </div>

@@ -1,0 +1,16 @@
+
+
+
+.navbar-section-holds-everything{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* .navbar-section-img{
+} */
+
+.navbar-section-nav{
+    display: flex;
+    flex-direction: row;
+}
