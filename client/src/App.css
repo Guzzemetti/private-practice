@@ -1,4 +1,17 @@
-.App {
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* :root{
+  Establish variables here
+} */
+
+
+
+/* =============================== Commented out CSS from create react app (Not needed but leave here) ====================================== */
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +48,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
