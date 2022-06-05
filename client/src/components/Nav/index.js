@@ -4,6 +4,9 @@ import LogoHeader from '../../assets/Private Practice-logos_transparent.png';
 import { Link } from "react-router-dom";
 import '../Nav/nav.css';
 
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+
+
 
 const Navbar = () => {
   // This function checks if the user is logged in.
@@ -14,9 +17,10 @@ const Navbar = () => {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <div>
+        <div className="loggedin-or-not-navbar">
           <Link to='/profile'><button className="navbar-button">Profile</button></Link>
-          <Link to=''><button className="navbar-button"></button></Link>
+          <div className="div-padding"></div>
+          <Link to='/'><button className="navbar-button"><AiOutlineShoppingCart className="cart-navbar-icon" /></button></Link>
         </div>
         // =============================== Example ===============================
         // <div>
@@ -33,10 +37,12 @@ const Navbar = () => {
       );
     } else {
       return (
-        <div>
+        <div className="loggedin-or-not-navbar">
           <Link to="/signup"><button className="navbar-button">Signup</button></Link>
+          <div className="div-padding"></div>
           <Link to="/login"><button className="navbar-button">Login</button></Link>
         </div>
+
         // =============================== Example ===============================
         // <ul className="flex-row">
         //   <li className="mx-1">
@@ -53,9 +59,9 @@ const Navbar = () => {
       );
     }
   }
-
   return (
     <header>
+      {/* Header that has logo and calls the showNaviagtion function for what buttons are displayed */}
       <section className="navbar-section-holds-everything">
 
         <div className="navbar-section-img">
@@ -63,12 +69,63 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-section-nav">
-          {/* {showNavigation} */}
-          <div className="not-loggedin-navbar">
-            <Link to="/signup"><button className="navbar-button">Signup</button></Link>
-            <div className="div-padding"></div>
-            <Link to="/login"><button className="navbar-button">Login</button></Link>
-          </div>
+          {showNavigation}
+          
+        </div>
+
+      </section>
+      {/* Category and sub category options */}
+      <section className="navbar-categories">
+        <div className="option-for-1">
+          <p className="category-options-navbar">Gaming</p>
+          {/* <div className="on-hover-show-options">
+            <Link to='/'><button className="subcategory-button-on-hover">RPG</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">MOBA</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">MMO</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">FPS</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">Other</button></Link>
+          </div> */}
+        </div>
+
+        <div className="option-for-1">
+          <p className="category-options-navbar">Home</p>
+          {/* <div className="on-hover-show-options">
+            <Link to='/'><button className="subcategory-button-on-hover">Cooking</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">DIY Projects</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">Gardening</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">Maintenance</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">Other</button></Link>
+          </div> */}
+        </div>
+
+        <div className="option-for-1">
+          <p className="category-options-navbar">Lifestyle</p>
+          {/* <div className="on-hover-show-options">
+            <Link to='/'><button className="subcategory-button-on-hover">Fitness</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">Fashion</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">Selfcare</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">Life Coaching</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">Other</button></Link>
+          </div> */}
+        </div>
+
+        <div className="option-for-1">
+          <p className="category-options-navbar">Tech</p>
+          {/* <div className="on-hover-show-options">
+            <Link to='/'><button className="subcategory-button-on-hover">Computer Learning</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">Programming</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">IT</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">Streaming</button></Link>
+            <Link to='/'><button className="subcategory-button-on-hover">Other</button></Link>
+          </div> */}
+        </div>
+
+
+        <div className="option-for-1">
+          <p className="category-options-navbar">Misc.</p>
+          {/* <div className="on-hover-show-options">
+            <Link to='/'><button className="subcategory-button-on-hover">Misty-Misc</button></Link>
+          </div> */}
         </div>
       </section>
     </header>

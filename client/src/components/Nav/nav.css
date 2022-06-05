@@ -1,47 +1,103 @@
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-  
 
 /* :root{
   Establish variables here
 } */
 
-
-.div-padding{
-    padding: .5rem;
+.div-padding {
+  padding: 0.5rem;
+}
+.div-padding-small {
+    padding: 1px;
 }
 
-.navbar-section-holds-everything{
+.navbar-section-holds-everything {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+.logo-navbar {
+  width: 25%;
+  height: auto;
+}
+
+.navbar-section-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.loggedin-or-not-navbar {
+  display: flex;
+  padding: 1rem;
+}
+
+.navbar-button {
+  color: black;
+  background-color: transparent;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.3em;
+}
+
+/* .cart-navbar-icon{
+    font-size: 1.5em;
+} */
+
+.navbar-categories {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  align-items: flex-start;
+  /* width: 90%; */
+}
+
+.option-for-1{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2rem;
+    flex-direction: column;
+}
+.subcategory-button-on-hover{
+    background-color: transparent;
+    cursor: pointer;
 }
 
-.logo-navbar{
-    width: 25%;
-    height: auto;
+.on-hover-show-options{
+    display: none;
+    top: 0;
 }
 
-.navbar-section-nav{
+.category-options-navbar {
+  margin: auto;
+  /* border: 2px solid black; */
+  padding: .5rem;
+  cursor: pointer;
+}
+
+.category-options-navbar:hover + .on-hover-show-options{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.not-loggedin-navbar{
+.on-hover-show-options:hover{
     display: flex;
-    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
 }
 
-.navbar-button{
-    color: black;
-    background-color: transparent;
-    padding: .5rem;
-}
+/* .category-options-navbar:focus{
+    border-bottom: 2px solid black;
+} */
 
-  
+
+
+
