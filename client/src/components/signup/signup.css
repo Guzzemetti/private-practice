@@ -1,0 +1,31 @@
+
+
+
+.card-margin-top{
+    margin-top: 1rem;
+}
+
+.holds-everything-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-card-signup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-button {
+  color: black;
+  background-color: transparent;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.2s ease-in-out;
+}
+/* Change color or take out, Possibly add a background color no matter wehat since its a call to action*/
+.card-button:hover {
+  background-color: aqua;
+}
