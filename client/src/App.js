@@ -22,6 +22,8 @@ import Profile from "../src/pages/Profile";
 
 // Components to import
 import Navbar from "../src/components/Nav/index";
+// import Signup from "../src/components/signup/index";
+// import Login from "../src/components/login/index";
 // import Footer from ''; --If we want a footer... maybe only use in the home page?
 // import Categories from '../src/components/categoryCards/index';
 // import Nav from './components/Nav';
@@ -54,6 +56,8 @@ function App() {
         <main>
           <StoreProvider>
             <Navbar />
+            {/* <Signup /> */}
+            {/* <Login /> */}
             {/* Was testing component <Categories /> */}
             <Routes>
               <Route 
