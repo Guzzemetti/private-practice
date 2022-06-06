@@ -7,6 +7,11 @@ const subCategorySchema = new Schema({
         type: String,
         required: true,
         trim: true
+    },
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Categories',
+        required: true
     }
 });
 

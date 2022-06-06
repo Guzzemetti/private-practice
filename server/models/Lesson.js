@@ -18,6 +18,16 @@ const lessonSchema = new Schema({
         ref: 'User',
         required: true
     },
+    price: {
+        type: Number,
+        required: true,
+        min: 9.99
+    },
+    quantity: {
+        type: Number,
+        min: 0,
+        default: 0
+    },
     coach: {
         type: Schema.Types.ObjectId,
         ref: 'User',

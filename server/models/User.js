@@ -30,9 +30,6 @@ const userSchema = new Schema({
   aboutMe: {
     type: String
   },
-  // isCoach: {
-  //   type: Boolean
-  // }
 });
 
 // set up pre-save middleware to create password
