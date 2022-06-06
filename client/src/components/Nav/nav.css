@@ -18,7 +18,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 1.5rem;
+  /* margin: 1.5rem; */
+  background-color: #212227;
 }
 
 .logo-navbar {

@@ -1,6 +1,6 @@
 import React from "react";
 import Auth from "../../utils/auth";
-import LogoHeader from '../../assets/Private Practice-logos_transparent.png';
+import LogoHeader from '../../assets/PrivatePractice.png';
 import { Link } from "react-router-dom";
 import '../Nav/nav.css';
 
@@ -67,7 +67,11 @@ const Navbar = () => {
         <div className="navbar-section-img">
           <img src={LogoHeader} className='logo-navbar' alt='logo'></img>
         </div>
-
+        <div className="loggedin-or-not-navbar">
+          <Link to="/signup"><button className="navbar-button">Signup</button></Link>
+          <div className="div-padding"></div>
+          <Link to="/login"><button className="navbar-button">Login</button></Link>
+        </div>
         <div className="navbar-section-nav">
           {showNavigation}
           
