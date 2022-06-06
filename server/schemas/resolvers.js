@@ -105,7 +105,62 @@ const resolvers = {
   },
 
   Mutation: {
-    
+    // To create a new user
+    addUser: async (parent, args) => {
+      const user = await User.create(args);
+      const token = signToken(user);
+
+      return { token, user };
+    },
+    // To create a new order to their cart
+    addOrder: async (parent, { lessons }, context) => {
+      console.log(context);
+      if (context.user) {
+        const order = new Order({ lessons });
+
+        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+
+        return order;
+      }
+
+      throw new AuthenticationError('Not logged in');
+    },
+    //  To update an existing user
+    updateUser: async (parent, args, context) => {
+      if (context.user) {
+        return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+      }
+
+      throw new AuthenticationError('Not logged in');
+    },
+    // To update an existing lesson
+    updateLesson: async (parent, args, context) => {
+      
+      return await Lesson.findByIdAndUpdate(context.user._id, args, { new: true });
+    },
+    // updateLesson: async (parent, { _id, quantity }) => {
+    //   const decrement = Math.abs(quantity) * -1;
+
+    //   return await Lesson.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+    // },
+    // To login in a user
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    }
   },
 };
 
