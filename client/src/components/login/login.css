@@ -1,15 +1,20 @@
-.card-margin-top{
-    margin-top: 1rem;
+.card-margin-top {
+  margin-top: 1rem;
+  /* sets the width of the entire form */
+  width: 60%;
 }
-.holds-everything-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.holds-everything-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Sets the overall height to the whole form */
-.cardBody{ 
-  height: 20rem;
+.cardBody {
+  height: 35rem;
+  padding: 0;
+  background-color: #f9eccc;
 }
 
 /* Button Stlying */
@@ -21,57 +26,118 @@
   font-size: 1rem;
   transition: all 0.2s ease-in-out;
 }
+
 /* Change color or take out, Possibly add a background color no matter wehat since its a call to action*/
 .card-button:hover {
-  background-color: aqua;
+  background-color: #f9eccc;
 }
+
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
-/* Styles the div that CONTAINS both the Login title
+
+/* styling for the overall body of the form, ensures the Login/Logo and Input
+fields are resting next to each other */
+.bodyItems {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+
+/* Styles the div that CONTAINS both the site title
 and the logo image on the left side of the form */
-.loginLogo{
+.loginLogo {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-color: #212227;
+  color: #f9eccc;
+  width: 60%;
 }
 
 /* Sets the dimensions for the logo Div */
 .imageBox {
   border: 2px solid black;
-  width: 150px;
-  height: 150px;
-}
-
-/* styling for the overall body of the form, ensures the Login/Logo and Input
-fields are resting next to each other */
-.bodyItems{
-  display: flex;
-  flex-direction: row;
+  width: 75%;
+  height: 75%;
 }
 
 /* styling for the right side of the login form
 includes the Email/Password fields and the login button */
-.formBody{
+.formBody {
   display: flex;
-  flex-wrap: wrap;
-  width: 17rem;
-  height: 17rem;
+  flex-direction: column;
+  height: 100%;
   align-items: center;
-  justify-content: center;
-}
-/* Styles the labels for each inoput and centers them */
-.labels{
-  display: flex;
-  justify-content: center;
-}
-/* --------------------------------------------------------- */
-/* --------------------------------------------------------- */
-/* Sets a max-width to the input fields*/
-#exampleEmail{
-  width: 15rem;
+  justify-content: space-around;
+  color: #212227;
+  width: 40%;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 }
 
-#examplePassword{
-  width: 15rem;
+/* Styles the labels for each inoput and centers them */
+.labels {
+  display: flex;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+
+/* Sets a max-width to the input fields*/
+#exampleEmail {
+  width: 100%;
+}
+
+#examplePassword {
+  width: 100%;
+}
+/* --------------------------------------------------------- */
+/* Technically sets the actual width of the input fields */
+.inputRow {
+  width: 20rem;
+}
+
+
+@media only screen and (max-width: 1366px) {
+  .loginLogo {
+    width: 50%;
+  }
+
+  .cardBody {
+    height: 100%;
+  }
+
+  .imageBox {
+    width: 75%;
+    height: 95%;
+  }
+
+  .formBody {
+    width: 50%;
+  }
+
+  .inputRow {
+    width: 15rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bodyItems {
+    flex-direction: column;
+  }
+
+  .loginLogo {
+    width: 100%;
+  }
+
+  .formBody {
+    width: 100%;
+  }
+
+  .inputRow {
+    width: 100%;
+  }
 }
