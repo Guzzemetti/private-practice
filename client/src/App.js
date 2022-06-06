@@ -24,7 +24,7 @@ import Login from './pages/Login';
 
 // Components to import
 import Navbar from "../src/components/Nav/index";
-import Home from "../src/components/Home/index";
+// import HomeComp from "../src/components/Home/index";
 // import Signup from "../src/components/signup/index";
 // import Login from "../src/components/login/index";
 // import Footer from ''; --If we want a footer... maybe only use in the home page?
