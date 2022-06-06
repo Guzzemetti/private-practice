@@ -15,8 +15,20 @@ const resolvers = {
       return await Categories.findById(_id);
     },
     // Find all subcategories
-    SubCategories: async (parent, { _id }) => {
-      return await SubCategories.findById(_id);
+    subcategories: async () => {
+      return await SubCategories.find();
+    },
+    // Find 1 subcategory
+    subcategory: async (parent, { _id }) => {
+      return await SubCategories.find(_id);
+    },
+    // Find all reviews
+    reviews: async () => {
+      return await Review.find();
+    },
+    // Find 1 review
+    review: async (parent, { _id }) => {
+      return await Review.find(_id);
     },
     // Find 1 lesson and populate
     lesson: async (parent, { _id }) => {

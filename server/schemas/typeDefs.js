@@ -15,11 +15,13 @@ const typeDefs = gql`
     _id: ID
     title: String
     description: String
+    subcategory: [SubCategories]
     price: Float
-    quantity: Number
+    quantity: Int
     user: [User]
     coach: [User]
     review: [Review]
+
   }
 
   type Review {
@@ -37,7 +39,7 @@ const typeDefs = gql`
     profileImage: String
     aboutMe: String
   }
-  # ====================== Might not be needed ======================= #
+  # ====================== Might not be needed/ For checkout ======================= #
   type Order {
     _id: ID
     purchaseDate: String
@@ -55,10 +57,14 @@ const typeDefs = gql`
   # ============================================= #
   type Query {
     categories: [Categories]
-    category(_id: ID!): Category
+    category(_id: ID!): Categories
 
-    subCategories: [SubCategories]
+    subcategories: [SubCategories]
+    subcategory(_id: ID!): SubCategories
     user: User
+
+    review: [Review]
+    reviews(_id: ID!): Review
 
     lessons: [Lesson]
     lesson(_id: ID!): Lesson
