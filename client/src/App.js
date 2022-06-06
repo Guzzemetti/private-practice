@@ -11,7 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 
 import { StoreProvider } from './utils/GlobalState';
 // Pages to import
-import Home from './pages/Home';
+// import Home from './pages/Home';
 import Profile from "../src/pages/Profile";
 // import Detail from './pages/Detail';
 // import NoMatch from './pages/NoMatch';
@@ -22,6 +22,7 @@ import Profile from "../src/pages/Profile";
 
 // Components to import
 import Navbar from "../src/components/Nav/index";
+import Home from "../src/components/Home/index";
 // import Signup from "../src/components/signup/index";
 // import Login from "../src/components/login/index";
 // import Footer from ''; --If we want a footer... maybe only use in the home page?
@@ -56,6 +57,7 @@ function App() {
         <main>
           <StoreProvider>
             <Navbar />
+            {/* <Home /> */}
             {/* <Signup /> */}
             {/* <Login /> */}
             {/* Was testing component <Categories /> */}

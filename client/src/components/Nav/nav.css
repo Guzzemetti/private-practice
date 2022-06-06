@@ -29,6 +29,10 @@
   height: auto;
 }
 
+.navbar-section-img {
+  align-items: center;
+}
+
 .navbar-section-nav {
   display: flex;
   flex-direction: row;
@@ -61,6 +65,7 @@
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   align-items: flex-start;
+  background-color: #F9ECCC;
   /* width: 90%; */
 }
 
