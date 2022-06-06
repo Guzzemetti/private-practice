@@ -67,12 +67,13 @@ const Navbar = () => {
         <div className="navbar-section-img">
           <img src={LogoHeader} className='logo-navbar' alt='logo'></img>
         </div>
-        <div className="loggedin-or-not-navbar">
-          <Link to="/signup"><button className="navbar-button">Signup</button></Link>
-          <div className="div-padding"></div>
-          <Link to="/login"><button className="navbar-button">Login</button></Link>
-        </div>
+        {/* this is default navbar, just for visual sake. Will edit for login status */}
         <div className="navbar-section-nav">
+                    {/* <Link to="/signup"><button className="navbar-button">Signup</button></Link>
+          <div className="div-padding"></div> */}
+          <Link to="/explore"><button className="navbar-button">Explore</button></Link>
+          <Link to="/login"><button className="navbar-button">Login</button></Link>
+          <AiOutlineShoppingCart className="cart-navbar-icon" />
           {showNavigation}
           
         </div>
