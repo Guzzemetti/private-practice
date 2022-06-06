@@ -1,3 +1,4 @@
-const Profile = require('./Profile');
+const Categories = require('./Categories');
+const User = require('./User');
 
-module.exports = { Profile };
+module.exports = { Categories, User };
