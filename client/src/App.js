@@ -27,7 +27,7 @@ import Navbar from "../src/components/Nav/index";
 // import Footer from ''; --If we want a footer... maybe only use in the home page?
 // import Categories from '../src/components/categoryCards/index';
 // import Nav from './components/Nav';
-
+// import Homecomp from "../src/components/home/index";
 
 
 const httpLink = createHttpLink({
@@ -56,9 +56,11 @@ function App() {
         <main>
           <StoreProvider>
             <Navbar />
+            {/*  Was testing components  */}
+            {/* <Homecomp /> */}
             {/* <Signup /> */}
             {/* <Login /> */}
-            {/* Was testing component <Categories /> */}
+            {/* <Categories /> */}
             <Routes>
               <Route 
                 path="/" 
