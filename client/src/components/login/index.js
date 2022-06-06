@@ -13,50 +13,53 @@ const Loginpage = () => {
             <Card className="card-margin-top">
                 <CardBody className="cardBody">
                     <div className="bodyItems">
-                    <div className="loginLogo">
-                    <CardTitle tag="h5" className="form-card-login">
-                        Login
-                    </CardTitle>
-                    <div className="imageBox">
-                        <p>LogoHere</p>
-                    </div>
-                    </div>
-                    {/* This might not be needed */}
-                    <div className="formBody">
-                    <Form>
-                        <Row>
-                        <div className="inputRow">
-                            <Col md={12}>
-                                <FormGroup >
-                                    <Label className="labels" for="exampleEmail">
-                                        Email
-                                    </Label>
-                                    <Input
-                                        id="exampleEmail"
-                                        name="email"
-                                        placeholder="Email Address"
-                                        type="email"
-                                    />
-                                </FormGroup>
-                            </Col>
-                            <Col md={12}>
-                                <FormGroup>
-                                    <Label className="labels" for="examplePassword">
-                                        Password
-                                    </Label>
-                                    <Input
-                                        id="examplePassword"
-                                        name="password"
-                                        placeholder="Password"
-                                        type="password"
-                                    />
-                                </FormGroup>
-                            </Col>
+                        <div className="loginLogo">
+                            <CardTitle tag="h2" className="form-card-login">
+                                Private Practice
+                            </CardTitle>
+                            <div className="imageBox">
+                                <p>LogoHere</p>
                             </div>
-                        </Row>
-                    </Form>
-                    <button className="card-button">Login</button>
-                    </div>
+                        </div>
+                        {/* This might not be needed */}
+                        <div className="formBody">
+                            <CardTitle tag="h3" id="login">
+                                Login
+                            </CardTitle>
+                            <Form>
+                                <Row>
+                                    <div className="inputRow">
+                                        <Col md={12}>
+                                            <FormGroup >
+                                                <Label className="labels" for="exampleEmail">
+                                                    Email
+                                                </Label>
+                                                <Input
+                                                    id="exampleEmail"
+                                                    name="email"
+                                                    placeholder="Email Address"
+                                                    type="email"
+                                                />
+                                            </FormGroup>
+                                        </Col>
+                                        <Col md={12}>
+                                            <FormGroup>
+                                                <Label className="labels" for="examplePassword">
+                                                    Password
+                                                </Label>
+                                                <Input
+                                                    id="examplePassword"
+                                                    name="password"
+                                                    placeholder="Password"
+                                                    type="password"
+                                                />
+                                            </FormGroup>
+                                        </Col>
+                                    </div>
+                                </Row>
+                            </Form>
+                            <button className="card-button">Login</button>
+                        </div>
                     </div>
                 </CardBody>
             </Card>
