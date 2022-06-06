@@ -15,7 +15,7 @@ import Home from './pages/Home';
 import Profile from "../src/pages/Profile";
 // import Detail from './pages/Detail';
 // import NoMatch from './pages/NoMatch';
-// import Login from './pages/Login';
+import Login from './pages/Login';
 // import Signup from './pages/Signup';
 // import Success from './pages/Success';
 // import OrderHistory from './pages/OrderHistory';
@@ -68,10 +68,11 @@ function App() {
                 path="/login" 
                 element={<Profile />} 
               />
-              {/* <Route 
+              <Route 
                 path="/signup" 
-                element={<NA />} 
+                element={<Login />} 
               />
+              {/* 
               <Route 
                 path="/success" 
                 element={<NA />} 
