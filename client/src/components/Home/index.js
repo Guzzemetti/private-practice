@@ -3,7 +3,7 @@ import BigLogo from '../../assets/PrivatePractice_TextOnly.png';
 import { Link } from "react-router-dom";
 import '../Home/home.css';
 
-const Home = () => {
+const HomeComp = () => {
   return (
       <section>
       <div className='bg-img'>
@@ -17,4 +17,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomeComp
