@@ -37,7 +37,12 @@ const lessonSchema = new Schema({
         type: String,
         ref: 'Review',
         required: true
-    }]
+    }],
+    subcategory: {
+        type: Schema.Types.ObjectId,
+        ref: 'SubCategories',
+        required: true
+    }
 });
 
 const Lesson = mongoose.model('Lesson', lessonSchema);
