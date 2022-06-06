@@ -12,7 +12,7 @@ import { setContext } from '@apollo/client/link/context';
 import { StoreProvider } from './utils/GlobalState';
 // Pages to import
 import Home from './pages/Home';
-import Profile from "../src/pages/Profile";
+// import Profile from "../src/pages/Profile";
 // import Detail from './pages/Detail';
 // import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
@@ -66,16 +66,16 @@ function App() {
               />
               <Route 
                 path="/login" 
-                element={<Profile />} 
-              />
-              <Route 
-                path="/signup" 
                 element={<Login />} 
               />
               {/* 
               <Route 
+                path="/signup" 
+                element={<Login />} 
+              />
+              <Route 
                 path="/success" 
-                element={<NA />} 
+                element={<Profile />} 
               />
               <Route 
                 path="/orderHistory" 
