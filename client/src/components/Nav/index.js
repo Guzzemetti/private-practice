@@ -20,6 +20,8 @@ const Navbar = () => {
         <div className="loggedin-or-not-navbar">
           <Link to='/profile'><button className="navbar-button">Profile</button></Link>
           <div className="div-padding"></div>
+          <a href="/" className="navbar-button" onClick={() => Auth.logout()}>Logout</a>
+          <div className="div-padding"></div>
           <Link to='/'><button className="navbar-button"><AiOutlineShoppingCart className="cart-navbar-icon" /></button></Link>
         </div>
         // =============================== Example ===============================
