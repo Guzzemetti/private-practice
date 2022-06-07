@@ -1,22 +1,23 @@
 const db = require('./connection');
-const { User, Category, SubCategory, Lesson, Review } = require('../models');
+const { User, Categories, SubCategories, Lesson, Review } = require('../models');
 
 db.once('open', async () => {
-    await Category.deleteMany();
+    await Categories.deleteMany();
+    await SubCategories.deleteMany();
+    await User.deleteMany();
+    await Lesson.deleteMany();
+    await Review.deleteMany();
 
-    const categories = await Category.insertMany([
+    const categories = await Categories.insertMany([
         { name: 'Gaming' },
         { name: 'Home' },
         { name: 'Lifestyle' },
         { name: 'Tech' },
         { name: 'Misc.' },
     ]);
-
     console.log('Categories seeded');
 
-    await SubCategory.deleteMany();
-
-    await SubCategory.insertMany([
+    await SubCategories.insertMany([
         {
             name: 'RPGs',
             category: categories[0]._id,
@@ -105,8 +106,6 @@ db.once('open', async () => {
 
     console.log('Sub-Categories seeded');
 
-    await User.deleteMany();
-
     await User.create({
         firstName: 'Pamela',
         lastName: 'Washington',
@@ -157,8 +156,6 @@ db.once('open', async () => {
 
     console.log('Users seeded');
 
-    await Lesson.deleteMany();
-
 // ---------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------
     // The user and coach fields need to be an actual objID that 
@@ -174,8 +171,6 @@ db.once('open', async () => {
   });
 
   console.log('Lessons seeded');
-
-  await Review.deleteMany();
 
   await Review.create({
     reviewText: "",
