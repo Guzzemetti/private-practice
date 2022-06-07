@@ -6,7 +6,6 @@ const reviewSchema = new Schema({
     reviewText: {
         type: String,
         required: true,
-        trim: true
     },
     reviewRating: {
         type: Integer,
