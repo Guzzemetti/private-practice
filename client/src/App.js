@@ -59,8 +59,10 @@ function App() {
         <main>
           <StoreProvider>
             <Navbar />
-            {/* <HomeComp /> */}
+            <HomeComp />
             {/* <Categories /> */}
+            {/* <Signup /> */}
+            {/* <Login /> */}
             {/* Was testing component <Categories /> */}
             <Routes>
               <Route 

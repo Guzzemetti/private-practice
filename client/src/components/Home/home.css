@@ -1,12 +1,19 @@
 .h {
-    height: 50vh;
+    /* height: 50vh; */
     display: flex;
     align-items: center;
+    flex-direction: column;
     /* background-color: #7B6D8D; */
 }
 
+.h-row {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem;
+}
+
 .h-left {
-    flex: 1;
+    width: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +33,7 @@
 }
 
 .h-right {
-    flex: 1;
+    width: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +76,7 @@
     } */
   }
 
-.h-across {
+/* .h-across {
     display: block;
     align-items: center;
     flex-direction: column;
@@ -81,7 +88,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .h-title-wrapper {
     height: 50px;
@@ -115,4 +122,37 @@
     color: rgb(32, 32, 32);
     display: flex;
     align-items: center;
+}
+
+.h-cats {
+    width: 75%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    /* background-color: #7B6D8D; */
+}
+
+.h-cats-across {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.category-cube {
+    color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 1rem;
+
+    background-color: #212227;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.cat-img {
+    width: 100%; /* or any custom size */
+    height: 100%; 
+    object-fit: cover;
+    opacity: 1;
 }
