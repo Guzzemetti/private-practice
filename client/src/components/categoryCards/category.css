@@ -54,3 +54,32 @@
 .card-button:hover {
   background-color: aqua;
 }
+
+/* ============================================= */
+/* John H dumb edits */
+
+.c {
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  /* background-color: #7B6D8D; */
+}
+
+.c-across {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.category-cube {
+  color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #212227;
+  overflow: hidden;
+  object-fit: cover;
+}
