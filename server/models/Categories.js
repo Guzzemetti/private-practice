@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const subCategory = require('./SubCategories');
+// const SubCategory = require('./SubCategories');
 
 const { Schema } = mongoose;
 
@@ -10,7 +10,13 @@ const categorySchema = new Schema({
         required: true,
         trim: true
     },
-    subCategory: [subCategory.schema]
+    subcategory: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'SubCategory',
+            required: true
+        },
+    ],
 });
 
 const Category = mongoose.model('Category', categorySchema);

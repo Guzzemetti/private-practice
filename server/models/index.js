@@ -1,8 +1,8 @@
 const User = require('./User');
-const Categories = require('./Categories');
+const Category = require('./Categories');
 const Lesson = require('./Lesson');
 const Review = require('./Lesson');
 const Order = require('./Order');
-const SubCategories = require('./SubCategories');
+const SubCategory = require('./SubCategories');
 
-module.exports = { User, Categories, Lesson, Review, Order, SubCategories };
+module.exports = { User, Category, Lesson, Review, Order, SubCategory };

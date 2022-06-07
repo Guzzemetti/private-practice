@@ -1,30 +1,32 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type Categories {
+  type Category {
     _id: ID
     name: String
+    subcategory: [SubCategory]
   }
 
-  type SubCategories {
+  type SubCategory {
     _id: ID
     name: String
+    category: [Category]
   }
 
   type Lesson {
     _id: ID
     title: String
     description: String
-    subcategory: [SubCategories]
+    subcategory: [SubCategory]
     price: Float
     quantity: Int
-    user: [User]
+    # user: [User]
     coach: [User]
     review: [Review]
-
   }
 
   type Review {
+    _id: ID
     reviewText: String
     reviewRating: String
     user: [User]
@@ -32,6 +34,7 @@ const typeDefs = gql`
   }
 
   type User{
+    _id: ID
     firstname: String
     lastname: String
     email: String
@@ -56,12 +59,14 @@ const typeDefs = gql`
   }
   # ============================================= #
   type Query {
-    categories: [Categories]
-    category(_id: ID!): Categories
+    categories: [Category]
+    category(_id: ID!): Category
 
-    subcategories: [SubCategories]
-    subcategory(_id: ID!): SubCategories
-    user: User
+    subcategories: [SubCategory]
+    subcategory(_id: ID!): SubCategory
+    
+    user(_id: ID!): User
+    users: [User]
 
     review: [Review]
     reviews(_id: ID!): Review

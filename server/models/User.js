@@ -6,12 +6,12 @@ const Order = require('./Order');
 
 
 const userSchema = new Schema({
-  firstName: {
+  firstname: {
     type: String,
     required: true,
     trim: true
   },
-  lastName: {
+  lastname: {
     type: String,
     required: true,
     trim: true
@@ -32,7 +32,12 @@ const userSchema = new Schema({
   aboutMe: {
     type: String
   },
+  // lessons: [{
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'Lesson'
+  // }],
   orders: [Order.schema]
+
 });
 
 // set up pre-save middleware to create password

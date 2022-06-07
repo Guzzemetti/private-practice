@@ -8,11 +8,11 @@ const subCategorySchema = new Schema({
         required: true,
         trim: true
     },
-    category: {
+    category: [{
         type: Schema.Types.ObjectId,
-        ref: 'Categories',
+        ref: 'Category',
         required: true
-    }
+    }]
 });
 
 const SubCategory = mongoose.model('SubCategory', subCategorySchema);
