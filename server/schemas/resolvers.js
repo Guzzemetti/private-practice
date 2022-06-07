@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Lesson, Categories, Order, Review, SubCategories } = require('../models');
+const { User, Lesson, Category, Order, Review, SubCategory } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -8,19 +8,19 @@ const resolvers = {
   Query: {
     // Find all categories
     categories: async () => {
-      return await Categories.find();
+      return await Category.find().populate('subcategory');
     },
     // Find one category
     category: async (parent, { _id }) => {
-      return await Categories.findById(_id);
+      return await Category.findById(_id).populate('subcategory');
     },
     // Find all subcategories
     subcategories: async () => {
-      return await SubCategories.find();
+      return await SubCategory.find().populate('category');
     },
     // Find 1 subcategory
     subcategory: async (parent, { _id }) => {
-      return await SubCategories.find(_id);
+      return await SubCategory.findById(_id).populate('category');
     },
     // Find all reviews
     reviews: async () => {
@@ -32,23 +32,19 @@ const resolvers = {
     },
     // Find 1 lesson and populate
     lesson: async (parent, { _id }) => {
-      return await Lesson.findById(_id).populate('SubCategories');
+      return await Lesson.findById(_id).populate('coach').populate('subcategory');
     },
     // find all lessons 
-    lessons: async (parent, { subcategory, title }) => {
-      const params = {};
+    lessons: async () => {
 
-      if (subcategory) {
-        params.subcategory = subcategory;
-      }
+      return await Lesson.find().populate('subcategory').populate('coach');
+    },
+    // Find all users
+    users: async (parent, args) => {
 
-      if (title) {
-        params.title = {
-          $regex: title
-        };
-      }
+      const user = await User.find();
 
-      return await Lesson.find(params).populate('subcategory');
+      return user;
     },
     // Finds a User and populates the order history
     user: async (parent, args, context) => {
@@ -65,6 +61,13 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+    // Me route
+    //   me: async (parent, args, context) => {
+    //   if (context.user) {
+    //     return User.findOne({ _id: context.user._id }).populate('thoughts');
+    //   }
+    //   throw new AuthenticationError('You need to be logged in!');
+    // },
     // Get order?
     order: async (parent, { _id }, context) => {
       if (context.user) {
@@ -147,7 +150,7 @@ const resolvers = {
     },
     // To update an existing lesson
     updateLesson: async (parent, args, context) => {
-      
+
       return await Lesson.findByIdAndUpdate(context.user._id, args, { new: true });
     },
     // updateLesson: async (parent, { _id, quantity }) => {

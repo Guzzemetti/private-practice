@@ -13,10 +13,10 @@ const lessonSchema = new Schema({
         required: true,
         trim: true
     },
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-    },
+    // user: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'User',
+    // },
     price: {
         type: Number,
         required: true,
@@ -27,20 +27,20 @@ const lessonSchema = new Schema({
         min: 0,
         default: 0
     },
-    coach: {
+    coach: [{
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true
-    },  
+    }],
     review: [{
         type: String,
         ref: 'Review',
     }],
-    subcategory: {
+    subcategory: [{
         type: Schema.Types.ObjectId,
-        ref: 'SubCategories',
+        ref: 'SubCategory',
         required: true
-    }
+    }]
 });
 
 const Lesson = mongoose.model('Lesson', lessonSchema);
