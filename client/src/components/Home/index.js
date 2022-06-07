@@ -1,5 +1,5 @@
 import React from "react";
-import BigLogo from "../../assets/PrivatePractice_black.png";
+// import BigLogo from "../../assets/PrivatePractice_black.png";
 import Gaming from "../../assets/gaming_category.png";
 import Tech from "../../assets/tech_category.png";
 import Home from "../../assets/home_category.png";
