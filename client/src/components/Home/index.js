@@ -1,6 +1,6 @@
 import React from 'react';
-import BigLogo from '../../assets/PrivatePractice_black.png';
-import { Link } from "react-router-dom";
+// import BigLogo from '../../assets/PrivatePractice_black.png';
+// import { Link } from "react-router-dom";
 import '../Home/home.css';
 
 const HomeComp = () => {
