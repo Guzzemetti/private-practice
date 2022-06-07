@@ -13,7 +13,7 @@ import { StoreProvider } from './utils/GlobalState';
 // Pages to import
 
 // import Profile from "../src/pages/Profile";
-import Home from './pages/Home';
+// import Home from './pages/Home';
 
 // import Detail from './pages/Detail';
 // import NoMatch from './pages/NoMatch';
@@ -24,9 +24,7 @@ import Signup from './pages/Signup';
 
 // Components to import
 import Navbar from "../src/components/Nav/index";
-// import HomeComp from "../src/components/Home/index";
-// import Signup from "../src/components/signup/index";
-// import Login from "../src/components/login/index";
+import HomeComp from "../src/components/Home/index";
 // import Footer from ''; --If we want a footer... maybe only use in the home page?
 // import Categories from '../src/components/categoryCards/index';
 // import Nav from './components/Nav';
@@ -59,15 +57,10 @@ function App() {
         <main>
           <StoreProvider>
             <Navbar />
-            <HomeComp />
-            {/* <Categories /> */}
-            {/* <Signup /> */}
-            {/* <Login /> */}
-            {/* Was testing component <Categories /> */}
             <Routes>
               <Route 
                 path="/" 
-                element={<Home />} 
+                element={<HomeComp />} 
               />
               <Route 
                 path="/login" 
