@@ -5,15 +5,50 @@ db.once('open', async () => {
     // await Category.deleteMany();
     // await SubCategory.deleteMany();
     // await User.deleteMany();
-    await Lesson.deleteMany();
+    // await Lesson.deleteMany();
     // await Review.deleteMany();
 
     // const categories = await Category.insertMany([
-    //     { name: 'Gaming' },
-    //     { name: 'Home' },
-    //     { name: 'Lifestyle' },
-    //     { name: 'Tech' },
-    //     { name: 'Misc.' },
+    //     {
+    //         name: 'Gaming',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: ''
+    //     },
+    //     {
+    //         name: 'Home',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: ''
+    //     },
+    //     {
+    //         name: 'Lifestyle',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: ''
+    //     },
+    //     {
+    //         name: 'Tech',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: ''
+    //     },
+    //     {
+    //         name: 'Misc.',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: ''
+    //     },
     // ]);
     // console.log('Categories seeded');
 
@@ -177,7 +212,7 @@ db.once('open', async () => {
     //     user: "",
     //     lesson: "",
     // });
-    
+
     // console.log('Reviews seeded');
     process.exit();
 });
