@@ -12,7 +12,7 @@ db.once('open', async () => {
     { name: 'Misc.' },
   ]);
 
-  // console.log('categories seeded');
+  console.log('Categories seeded');
 
   // await SubCategory.deleteMany();
 
@@ -103,7 +103,7 @@ db.once('open', async () => {
     },
   ]);
 
-  console.log('products seeded');
+  console.log('Sub-Categories seeded');
 
   await User.deleteMany();
 
@@ -111,22 +111,51 @@ db.once('open', async () => {
     firstName: 'Pamela',
     lastName: 'Washington',
     email: 'pamela@testmail.com',
+    aboutMe: 'AboutMeTextHere',
     password: 'password12345',
-    orders: [
-      {
-        products: [products[0]._id, products[0]._id, products[1]._id],
-      },
-    ],
   });
 
   await User.create({
     firstName: 'Elijah',
     lastName: 'Holt',
     email: 'eholt@testmail.com',
+    aboutMe: 'AboutMeTextHere',
+    password: 'password12345',
+  });
+  
+  await User.create({
+    firstName: 'Billy',
+    lastName: 'Joe',
+    email: 'joe@testmail.com',
+    aboutMe: 'AboutMeTextHere',
     password: 'password12345',
   });
 
-  console.log('users seeded');
+  await User.create({
+    firstName: 'Debbie',
+    lastName: 'Downer',
+    email: 'debbie@downer.com',
+    aboutMe: 'AboutMeTextHere',
+    password: 'password12345',
+  });
+
+  await User.create({
+    firstName: 'Raggedy',
+    lastName: 'Man',
+    email: 'Dr@Who.com',
+    aboutMe: 'AboutMeTextHere',
+    password: 'password12345',
+  });
+
+  await User.create({
+    firstName: 'Amy',
+    lastName: 'Pond',
+    email: 'raggedyGal@hotmail.com',
+    aboutMe: 'AboutMeTextHere',
+    password: 'password12345',
+  });
+
+  console.log('Users seeded');
 
   process.exit();
 });
