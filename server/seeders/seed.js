@@ -7,6 +7,17 @@ db.once('open', async () => {
     // await User.deleteMany();
     // await Lesson.deleteMany();
     // await Review.deleteMany();
+    await SubCategory.findOneAndUpdate({name: 'RPGs'}, 
+        {
+            lessons: '629f96375fb5546c6987c2cd'
+        }
+    )
+
+    // await Category.findOneAndUpdate({name: 'Misc.'}, 
+    //     {
+    //         subcategory: ['629f95f3f7376d4db3dd5179']
+    //     }
+    // )
 
     // const categories = await Category.insertMany([
     //     {
@@ -195,16 +206,16 @@ db.once('open', async () => {
     // ---------------------------------------------------------------------------------
     // The user and coach fields need to be an actual objID that 
     // isn't created until we seed the users
-    await Lesson.create({
-        title: "Intro to Leveling Up",
-        description: "In this lesson, I'll go over the basics of leveling within most RPG style games!",
-        price: 4500,
-        coach: "629f7b175d4b8615f731ba1c",
-        review: [],
-        subcategory: "629f95f3f7376d4db3dd5165",
-    });
+    // await Lesson.create({
+    //     title: "Intro to Leveling Up",
+    //     description: "In this lesson, I'll go over the basics of leveling within most RPG style games!",
+    //     price: 4500,
+    //     coach: "629f7b175d4b8615f731ba1c",
+    //     review: [],
+    //     subcategory: "629f95f3f7376d4db3dd5165",
+    // });
 
-    console.log('Lessons seeded');
+    // console.log('Lessons seeded');
 
     // await Review.create({
     //     reviewText: "",
