@@ -18,9 +18,9 @@ const lessonSchema = new Schema({
         ref: 'User',
     },
     price: {
-        type: Float,
+        type: Number,
         required: true,
-        min: 9.99
+        min: 999
     },
     quantity: {
         type: Number,
