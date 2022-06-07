@@ -11,6 +11,8 @@ const reviewSchema = new Schema({
     reviewRating: {
         type: Integer,
         required: true,
+        min: 1,
+        max: 5,
     },
     user: {
         type: Schema.Types.ObjectId,
