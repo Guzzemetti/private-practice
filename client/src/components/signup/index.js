@@ -1,6 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../signup/signup.css';
+import Navbar from '../Nav/index.js';
 
 import { Card, CardBody, CardTitle, Label, Input, Row, Col, FormGroup, Form } from 'reactstrap';
 
@@ -9,6 +10,8 @@ import { Card, CardBody, CardTitle, Label, Input, Row, Col, FormGroup, Form } fr
 const Signup = () => {
 
     return (
+        <>
+        <Navbar />
         <section className="holds-everything-form">
           <Card className="card-margin-top">
             <CardBody className="cardBody">
@@ -94,7 +97,7 @@ const Signup = () => {
                               id="aboutMe"
                               name="aboutMe"
                               placeholder="Type here..."
-                              type="aboutMe"
+                              type="textarea"
                             />
                           </FormGroup>
                         </Col>
@@ -102,11 +105,15 @@ const Signup = () => {
                     </Row>
                   </Form>
                   <button className="card-button">Get Started</button>
+                    <div className="loginLink"><p>Already have an account?</p>
+                    <a href={'login'}>Click here!</a>
+                    </div>
                 </div>
               </div>
             </CardBody>
           </Card>
         </section>
+        </>
       )
 }
 

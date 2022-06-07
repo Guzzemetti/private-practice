@@ -1,20 +1,14 @@
-body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-}
-
 .card-margin-top {
   margin-top: 1rem;
   /* sets the width of the entire form */
   width: 60%;
+  border-radius: 50px;
 }
 
 .holds-everything-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
 }
 
 /* Sets the overall height to the whole form */
@@ -22,6 +16,7 @@ body{
   height: 35rem;
   padding: 0;
   background-color: #f9eccc;
+  border-radius: 50px;
 }
 
 /* Button Stlying */
@@ -64,6 +59,7 @@ and the logo image on the left side of the form */
   background-image: linear-gradient(to bottom right, #212227, #3c3d47);
   color: #f9eccc;
   width: 60%;
+  border-radius: 50px 0px 0px 50px;
 }
 
 /* Sets the dimensions for the logo Div */
@@ -82,8 +78,8 @@ includes the input fields and the Get Started button */
   justify-content: space-around;
   color: #212227;
   width: 40%;
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
 }
 
 /* Styles the labels for each input and centers them */
@@ -92,16 +88,45 @@ includes the input fields and the Get Started button */
   justify-content: center;
 }
 
+/* Ensures the p-tag and a-tag are in-line */
+.loginLink{
+  display: flex;
+  margin: .5rem;
+}
+
+/* Shifts the "click here" link to the right */
+a{
+  margin-left: 5px;
+}
+
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
 
 /* Sets a max-width to the input fields*/
 #exampleEmail {
   width: 100%;
+  border-radius: 15px;
 }
 
 #examplePassword {
   width: 100%;
+  border-radius: 15px;
+}
+
+#firstName{
+  width: 100%;
+  border-radius: 15px;
+}
+
+#lastName{
+  width: 100%;
+  border-radius: 15px;
+}
+
+#aboutMe{
+  width: 100%;
+  border-radius: 15px;
+  resize: none;
 }
 
 /* --------------------------------------------------------- */
