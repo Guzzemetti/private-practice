@@ -23,7 +23,7 @@ import Signup from './pages/Signup';
 // import OrderHistory from './pages/OrderHistory';
 
 // Components to import
-// import Navbar from "../src/components/Nav/index";
+import Navbar from "../src/components/Nav/index";
 // import HomeComp from "../src/components/Home/index";
 // import Signup from "../src/components/signup/index";
 // import Login from "../src/components/login/index";
@@ -58,11 +58,9 @@ function App() {
       <Router>
         <main>
           <StoreProvider>
-            {/* <Navbar /> */}
+            <Navbar />
             {/* <HomeComp /> */}
             {/* <Categories /> */}
-            {/* <Signup /> */}
-            {/* <Login /> */}
             {/* Was testing component <Categories /> */}
             <Routes>
               <Route 

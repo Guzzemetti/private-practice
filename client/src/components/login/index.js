@@ -56,6 +56,9 @@ const Loginpage = () => {
                 </Row>
               </Form>
               <button className="card-button">Login</button>
+              <div className="loginLink"><p>Don't have an account?</p>
+                    <a href={'signup'}>Click here!</a>
+                    </div>
             </div>
           </div>
         </CardBody>
