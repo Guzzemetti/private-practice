@@ -14,9 +14,9 @@ db.once('open', async () => {
 
     console.log('Categories seeded');
 
-    // await SubCategory.deleteMany();
+    await SubCategory.deleteMany();
 
-    const subCategories = await SubCategory.insertMany([
+    await SubCategory.insertMany([
         {
             name: 'RPGs',
             category: categories[0]._id,
