@@ -1,10 +1,10 @@
 import React from "react";
 import BigLogo from "../../assets/PrivatePractice_black.png";
-import Gaming from "../../assets/bg_gaming.jpg";
-import Tech from "../../assets/bg_coding.jpg";
-import Home from "../../assets/bg_diy.jpg";
-import Lifestyle from "../../assets/bg_selfcare.jpg";
-import Misc from "../../assets/bg_workout.jpg";
+import Gaming from "../../assets/gaming_category.png";
+import Tech from "../../assets/tech_category.png";
+import Home from "../../assets/home_category.png";
+import Lifestyle from "../../assets/lifestyle_category.png";
+import Misc from "../../assets/misc_category.png";
 import { Link } from "react-router-dom";
 import "../Home/home.css";
 
@@ -36,6 +36,7 @@ const HomeComp = () => {
             <div className="h-cats-across">
                 <div className="category-cube">
                 <img src={Gaming} className='cat-img' alt='logo'></img>
+                <p>Gaming</p>
                 </div>
                 <div className="category-cube">
                 <img src={Tech} className='cat-img' alt='logo'></img>
@@ -51,7 +52,9 @@ const HomeComp = () => {
                 </div>
             </div>
         </div>
-
+        <div className="signup-area">
+        <Link to='/signup'><h4>Click here to sign up</h4></Link>
+        </div>
     </div>
   );
 };

@@ -129,6 +129,8 @@
     height: 25vh;
     display: flex;
     align-items: center;
+    padding: 4rem;
+    margin: 4rem;
     /* background-color: #7B6D8D; */
 }
 
@@ -140,11 +142,11 @@
 }
 
 .category-cube {
+    flex-direction: column;
     color: white;
     width: 200px;
     height: 200px;
     border-radius: 1rem;
-
     background-color: #212227;
     overflow: hidden;
     object-fit: cover;
@@ -155,4 +157,9 @@
     height: 100%; 
     object-fit: cover;
     opacity: 1;
+}
+
+.signup-area a {
+    text-decoration: none;
+    color: #212227;
 }
