@@ -1,10 +1,10 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './category.css';
-import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
+// import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 // import { Link } from "react-router-dom";
-import tempPic from '../../assets/blank-profile-picture-973460__340.webp';
-import Cat1 from '../../assets/bg_gaming.jpg';
+// import tempPic from '../../assets/blank-profile-picture-973460__340.webp';
+// import Cat1 from '../../assets/bg_gaming.jpg';
 
 // import LogoHeader from '../../assets/Private Practice-logos_transparent.png';
 

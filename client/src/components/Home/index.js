@@ -8,7 +8,6 @@ import Misc from "../../assets/misc_category.png";
 import { Link } from "react-router-dom";
 import "../Home/home.css";
 
-
 const HomeComp = () => {
   return (
     // parent element div

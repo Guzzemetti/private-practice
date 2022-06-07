@@ -1,31 +1,178 @@
-
-
-
-.card-margin-top{
-    margin-top: 1rem;
+.card-margin-top {
+  margin-top: 1rem;
+  /* sets the width of the entire form */
+  width: 60%;
+  border-radius: 50px;
 }
 
-.holds-everything-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.holds-everything-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
 }
 
-.form-card-signup{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Sets the overall height to the whole form */
+.cardBody {
+  height: 35rem;
+  padding: 0;
+  background-color: #f9eccc;
+  border-radius: 50px;
 }
 
+/* Button Stlying */
 .card-button {
   color: black;
   background-color: transparent;
-  padding: 0.5rem;
+  padding: 14px 40px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.5rem;
   transition: all 0.2s ease-in-out;
+  border-radius: 12px;
+  transition-duration: 0.4s;
 }
+
 /* Change color or take out, Possibly add a background color no matter wehat since its a call to action*/
 .card-button:hover {
-  background-color: aqua;
+  background-color: #212227;
+  color: #f9eccc;
+}
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+
+/* styling for the overall body of the form, ensures the call to action and Input
+fields are resting next to each other */
+.bodyItems {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+
+/* Styles the div that CONTAINS both the site title
+and the logo image on the left side of the form */
+.loginLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to bottom right, #212227, #3c3d47);
+  color: #f9eccc;
+  width: 60%;
+  border-radius: 50px 0px 0px 50px;
+}
+
+/* Sets the dimensions for the logo Div */
+.imageBox {
+  border: 2px solid black;
+  width: 75%;
+  height: 75%;
+}
+/* styling for the right side of the Sign Up form
+includes the input fields and the Get Started button */
+.formBody {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  color: #212227;
+  width: 40%;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Styles the labels for each input and centers them */
+.labels {
+  display: flex;
+  justify-content: center;
+}
+
+/* Ensures the p-tag and a-tag are in-line */
+.loginLink{
+  display: flex;
+  margin: .5rem;
+}
+
+/* Shifts the "click here" link to the right */
+a{
+  margin-left: 5px;
+}
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+
+/* Sets a max-width to the input fields*/
+#exampleEmail {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#examplePassword {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#firstName{
+  width: 100%;
+  border-radius: 15px;
+}
+
+#lastName{
+  width: 100%;
+  border-radius: 15px;
+}
+
+#aboutMe{
+  width: 100%;
+  border-radius: 15px;
+  resize: none;
+}
+
+/* --------------------------------------------------------- */
+/* Technically sets the actual width of the input fields */
+.inputRow {
+  width: 20rem;
+}
+
+
+@media only screen and (max-width: 1366px) {
+  .loginLogo {
+    width: 50%;
+  }
+
+  .cardBody {
+    height: 100%;
+  }
+
+  .imageBox {
+    width: 75%;
+    height: 95%;
+  }
+
+  .formBody {
+    width: 50%;
+  }
+
+  .inputRow {
+    width: 15rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bodyItems {
+    flex-direction: column;
+  }
+
+  .loginLogo {
+    width: 100%;
+  }
+
+  .formBody {
+    width: 100%;
+  }
+
+  .inputRow {
+    width: 100%;
+  }
 }
