@@ -160,25 +160,25 @@ db.once('open', async () => {
 // ---------------------------------------------------------------------------------
     // The user and coach fields need to be an actual objID that 
     // isn't created until we seed the users
-    await Lesson.create({
-        title: "Intro to Leveling Up",
-        Description: "In this lesson, I'll go over the basics of leveling within most RPG style games!",
-        user: 'idk',
-        price: 45,
-        coach: 'idk',
-        review: [],
-        subcategory: "",
-  });
+//     await Lesson.create({
+//         title: "Intro to Leveling Up",
+//         Description: "In this lesson, I'll go over the basics of leveling within most RPG style games!",
+//         user: 'idk',
+//         price: 45,
+//         coach: 'idk',
+//         review: [],
+//         subcategory: "",
+//   });
 
-  console.log('Lessons seeded');
+//   console.log('Lessons seeded');
 
-  await Review.create({
-    reviewText: "",
-    reviewRating: 5,
-    user: "",
-    lesson: "",
-});
+//   await Review.create({
+//     reviewText: "",
+//     reviewRating: 5,
+//     user: "",
+//     lesson: "",
+// });
 
-  console.log('Reviews seeded');
+//   console.log('Reviews seeded');
     process.exit();
 });

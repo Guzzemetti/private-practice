@@ -16,12 +16,11 @@ const lessonSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        required: true
     },
     price: {
         type: Number,
         required: true,
-        min: 9.99
+        min: 999
     },
     quantity: {
         type: Number,
@@ -36,7 +35,6 @@ const lessonSchema = new Schema({
     review: [{
         type: String,
         ref: 'Review',
-        required: true
     }],
     subcategory: {
         type: Schema.Types.ObjectId,
