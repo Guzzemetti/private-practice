@@ -32,10 +32,10 @@ const userSchema = new Schema({
   aboutMe: {
     type: String
   },
-  // lessons: [{
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'Lesson'
-  // }],
+  lessons: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Lesson'
+  }],
   orders: [Order.schema]
 
 });

@@ -155,6 +155,24 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+    // Add a lesson
+    addLesson: async (parent, { title, description,  }, context) => {
+      if (context.user) {
+        const lesson = await Lesson.create({
+          title,
+          description,
+          coach: context.user,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { lesson: lesson._id } }
+        );
+
+        return thought;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
     // To update an existing lesson
     updateLesson: async (parent, args, context) => {
 
@@ -184,7 +202,24 @@ const resolvers = {
       const token = signToken(user);
       // Return an `Auth` object that consists of the signed token and user's information
       return { token, user };
-    }
+    },
+    addReview: async (parent, { lessonId, reviewText }, context) => {
+      if (context.user) {
+        return Review.findOneAndUpdate(
+          { _id: lessonId },
+          {
+            $addToSet: {
+              review: { reviewText, user: context.user },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 };
 
