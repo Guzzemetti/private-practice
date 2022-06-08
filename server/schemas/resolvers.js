@@ -156,20 +156,22 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
     // Add a lesson
-    addLesson: async (parent, { title, description,  }, context) => {
+    addLesson: async (parent, { title, description, price, subcategory }, context) => {
       if (context.user) {
         const lesson = await Lesson.create({
           title,
           description,
+          price,
+          subcategory,
           coach: context.user,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { lesson: lesson._id } }
+          { $addToSet: { lessons: lesson._id } }
         );
 
-        return thought;
+        return lesson;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -177,6 +179,23 @@ const resolvers = {
     updateLesson: async (parent, args, context) => {
 
       return await Lesson.findByIdAndUpdate(context.user._id, args, { new: true });
+    },
+    // Delete a lesson from a user
+    removeLesson: async (parent, { lessonId }, context) => {
+      if (context.user) {
+        const lesson = await Lesson.findOneAndDelete({
+          _id: lessonId,
+          coach: context.user,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { lessons: lesson._id } }
+        );
+
+        return lesson;
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
     // updateLesson: async (parent, { _id, quantity }) => {
     //   const decrement = Math.abs(quantity) * -1;
