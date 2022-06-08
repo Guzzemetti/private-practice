@@ -26,9 +26,11 @@ module.exports = {
 
     return req;
   },
-  signToken: function ({ firstName, email, _id }) {
-    const payload = { firstName, email, _id };
 
+  // We're pulling this data and matching it to the database
+  signToken: function ({ firstname, email, _id }) {
+    const payload = { firstname, email, _id };
+  // we're signing the token with the submitted payload, the secret key and the expiration
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };
