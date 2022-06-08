@@ -31,6 +31,7 @@ import HomeComp from "../src/components/Home/index";
 import Footer from "../src/components/Footer/index";
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound'
+import CatagoryPage from './components/CatagoryPage';
 // import Categories from '../src/components/categoryCards/index';
 //------------------------------------------------------------------------------------------
 
@@ -64,6 +65,7 @@ function App() {
           <StoreProvider>
             {/* The Navbar is added here to be added to every page that renders */}
             <Navbar />
+
             <Routes>
               <Route 
                 path="/" 
@@ -85,6 +87,10 @@ function App() {
               <Route
                 path="*" 
                 element={<NotFound />} 
+              />
+                            <Route 
+                path="/success" 
+                element={<CatagoryPage />} 
               />
               {/* 
               <Route 
