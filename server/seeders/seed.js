@@ -230,7 +230,7 @@ db.once('open', async () => {
 
 
 
-    const categories = await Category.insertMany([
+        await Category.insertMany([
         {
             _id: '1',
             name: 'Gaming'

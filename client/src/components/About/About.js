@@ -16,44 +16,33 @@ const About = () => {
         <>
             <div className="top-level-div">
                 <div className="main-container">
-
                     <h1>About Us</h1>
-
                     <div className="row">
-                        {/* Top half of page */}
                         <div className="col">
-                            {/* ------------------------------------- */}
                             <div className="aboutMe">
-                                <h2>Austin</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
+                                <div className="aboutText">
+                                    <h3>Austin</h3>
+                                    <img src={Austin} alt="Austin" />
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
+                                    {/* ------------------------------------------ */}
+                                    <h3>John G.</h3>
+                                    <img src={JohnG} alt="JohnG" />
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
+                                </div>
                             </div>
-                            {/* ------------------------------------- */}
-                            <img src={Austin} alt="Austin" />
-                            <img src={JohnG} alt="JohnG" />
-                            {/* **************************************** */}
-                            <div className="aboutMe">
-                                <h2>John G.</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
-                            </div>
-                            {/* **************************************** */}
                         </div>
-                     
-                        {/* Bootom half of page */}
                         <div className="col">
-                            {/* ------------------------------------- */}
                             <div className="aboutMe">
-                                <h2>John H.</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
+                                <div className="aboutText">
+                                    <h3>John H.</h3>
+                                    <img src={JohnH} alt="JohnH" />
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
+                                    {/* ------------------------------------------ */}
+                                    <h3>Phillip</h3>
+                                    <img src={Phillip} alt="Phillip" />
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
+                                </div>
                             </div>
-                            {/* ------------------------------------- */}
-                            <img src={JohnH} alt="JohnH" />
-                            <img src={Phillip} alt="Phillip" />
-                            {/* **************************************** */}
-                            <div className="aboutMe">
-                                <h2>Phillip</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
-                            </div>
-                            {/* **************************************** */}
                         </div>
                     </div>
                 </div>

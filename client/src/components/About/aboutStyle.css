@@ -9,6 +9,7 @@
 .main-container{
     width: 80%;
     border: 2px solid black;
+    border-radius: 25px;
     margin: 5rem;
     display: flex;
     flex-direction: column;
@@ -17,21 +18,47 @@
 
 .col{
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
+/* this is made redundant with .aboutText
 .aboutMe{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
+} */
+
+.aboutText{
+    margin: 1rem;
+    text-align: center;
 }
 
 /* !! Still need to make images responsive !! */
 img{
-    height: 20rem;
-    width: 20rem;
+    width: 60%;
+    border-radius: 25%;
 }
 
-h1, h2{
+h1, h3{
     font-weight: bold;
 }
+
+
+#pics{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1366px) {
+    img{
+        width: 40%;
+    }
+    .row{
+        width: 100%;
+        flex-direction: column;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    img{
+        width: 100%;
+    }
+  }
