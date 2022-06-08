@@ -81,14 +81,20 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(firstname: String!, lastname: String!, email: String!, password: String!, profileImage: String, aboutMe: String): Auth
+    updateUser(firstname: String, lastname: String, email: String, password: String, profileImage: String, aboutMe: String): User
+    deleteUser(userId: ID!): User
+    login(email: String!, password: String!): Auth
 
+    # For stripe so user can pay for lessons
     addOrder(lessons: [ID]!): Order
 
-    updateUser(firstname: String, lastname: String, email: String, password: String, profileImage: String, aboutMe: String): User
+    # Subcategory is either a string or an ID... Should be an ID
+    addLesson(title: String!, description: String!, price: Float, coach: String, subcategory: ID,): Lesson
+    updateLesson(_id: ID!, title: String, description: String, price: Float, coach: String, ): Lesson
+    removeLesson(lesson: ID!): Lesson
 
-    updateLesson(_id: ID!, title: String, description: String, user: String, price: Float, coach: String, ): Lesson
-
-    login(email: String!, password: String!): Auth
+    addReview(lessonId: ID!, reviewText: String!): Review
+    removeReview(lessonId: ID!, reviewId: ID!): Review
   }
 `;
 

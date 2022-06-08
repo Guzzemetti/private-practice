@@ -155,10 +155,50 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+    deleteUser: async (parent, { userId }) => {
+      return User.findOneAndDelete({ _id: userId });
+    },
+    // Add a lesson
+    addLesson: async (parent, { title, description, price, subcategory }, context) => {
+      if (context.user) {
+        const lesson = await Lesson.create({
+          title,
+          description,
+          price,
+          subcategory,
+          coach: context.user,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { lessons: lesson._id } }
+        );
+
+        return lesson;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
     // To update an existing lesson
     updateLesson: async (parent, args, context) => {
 
       return await Lesson.findByIdAndUpdate(context.user._id, args, { new: true });
+    },
+    // Delete a lesson from a user
+    removeLesson: async (parent, { lessonId }, context) => {
+      if (context.user) {
+        const lesson = await Lesson.findOneAndDelete({
+          _id: lessonId,
+          coach: context.user,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { lessons: lesson._id } }
+        );
+
+        return lesson;
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
     // updateLesson: async (parent, { _id, quantity }) => {
     //   const decrement = Math.abs(quantity) * -1;
@@ -184,7 +224,42 @@ const resolvers = {
       const token = signToken(user);
       // Return an `Auth` object that consists of the signed token and user's information
       return { token, user };
-    }
+    },
+    addReview: async (parent, { lessonId, reviewText }, context) => {
+      if (context.user) {
+        return Review.findOneAndUpdate(
+          { _id: lessonId },
+          {
+            $addToSet: {
+              review: { reviewText, user: context.user },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    // Remove a review
+    removeReview: async (parent, { lessonId, reviewId }, context) => {
+      if (context.user) {
+        return Lesson.findOneAndUpdate(
+          { _id: lessonId },
+          {
+            $pull: {
+              review: {
+                _id: reviewId,
+                user: context.user,
+              },
+            },
+          },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 };
 
