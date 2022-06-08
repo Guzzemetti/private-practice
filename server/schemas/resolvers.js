@@ -16,11 +16,11 @@ const resolvers = {
     },
     // Find all subcategories
     subcategories: async () => {
-      return await SubCategory.find().populate('category');
+      return await SubCategory.find().populate('category').populate('lessons');
     },
     // Find 1 subcategory
     subcategory: async (parent, { _id }) => {
-      return await SubCategory.findById(_id).populate('category');
+      return await SubCategory.findById(_id).populate('category').populate('lessons');
     },
     // Find all reviews
     reviews: async () => {

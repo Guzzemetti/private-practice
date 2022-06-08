@@ -12,7 +12,12 @@ const subCategorySchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Category',
         required: true
-    }]
+    }],
+    lessons: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Lesson',
+        required: true
+    }],
 });
 
 const SubCategory = mongoose.model('SubCategory', subCategorySchema);

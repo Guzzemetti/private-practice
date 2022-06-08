@@ -7,13 +7,59 @@ db.once('open', async () => {
     // await User.deleteMany();
     // await Lesson.deleteMany();
     // await Review.deleteMany();
+    await SubCategory.findOneAndUpdate({name: 'RPGs'}, 
+        {
+            lessons: '629f96375fb5546c6987c2cd'
+        }
+    )
+
+    // await Category.findOneAndUpdate({name: 'Misc.'}, 
+    //     {
+    //         subcategory: ['629f95f3f7376d4db3dd5179']
+    //     }
+    // )
 
     // const categories = await Category.insertMany([
-    //     { name: 'Gaming' },
-    //     { name: 'Home' },
-    //     { name: 'Lifestyle' },
-    //     { name: 'Tech' },
-    //     { name: 'Misc.' },
+    //     {
+    //         name: 'Gaming',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: ''
+    //     },
+    //     {
+    //         name: 'Home',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: ''
+    //     },
+    //     {
+    //         name: 'Lifestyle',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: ''
+    //     },
+    //     {
+    //         name: 'Tech',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: ''
+    //     },
+    //     {
+    //         name: 'Misc.',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: '',
+    //         subcategory: ''
+    //     },
     // ]);
     // console.log('Categories seeded');
 

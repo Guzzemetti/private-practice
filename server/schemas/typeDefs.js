@@ -11,6 +11,7 @@ const typeDefs = gql`
     _id: ID
     name: String
     category: [Category]
+    lessons: [Lesson]
   }
 
   type Lesson {

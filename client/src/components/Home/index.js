@@ -33,21 +33,50 @@ const HomeComp = () => {
       </div>
       <div className="h-cats">
             <div className="h-cats-across">
+
                 <div className="category-cube">
-                <img src={Gaming} className='cat-img' alt='logo'></img>
-                <p>Gaming</p>
+                <img src={Gaming} className='cat-img' alt='Gaming'></img>
+                <Link to='/gaming'>
+                <div className="cube-overlay">
+                  <div className="cube-text">Gaming</div>
                 </div>
-                <div className="category-cube">
-                <img src={Tech} className='cat-img' alt='logo'></img>
+                </Link>
                 </div>
+
                 <div className="category-cube">
-                <img src={Home} className='cat-img' alt='logo'></img>
+                <img src={Tech} className='cat-img' alt='Tech'></img>
+                <Link to='/tech'>
+                <div className="cube-overlay">
+                  <div className="cube-text">Tech</div>
                 </div>
-                <div className="category-cube">
-                <img src={Lifestyle} className='cat-img' alt='logo'></img>
+                </Link>
                 </div>
+
                 <div className="category-cube">
-                <img src={Misc} className='cat-img' alt='logo'></img>
+                <img src={Home} className='cat-img' alt='Home'></img>
+                <Link to='/home'>
+                <div className="cube-overlay">
+                  <div className="cube-text">Home</div>
+                </div>
+                </Link>
+                </div>
+
+                <div className="category-cube">
+                <img src={Lifestyle} className='cat-img' alt='Lifestyle'></img>
+                <Link to='/lifestyle'>
+                <div className="cube-overlay">
+                  <div className="cube-text">Lifestyle</div>
+                </div>
+                </Link>
+                </div>
+
+                <div className="category-cube">
+                <img src={Misc} className='cat-img' alt='Misc'></img>
+                <Link to='/misc'>
+                <div className="cube-overlay">
+                  <div className="cube-text">Misc</div>
+                </div>
+                </Link>
                 </div>
             </div>
         </div>
