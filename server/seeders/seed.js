@@ -228,27 +228,27 @@ db.once('open', async () => {
 
 
 
-
+    
 
         await Category.insertMany([
         {
-            _id: '1',
+            _id: '12345678912345678912345a',
             name: 'Gaming'
         },
         {
-            _id: '2',
+            _id: '12345678912345678912323a',
             name: 'Home'
         },
         {
-            _id: '3',
+            _id: '12345678912345678912345b',
             name: 'Lifestyle'
         },
         {
-            _id: '4',
+            _id: '12345678912345678912342n',
             name: 'Tech'
         },
         {
-            _id: '5',
+            _id: '12345678912345678912342v',
             name: 'Misc'
         },
     ]);
@@ -256,128 +256,146 @@ db.once('open', async () => {
 
     await SubCategory.insertMany([
         {
-            _id: '01',
+            _id: '82349678912345678912345v',
             name: 'RPGs',
-            category: '1',
+            category: '12345678912345678912345a',
         },
         {
-            _id: '02',
+            _id: '29349678912345678912345d',
             name: 'MOBAs',
-            category: "1",
+            category: "12345678912345678912345a",
         },
         {
-            _id: '03',
+            _id: '30349678912345678912345s',
             name: 'MMOs',
-            category: "1",
+            category: "12345678912345678912345a",
         },
         {
-            _id: '04',
+            _id: '31349678912345678912345v',
             name: 'FPS',
-            category: "1",
+            category: "12345678912345678912345a",
         },
         {
-            _id: '05',
+            _id: '82888678912345678912345x',
             name: 'Other',
-            category: "1",
+            category: "12345678912345678912345a",
         },
         {
-            _id: '06',
+            _id: '53349678912345678912345w',
             name: 'Cooking',
-            category: "2",
+            category: "12345678912345678912323a",
         },
         {
-            _id: '07',
+            _id: '55559678912345678912345k',
             name: 'DIY Projects',
-            category: "2",
+            category: "12345678912345678912323a",
         },
         {
-            _id: '08',
+            _id: '99349678912345678912345f',
             name: 'Gardening',
-            category: "2",
+            category: "12345678912345678912323a",
         },
         {
-            _id: '09',
+            _id: '88349678912345678912345g',
             name: 'Maintenance',
-            category: "2",
+            category: "12345678912345678912323a",
         },
         {
-            _id: '10',
+            _id: '88349678919945678912345g',
             name: 'Other',
-            category: "2",
+            category: "12345678912345678912323a",
         },
         {
-            _id: '11',
+            _id: '02349678912345678912345p',
             name: 'Fitness',
-            category: "3",
+            category: "12345678912345678912345b",
         },
         {
-            _id: '12',
+            _id: '90349678112345678912345f',
             name: 'Fashion',
-            category: "3",
+            category: "12345678912345678912345b",
         },
         {
-            _id: '13',
+            _id: '45349678912345678912345b',
             name: 'Self Care',
-            category: "3",
+            category: "12345678912345678912345b",
         },
         {
-            _id: '14',
+            _id: '08349678912345678912345h',
             name: 'Life Coaching',
-            category: "3",
+            category: "12345678912345678912345b",
         },
         {
-            _id: '15',
+            _id: '88349678911045678912345e',
             name: 'Other',
-            category: "3",
+            category: "12345678912345678912345b",
         },
         {
-            _id: '16',
+            _id: '88041678912345678912345t',
             name: 'Computer Learning',
-            category: "4",
+            category: "12345678912345678912342n",
         },
         {
-            _id: '17',
+            _id: '88349678912445678912345u',
             name: 'Programming',
-            category: "4",
+            category: "12345678912345678912342n",
         },
         {
-            _id: '18',
+            _id: '88349678919545678912345o',
             name: 'IT',
-            category: "4",
+            category: "12345678912345678912342n",
         },
         {
-            _id: '19',
+            _id: '50349678916745678912345y',
             name: 'Streaming',
-            category: "4",
+            category: "12345678912345678912342n",
         },
         {
-            _id: '20',
+            _id: '88349687012345678912345m',
             name: 'Other',
-            category: "4",
+            category: "12345678912345678912342n",
         },
         {
-            _id: '21',
+            _id: '88319678912345678912345g',
             name: 'Misc.',
-            category: "5",
+            category: "12345678912345678912342v",
         },
     ]);
 
     console.log('Sub-Categories seeded');
 
     await User.create({
-        _id: '1',
-        firstname: 'Raggedy',
-        lastname: 'Man',
-        email: 'Dr@Who.com',
-        aboutMe: 'AboutMeTextHereOne',
-        password: 'password1',
+        _id: '12345678912345678912233c',
+        firstname: 'Luke',
+        lastname: 'Pondop',
+        email: 'pondop@hotmail.com',
+        aboutMe: 'AboutMeTextHere',
+        password: 'password12345',
     });
 
     await User.create({
-        _id: '2',
-        firstname: 'Amy',
-        lastname: 'Pond',
-        email: 'raggedyGal@hotmail.com',
+        _id: '12345678912345678912233c',
+        firstname: 'Bob',
+        lastname: 'Pondop',
+        email: 'ponbob@hotmail.com',
+        aboutMe: 'AboutMeTextHere',
+        password: 'password12345',
+    });
+
+    await User.create({
+        _id: '92345678912349678919233c',
+        firstname: 'Bobby',
+        lastname: 'plow',
+        email: 'bobby@hotmail.com',
+        aboutMe: 'AboutMeTextHere',
+        password: 'password12345',
+    });
+
+    await User.create({
+        _id: '12345678912345678912733k',
+        firstname: 'Johnny',
+        lastname: 'loops',
+        email: 'loops@hotmail.com',
         aboutMe: 'AboutMeTextHereTwo',
         password: 'password1',
     });
@@ -385,41 +403,41 @@ db.once('open', async () => {
     console.log('Users seeded');
 
     await Lesson.create({
-        _id: '1',
+        _id: '12345678512345078912733z',
         title: "Intro to Leveling Up",
         description: "In this lesson, I'll go over the basics of leveling within most RPG style games!",
         price: 4500,
-        coach: "1",
-        review: ['1'],
-        subcategory: "01",
+        coach: "12345678912345678912233c",
+        review: ['12345672052345678912733k'],
+        subcategory: "12345678912345678912345a",
     });
 
     await Lesson.create({
-        _id: '2',
+        _id: '16347612052345671912733a',
         title: "Breakfast Basics with Babish",
         description: "In this course, we'll go over the basics of preparing breakfast.",
         price: 4700,
-        coach: "2",
-        review: ['2'],
-        subcategory: "06",
+        coach: "12345678912345678912733k",
+        review: ['12345612052345671912733p'],
+        subcategory: "12345678912345678912323a",
     });
 
     console.log('Lessons seeded');
 
     await Review.create({
-        _id: '1',
+        _id: '12345672052345678912733k',
         reviewText: "I loved the intro to leveling up course!",
         reviewRating: 5,
-        user: "2",
-        lesson: "1",
+        user: "12345678912345678912233c",
+        lesson: "12345678512345078912733z",
     });
 
     await Review.create({
-        _id: '2',
+        _id: '12345612052345671912733p',
         reviewText: "This course really showed me how fun cooking could be!",
         reviewRating: 5,
-        user: "1",
-        lesson: "2",
+        user: "92345678912349678919233c",
+        lesson: "16347612052345671912733a",
     });
 
     console.log('Reviews seeded');

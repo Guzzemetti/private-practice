@@ -36,6 +36,10 @@ const userSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Lesson'
   }],
+  // reviews: [{
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'Review'
+  // }],
   orders: [Order.schema]
 
 });
