@@ -18,7 +18,8 @@ import "../src/App.css"
 // Pages to import
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-// import Profile from "../src/pages/Profile";
+import CategoryPage from './pages/Category';
+import Profile from "../src/pages/Profile";
 // import Home from './pages/Home';
 // import Detail from './pages/Detail';
 // import NoMatch from './pages/NoMatch';
@@ -83,20 +84,20 @@ function App() {
                 path="/about" 
                 element={<About />} 
               />
+              <Route 
+                path="/category" 
+                element={<CategoryPage />} 
+              />
+              <Route 
+                path="/profile" 
+                element={<Profile />} 
+              />
               {/* 404 Page */}
               <Route
                 path="*" 
                 element={<NotFound />} 
               />
-                            <Route 
-                path="/success" 
-                element={<CatagoryPage />} 
-              />
               {/* 
-              <Route 
-                path="/success" 
-                element={<Profile />} 
-              />
               <Route 
                 path="/orderHistory" 
                 element={<NA />} 

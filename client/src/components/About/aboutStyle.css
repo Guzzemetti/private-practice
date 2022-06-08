@@ -35,7 +35,7 @@
 }
 
 /* !! Still need to make images responsive !! */
-img{
+.aboutMe-img {
     width: 60%;
     border-radius: 25%;
 }

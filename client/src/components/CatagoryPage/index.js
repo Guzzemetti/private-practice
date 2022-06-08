@@ -1,21 +1,16 @@
+import React from 'react';
 import "./index.css"
 import "./style.css"
-
-
-
 import Gamerimage from "../../assets/bg_gaming.jpg"
-
 import Blob from "../../assets/blob2.png"
-
 import Image4 from "../../assets/4.png"
-
-
 
 var imageStyle = {
   backgroundImage: `url(${Gamerimage})`
 };
 
-const CatagoryPage = () => {
+const CatagoryPage = (props) => {
+
   return (
 <>
 <body className="u-body u-xl-mode"> 
@@ -46,11 +41,9 @@ const CatagoryPage = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  </body>
-  </>
+        </section>
+      </body>
+    </>
   )
 }
 
