@@ -15,7 +15,7 @@ const About = () => {
     return (
         <>
             <div className="top-level-div">
-                <div className="main-container">
+                <div className="main-containerz">
                     <h1>About Us</h1>
                     <div className="row">
                         <div className="col">

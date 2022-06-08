@@ -4,16 +4,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
-.main-container{
+.main-containerz{
     width: 80%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 25px;
-    margin: 5rem;
+    margin: 3.5rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f9eccc;
 }
 
 .col{
@@ -41,6 +44,9 @@ h1, h3{
     font-weight: bold;
 }
 
+p {
+    padding: 1rem;
+}
 
 #pics{
     display: flex;
