@@ -1,0 +1,36 @@
+.top-level-div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    width: 80%;
+    border: 2px solid black;
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+}
+
+.aboutMe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    height: 20rem;
+    width: 20rem;
+}
+
+h1, h2{
+    font-weight: bold;
+}
