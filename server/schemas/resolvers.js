@@ -47,27 +47,34 @@ const resolvers = {
       return user;
     },
     // Finds a User and populates the order history
-    user: async (parent, args, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: 'orders.lessons',
-          populate: 'lesson'
-        });
+    // user: async (parent, args, context) => {
+    //   if (context.user) {
+    //     const user = await User.findById(context.user._id).populate({
+    //       path: 'orders.lessons',
+    //       populate: 'lesson'
+    //     });
 
-        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+        // // user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
-        return user;
+    //     return user;
+    //   }
+
+    //   throw new AuthenticationError('Not logged in');
+    // },
+    user: async (parent, {userId}) => {
+      if (userId) {
+        return User.findOne({_id:userId})
       }
 
       throw new AuthenticationError('Not logged in');
     },
     // Me route
-    //   me: async (parent, args, context) => {
-    //   if (context.user) {
-    //     return User.findOne({ _id: context.user._id }).populate('thoughts');
-    //   }
-    //   throw new AuthenticationError('You need to be logged in!');
-    // },
+      me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOne({ _id: context.user._id }).populate('lessons');
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
     // Get order?
     order: async (parent, { _id }, context) => {
       if (context.user) {
