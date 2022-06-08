@@ -3,7 +3,7 @@ const { User, Category, SubCategory, Lesson, Review } = require('../models');
 
 db.once('open', async () => {
     await Category.deleteMany();
-    // await SubCategory.deleteMany();
+    await SubCategory.deleteMany();
     // await User.deleteMany();
     // await Lesson.deleteMany();
     // await Review.deleteMany();
@@ -28,7 +28,7 @@ db.once('open', async () => {
 
     console.log('Categories seeded');
 
-    const subcategories = [
+    const gamingCategories = [
         {
             name: 'RPGs',
         },
@@ -43,7 +43,10 @@ db.once('open', async () => {
         },
         {
             name: 'Other',
-        },
+        }
+    ]
+
+    const homeCategories = [
         {
             name: 'Cooking',
         },
@@ -58,7 +61,10 @@ db.once('open', async () => {
         },
         {
             name: 'Other',
-        },
+        }
+    ]
+
+    const lifeCategories = [
         {
             name: 'Fitness',
         },
@@ -73,7 +79,10 @@ db.once('open', async () => {
         },
         {
             name: 'Other',
-        },
+        }
+    ]
+    
+    const techCategories = [
         {
             name: 'Computer Learning',
         },
@@ -88,18 +97,40 @@ db.once('open', async () => {
         },
         {
             name: 'Other',
-        },
+        }
+    ]
+
+    const miscCategories = [
         {
             name: 'Misc.',
         },
     ];
 
 
-    for (let i = 0; i < subcategories.length; i++) {
-        const { _id } = await SubCategory.create(subcategories[i])
+    for (let i = 0; i < gamingCategories.length; i++) {
+        const { _id } = await SubCategory.create(gamingCategories[i])
         await Category.findOneAndUpdate({ name: 'Gaming' }, { $addToSet: { subcategory: _id } })
     }
 
+    for (let i = 0; i < homeCategories.length; i++) {
+        const { _id } = await SubCategory.create(homeCategories[i])
+        await Category.findOneAndUpdate({ name: 'Home' }, { $addToSet: { subcategory: _id } })
+    }
+
+    for (let i = 0; i < lifeCategories.length; i++) {
+        const { _id } = await SubCategory.create(lifeCategories[i])
+        await Category.findOneAndUpdate({ name: 'Lifestyle' }, { $addToSet: { subcategory: _id } })
+    }
+
+    for (let i = 0; i < techCategories.length; i++) {
+        const { _id } = await SubCategory.create(techCategories[i])
+        await Category.findOneAndUpdate({ name: 'Tech' }, { $addToSet: { subcategory: _id } })
+    }
+
+    for (let i = 0; i < miscCategories.length; i++) {
+        const { _id } = await SubCategory.create(miscCategories[i])
+        await Category.findOneAndUpdate({ name: 'Misc' }, { $addToSet: { subcategory: _id } })
+    }
 
 
     console.log('Sub-Categories seeded');
