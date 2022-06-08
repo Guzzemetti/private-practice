@@ -37,7 +37,7 @@ const HomeComp = () => {
       </div>
 
               <div className="h-explore-row">
-          <h2>Explore our categories and find what you're looking for.</h2>
+          <h2>Explore our categories:</h2>
         </div>
 
       <div className="h-cats">

@@ -22,11 +22,11 @@ const About = () => {
                             <div className="aboutMe">
                                 <div className="aboutText">
                                     <h3>Austin</h3>
-                                    <img src={Austin} alt="Austin" />
+                                    <img src={Austin} className="aboutMe-img" alt="Austin" />
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
                                     {/* ------------------------------------------ */}
                                     <h3>John G.</h3>
-                                    <img src={JohnG} alt="JohnG" />
+                                    <img src={JohnG} className="aboutMe-img" alt="JohnG" />
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
                                 </div>
                             </div>
@@ -35,11 +35,11 @@ const About = () => {
                             <div className="aboutMe">
                                 <div className="aboutText">
                                     <h3>John H.</h3>
-                                    <img src={JohnH} alt="JohnH" />
+                                    <img src={JohnH} className="aboutMe-img" alt="JohnH" />
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
                                     {/* ------------------------------------------ */}
                                     <h3>Phillip</h3>
-                                    <img src={Phillip} alt="Phillip" />
+                                    <img src={Phillip} className="aboutMe-img" alt="Phillip" />
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
                                 </div>
                             </div>
