@@ -73,7 +73,7 @@ const Navbar = () => {
         <div className="navbar-section-nav">
                     {/* <Link to="/signup"><button className="navbar-button">Signup</button></Link>
           <div className="div-padding"></div> */}
-          <Link to="/explore"><button className="navbar-button">About</button></Link>
+          <Link to="/about"><button className="navbar-button">About</button></Link>
           <Link to="/login"><button className="navbar-button">Login</button></Link>
           <AiOutlineShoppingCart className="cart-navbar-icon" />
           {showNavigation}
