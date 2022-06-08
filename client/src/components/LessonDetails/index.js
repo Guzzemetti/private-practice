@@ -6,4 +6,4 @@ const LessonDetails = () => {
   )
 }
 
-export default index
+export default LessonDetails

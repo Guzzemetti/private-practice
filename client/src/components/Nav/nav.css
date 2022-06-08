@@ -50,8 +50,12 @@
   background-color: transparent;
   padding: 0.5rem;
   cursor: pointer;
-  font-size: 1.3em;
+  font-size: 1.1em;
   border: none;
+}
+
+.navbar-button:hover {
+  font-weight: 700;
 }
 
 .cart-navbar-icon{
