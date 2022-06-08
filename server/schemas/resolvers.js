@@ -239,6 +239,24 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    // Remove a review
+    removeReview: async (parent, { lessonId, reviewId }, context) => {
+      if (context.user) {
+        return Lesson.findOneAndUpdate(
+          { _id: lessonId },
+          {
+            $pull: {
+              review: {
+                _id: reviewId,
+                user: context.user,
+              },
+            },
+          },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 };
 
