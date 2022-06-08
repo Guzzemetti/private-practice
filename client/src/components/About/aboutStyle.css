@@ -40,11 +40,11 @@
     border-radius: 25%;
 }
 
-h1, h3{
+.aboutNames {
     font-weight: bold;
 }
 
-p {
+.aboutDescriptions {
     padding: 1rem;
 }
 
@@ -54,7 +54,7 @@ p {
 }
 
 @media only screen and (max-width: 1366px) {
-    img{
+    .aboutMe-img{
         width: 40%;
     }
     .row{
@@ -64,7 +64,7 @@ p {
   }
   
   @media only screen and (max-width: 768px) {
-    img{
+    .aboutMe-img{
         width: 100%;
     }
   }
