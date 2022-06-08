@@ -4,10 +4,12 @@ const { User, Category, SubCategory, Lesson, Review } = require('../models');
 db.once('open', async () => {
     await Category.deleteMany();
     await SubCategory.deleteMany();
-    // await User.deleteMany();
+    await User.deleteMany();
     // await Lesson.deleteMany();
     // await Review.deleteMany();
 
+
+    // Creates our main Categories
     await Category.create([
         {
             name: 'Gaming'
@@ -28,6 +30,7 @@ db.once('open', async () => {
 
     console.log('Categories seeded');
 
+    // Arrays for subcategories 
     const gamingCategories = [
         {
             name: 'RPGs',
@@ -106,7 +109,7 @@ db.once('open', async () => {
         },
     ];
 
-
+    // These for-loops loop over the subcategory arrays and then find a Category and update it to add the subcategory ID into it
     for (let i = 0; i < gamingCategories.length; i++) {
         const { _id } = await SubCategory.create(gamingCategories[i])
         await Category.findOneAndUpdate({ name: 'Gaming' }, { $addToSet: { subcategory: _id } })
@@ -135,58 +138,23 @@ db.once('open', async () => {
 
     console.log('Sub-Categories seeded');
 
-    // await User.create({
-    //     firstname: 'Pamela',
-    //     lastname: 'Washington',
-    //     email: 'pamela@testmail.com',
-    //     aboutMe: 'AboutMeTextHere',
-    //     password: 'password12345',
-    // });
+    await User.create({
+        firstname: 'Robert',
+        lastname: 'Testing',
+        email: 'test@test.com',
+        aboutMe: 'AboutMeTextHere',
+        password: 'testing',
+    });
 
-    // await User.create({
-    //     firstname: 'Elijah',
-    //     lastname: 'Holt',
-    //     email: 'eholt@testmail.com',
-    //     aboutMe: 'AboutMeTextHere',
-    //     password: 'password12345',
-    // });
+    console.log('Users seeded');
 
-    // await User.create({
-    //     firstname: 'Billy',
-    //     lastname: 'Joe',
-    //     email: 'joe@testmail.com',
-    //     aboutMe: 'AboutMeTextHere',
-    //     password: 'password12345',
-    // });
 
-    // await User.create({
-    //     firstname: 'Debbie',
-    //     lastname: 'Downer',
-    //     email: 'debbie@downer.com',
-    //     aboutMe: 'AboutMeTextHere',
-    //     password: 'password12345',
-    // });
-
-    // await User.create({
-    //     firstname: 'Raggedy',
-    //     lastname: 'Man',
-    //     email: 'Dr@Who.com',
-    //     aboutMe: 'AboutMeTextHere',
-    //     password: 'password12345',
-    // });
-
-    // await User.create({
-    //     firstname: 'Amy',
-    //     lastname: 'Pond',
-    //     email: 'raggedyGal@hotmail.com',
-    //     aboutMe: 'AboutMeTextHere',
-    //     password: 'password12345',
-    // });
-
-    // console.log('Users seeded');
 
     // ---------------------------------------------------------------------------------
+    // Might not need to seed the Review or Lesson
+    // Should be able to use queries to create them
     // ---------------------------------------------------------------------------------
+
     // The user and coach fields need to be an actual objID that 
     // isn't created until we seed the users
     // await Lesson.create({
