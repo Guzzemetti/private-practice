@@ -30,6 +30,7 @@ import Navbar from "../src/components/Nav/index";
 import HomeComp from "../src/components/Home/index";
 import Footer from "../src/components/Footer/index";
 import About from './components/About/About';
+import NotFound from './components/NotFound/NotFound'
 // import Categories from '../src/components/categoryCards/index';
 //------------------------------------------------------------------------------------------
 
@@ -80,6 +81,11 @@ function App() {
                 path="/about" 
                 element={<About />} 
               />
+              {/* 404 Page */}
+              <Route
+                path="*" 
+                element={<NotFound />} 
+              />
               {/* 
               <Route 
                 path="/success" 
@@ -91,11 +97,6 @@ function App() {
               />
               <Route 
                 path="/products/:id" 
-                element={<NA />} 
-              /> */}
-              {/* 404 Page */}
-              {/* <Route
-                path="*" 
                 element={<NA />} 
               /> */}
             </Routes>

@@ -14,24 +14,3 @@
     flex-direction: column;
     align-items: center;
 }
-
-.col{
-    display: flex;
-    align-items: center;
-}
-
-.aboutMe{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* !! Still need to make images responsive !! */
-img{
-    height: 20rem;
-    width: 20rem;
-}
-
-h1, h2{
-    font-weight: bold;
-}
