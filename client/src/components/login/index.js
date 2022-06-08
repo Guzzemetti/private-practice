@@ -1,12 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../login/login.css';
 
 import { Card, CardBody, CardTitle } from 'reactstrap';
 import { Label, Input, Row, Col, FormGroup, Form } from 'reactstrap';
 
+import { useMutation } from '@apollo/client';
+import { LOGIN } from '../../utils/mutations';
 
-const Loginpage = () => {
+import Auth from '../../utils/auth';
+
+const Loginpage = (props) => {
+  // state for login
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error, data }] = useMutation(LOGIN);
+
+  // update state based on form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  // submit form
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+    try {
+      const { data } = await login({
+        variables: { ...formState },
+      });
+
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+
+    // clear form values
+    setFormState({
+      email: '',
+      password: '',
+    });
+  };
 
   return (
     <section className="holds-everything-form">
@@ -19,47 +57,62 @@ const Loginpage = () => {
               </div>
             </div>
             {/* This might not be needed */}
-            <div className="formBody">
-              <CardTitle tag="h3" id="login">
-                Login
-              </CardTitle>
-              <Form>
-                <Row>
-                  <div className="inputRow">
-                    <Col md={12}>
-                      <FormGroup >
-                        <Label className="labels" for="exampleEmail">
-                          Email
-                        </Label>
-                        <Input
-                          id="exampleEmail"
-                          name="email"
-                          placeholder="Email Address"
-                          type="email"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col md={12}>
-                      <FormGroup>
-                        <Label className="labels" for="examplePassword">
-                          Password
-                        </Label>
-                        <Input
-                          id="examplePassword"
-                          name="password"
-                          placeholder="Password"
-                          type="password"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </div>
-                </Row>
-              </Form>
-              <button className="card-button">Login</button>
-              <div className="loginLink"><p>Don't have an account?</p>
-                    <a href={'signup'}>Click here!</a>
+            {data ? (
+              <p>
+                Success!
+              </p>
+            ) : (
+
+
+              <div className="formBody">
+                <CardTitle tag="h3" id="login">
+                  Login
+                </CardTitle>
+                <Form onSubmit={handleFormSubmit}>
+                  <Row>
+                    <div className="inputRow">
+                      <Col md={12}>
+                        <FormGroup >
+                          <Label className="labels" for="exampleEmail">
+                            Email
+                          </Label>
+                          <Input
+                            id="exampleEmail"
+                            name="email"
+                            placeholder="Email Address"
+                            type="email"
+                            onChange={handleChange}
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col md={12}>
+                        <FormGroup>
+                          <Label className="labels" for="examplePassword">
+                            Password
+                          </Label>
+                          <Input
+                            id="examplePassword"
+                            name="password"
+                            placeholder="Password"
+                            type="password"
+                            onChange={handleChange}
+                          />
+                        </FormGroup>
+                      </Col>
                     </div>
-            </div>
+                  </Row>
+                  <button className="card-button" type="submit">Login</button>
+                </Form>
+                <div className="loginLink"><p>Don't have an account?</p>
+                  <a href={'signup'}>Click here!</a>
+                </div>
+              </div>
+            )}
+            {error && (
+              <div className="my-3 p-3 bg-danger text-white">
+                {error.message}
+              </div>
+            )}
           </div>
         </CardBody>
       </Card>
