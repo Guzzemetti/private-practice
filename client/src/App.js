@@ -29,6 +29,7 @@ import Signup from './pages/Signup';
 import Navbar from "../src/components/Nav/index";
 import HomeComp from "../src/components/Home/index";
 import Footer from "../src/components/Footer/index";
+import About from './components/About/About';
 // import Categories from '../src/components/categoryCards/index';
 //------------------------------------------------------------------------------------------
 
@@ -74,6 +75,10 @@ function App() {
               <Route 
                 path="/signup" 
                 element={<Signup />} 
+              />
+               <Route 
+                path="/about" 
+                element={<About />} 
               />
               {/* 
               <Route 
