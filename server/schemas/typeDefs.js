@@ -81,9 +81,13 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(firstname: String!, lastname: String!, email: String!, password: String!, profileImage: String, aboutMe: String): Auth
+
     addOrder(lessons: [ID]!): Order
-    updateUser(firstName: String, lastName: String, email: String, password: String, profileImage: String, aboutMe: String): User
+
+    updateUser(firstname: String, lastname: String, email: String, password: String, profileImage: String, aboutMe: String): User
+
     updateLesson(_id: ID!, title: String, description: String, user: String, price: Float, coach: String, ): Lesson
+
     login(email: String!, password: String!): Auth
   }
 `;

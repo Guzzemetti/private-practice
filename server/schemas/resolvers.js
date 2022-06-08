@@ -121,12 +121,18 @@ const resolvers = {
 
   Mutation: {
     // To create a new user
+    // -----------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------
+    // Do the args here need to be broken down into name, email and password? Resolvers in activity 22 in MERN
     addUser: async (parent, args) => {
       const user = await User.create(args);
+      // Immediately signs a JSON Web Token and log the user in after they are created
       const token = signToken(user);
-
+      // Returns an "Auth" object that contains the toek and the user's info
       return { token, user };
     },
+
     // To create a new order to their cart
     addOrder: async (parent, { lessons }, context) => {
       console.log(context);
@@ -158,22 +164,24 @@ const resolvers = {
 
     //   return await Lesson.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
     // },
+
     // To login in a user
     login: async (parent, { email, password }) => {
+      // Locate a user based on the provided email address
       const user = await User.findOne({ email });
-
+      // If there isn't a user with that email, provide the below error
       if (!user) {
         throw new AuthenticationError('Incorrect credentials');
       }
-
+      // Checks to verify the user's submitted password
       const correctPw = await user.isCorrectPassword(password);
-
+      // If the provided password doesn't match the stores password, provide the below error message
       if (!correctPw) {
         throw new AuthenticationError('Incorrect credentials');
       }
-
+      // If the submitted email/password are correct, log the user in with a JWT
       const token = signToken(user);
-
+      // Return an `Auth` object that consists of the signed token and user's information
       return { token, user };
     }
   },
