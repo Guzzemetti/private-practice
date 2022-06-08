@@ -338,7 +338,27 @@ db.once('open', async () => {
 
     console.log('Users seeded');
 
+    await Lesson.create({
+            _id: '1',
+            title: "Intro to Leveling Up",
+            description: "In this lesson, I'll go over the basics of leveling within most RPG style games!",
+            price: 4500,
+            coach: "1",
+            review: ['1'],
+            subcategory: "1",
+        });
 
+        console.log('Lessons seeded');
+
+        await Review.create({
+            _id: '1',
+            reviewText: "I loved the intro to leveling up course!",
+            reviewRating: 5,
+            user: "2",
+            lesson: "1",
+        });
+
+        console.log('Reviews seeded');
 
 
     process.exit();
