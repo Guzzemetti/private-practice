@@ -155,6 +155,9 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+    deleteUser: async (parent, { userId }) => {
+      return User.findOneAndDelete({ _id: userId });
+    },
     // Add a lesson
     addLesson: async (parent, { title, description, price, subcategory }, context) => {
       if (context.user) {
