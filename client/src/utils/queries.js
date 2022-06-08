@@ -101,6 +101,21 @@ export const QUERY_SINGLE_USER = gql`
   }
 `;
 
+// Used in fullprofile component
+    // If there is no `userId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      email
+      firstname
+      lastname
+      aboutMe
+      lessons
+    }
+  }
+`;
+
 // ============== Lesson queries ================= //
 
 export const QUERY_LESSONS = gql`

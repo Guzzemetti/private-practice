@@ -92,6 +92,10 @@ function App() {
                 path="/profile" 
                 element={<Profile />} 
               />
+              <Route 
+                path="/profile/:userId" 
+                element={<Profile />} 
+              />
               {/* 404 Page */}
               <Route
                 path="*" 
