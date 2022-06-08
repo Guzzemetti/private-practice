@@ -7,7 +7,7 @@ db.once('open', async () => {
     // await User.deleteMany();
     // await Lesson.deleteMany();
     // await Review.deleteMany();
-    await SubCategory.findOneAndUpdate({name: 'RPGs'}, 
+    await SubCategory.findOneAndUpdate({ name: 'RPGs' },
         {
             lessons: '629f96375fb5546c6987c2cd'
         }
@@ -369,8 +369,8 @@ db.once('open', async () => {
         firstname: 'Raggedy',
         lastname: 'Man',
         email: 'Dr@Who.com',
-        aboutMe: 'AboutMeTextHere',
-        password: 'password12345',
+        aboutMe: 'AboutMeTextHereOne',
+        password: 'password1',
     });
 
     await User.create({
@@ -378,33 +378,51 @@ db.once('open', async () => {
         firstname: 'Amy',
         lastname: 'Pond',
         email: 'raggedyGal@hotmail.com',
-        aboutMe: 'AboutMeTextHere',
-        password: 'password12345',
+        aboutMe: 'AboutMeTextHereTwo',
+        password: 'password1',
     });
 
     console.log('Users seeded');
 
     await Lesson.create({
-            _id: '1',
-            title: "Intro to Leveling Up",
-            description: "In this lesson, I'll go over the basics of leveling within most RPG style games!",
-            price: 4500,
-            coach: "1",
-            review: ['1'],
-            subcategory: "1",
-        });
+        _id: '1',
+        title: "Intro to Leveling Up",
+        description: "In this lesson, I'll go over the basics of leveling within most RPG style games!",
+        price: 4500,
+        coach: "1",
+        review: ['1'],
+        subcategory: "01",
+    });
 
-        console.log('Lessons seeded');
+    await Lesson.create({
+        _id: '2',
+        title: "Breakfast Basics with Babish",
+        description: "In this course, we'll go over the basics of preparing breakfast.",
+        price: 4700,
+        coach: "2",
+        review: ['2'],
+        subcategory: "06",
+    });
 
-        await Review.create({
-            _id: '1',
-            reviewText: "I loved the intro to leveling up course!",
-            reviewRating: 5,
-            user: "2",
-            lesson: "1",
-        });
+    console.log('Lessons seeded');
 
-        console.log('Reviews seeded');
+    await Review.create({
+        _id: '1',
+        reviewText: "I loved the intro to leveling up course!",
+        reviewRating: 5,
+        user: "2",
+        lesson: "1",
+    });
+
+    await Review.create({
+        _id: '2',
+        reviewText: "This course really showed me how fun cooking could be!",
+        reviewRating: 5,
+        user: "1",
+        lesson: "2",
+    });
+
+    console.log('Reviews seeded');
 
 
     process.exit();
