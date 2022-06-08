@@ -67,7 +67,7 @@ const Navbar = () => {
       <section className="navbar-section-holds-everything">
 
         <div className="navbar-section-img">
-          <img src={LogoHeader} className='logo-navbar' alt='logo'></img>
+          <Link to="/"><img src={LogoHeader} className='logo-navbar' alt='logo'></img></Link>
         </div>
         {/* this is default navbar, just for visual sake. Will edit for login status */}
         <div className="navbar-section-nav">

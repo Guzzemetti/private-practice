@@ -28,8 +28,10 @@ import HomeComp from "../src/components/Home/index";
 // import Footer from ''; --If we want a footer... maybe only use in the home page?
 // import Categories from '../src/components/categoryCards/index';
 // import Nav from './components/Nav';
+import Footer from "../src/components/Footer/index";
 
-
+// App.css is needed to keep footer stuck at bottom.
+import "../src/App.css"
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -90,6 +92,7 @@ function App() {
               /> */}
             </Routes>
           </StoreProvider>
+          <Footer/>
         </main>
       </Router>
     </ApolloProvider>

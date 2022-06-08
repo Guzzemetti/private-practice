@@ -25,6 +25,7 @@ const HomeComp = () => {
               hone and the experts to teach them in a one on one setting.
               Consider yourself an expert? Offer your teaching services.
             </p>
+            <Link to='/signup'><h5>Click here to sign up!</h5></Link>
           </div>
         </div>
         <div className="h-right">
@@ -80,9 +81,9 @@ const HomeComp = () => {
                 </div>
             </div>
         </div>
-        <div className="signup-area">
+        {/* <div className="signup-area">
         <Link to='/signup'><h4>Click here to sign up</h4></Link>
-        </div>
+        </div> */}
     </div>
   );
 };

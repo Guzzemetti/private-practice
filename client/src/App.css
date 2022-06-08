@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+/* this is for the footer to keep it at bottom always */
+main {
+  min-height: 100vh;
+  position: relative;
+}
 
 /* :root{
   Establish variables here
