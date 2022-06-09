@@ -4,3 +4,46 @@
     justify-content: center;
     padding: 4rem;
 }
+
+
+
+/* 
+.div-image-header{
+    background-image: url(../../assets//category/gaming.jpg);
+    background-size: cover;
+    width: 100%;
+} */
+.Banner-category-page{
+    width: 100%;
+    height: auto;
+}
+
+.filter-category-sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-filter-category-sub{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-filter-submit-category{
+    margin-top: .3rem;
+    background-color: transparent;
+    border: 1px solid #212227;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-filter-submit-category:hover{
+    background-color: #212227;
+    color: white;
+}
+
+.category-card-lessons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+}
