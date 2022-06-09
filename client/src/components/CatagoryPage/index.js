@@ -5,10 +5,19 @@ import "./index.css"
 // import Blob from "../../assets/blob2.png"
 // import Image4 from "../../assets/4.png"
 
+// ------------------------ Create Lesson Modal ------------------------
+import CreateLesson from '../CreateLesson/CreateLesson';
+{/* <CreateLesson />   <----------------    This still needs to be called somewhere */}
+// ---------------------------------------------------------------------
+var imageStyle = {
+  backgroundImage: `url(${Gamerimage})`
+};
+
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import CategoryCard from '../categoryCards/index';
 import { QUERY_CATEGORIES } from '../../utils/queries';
+
 
 import GamingImageBanner from '../../assets/category/gaming.jpg';
 // import HomeImageBanner from '../../assets/category/gaming.jpg';
@@ -79,8 +88,6 @@ export const CatagoryPage = () => {
         <CategoryCard categoryId={category._id} />
       </div>
     </section>
-
-
   )
 }
 
@@ -129,6 +136,7 @@ export const CatagoryPage = () => {
 //       </body>
 //     </>
 //   )
+
 // }
 
 export default CatagoryPage;
