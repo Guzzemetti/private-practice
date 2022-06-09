@@ -17,8 +17,8 @@ const Fullprofile = () => {
   //   user = data.user;
   // }
 
-  const { userId } = useParams();
-  // console.log(userId);
+  let {userId}  = useParams();
+  console.log(userId);
 
   const { loading, data } = useQuery(
     // If there is no `profileId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
@@ -26,8 +26,9 @@ const Fullprofile = () => {
     // pass URL parameter
     variables: { userId: userId },
   });
+  console.log(data);
 
-  const user = data?.user || {};  
+  const user = data?.user || []; 
 
   // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
   //  const user = data?.me || data?.user || {};
@@ -55,7 +56,7 @@ const Fullprofile = () => {
                   <div className="photo-left">
                     <img className="photo" alt="temp propfile pic" src={tempPic} />
                   </div>
-                  <h4 className="name">Hello, {Auth.getProfile().data.firstname} {user.firstname} {user.lastname}</h4>
+                  <h4 className="name">Hello, {user.firstname} {user.lastname}</h4>
                   <p className="info">MERN stack developer</p>
                   <p className="info">{user.email}</p>
                   <p className="desc">{user.aboutMe}</p>
