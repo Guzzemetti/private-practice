@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../login/login.css';
-
+import logo from '../../assets/PrivatePractice.png';
 import { Card, CardBody, CardTitle } from 'reactstrap';
 import { Label, Input, Row, Col, FormGroup, Form } from 'reactstrap';
 
@@ -53,7 +53,8 @@ const Loginpage = (props) => {
           <div className="bodyItems">
             <div className="loginLogo">
               <div className="imageBox">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
+              <img src={logo} alt="logo"></img>
+                <p>Welcome back.</p>
               </div>
             </div>
             {/* This might not be needed */}
@@ -103,8 +104,8 @@ const Loginpage = (props) => {
                   </Row>
                   <button className="card-button" type="submit">Login</button>
                 </Form>
-                <div className="loginLink"><p>Don't have an account?</p>
-                  <a href={'signup'}>Click here!</a>
+                <div className="loginLink"><p>Don't have an account?
+                  <a href={'signup'} className="loginButton">Click here!</a></p>
                 </div>
               </div>
             )}
