@@ -45,6 +45,7 @@ const Navbar = () => {
             ) : (
               <div className="loggedin-or-not-navbar">
                 <Link to='/about'><button className="navbar-button">About</button></Link>
+                <div className="div-padding"></div>
                 <Link to="/signup"><button className="navbar-button">Signup</button></Link>
                 <div className="div-padding"></div>
                 <Link to="/login"><button className="navbar-button">Login</button></Link>
