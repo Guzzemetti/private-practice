@@ -161,12 +161,13 @@ const Signup = () => {
                             />
                           </FormGroup>
                         </Col>
+                        <button className="card-button" type="submit">Get Started</button>
                       </div>
                     </Row>
-                    <button className="card-button" type="submit">Get Started</button>
+                    
                   </Form>
                   <div className="loginLink"><p>Already have an account?</p>
-                    <a href={'login'}>Click here!</a>
+                    <a href={'login'} className="loginButton">Click here!</a>
                   </div>
                 </div>
               )}
