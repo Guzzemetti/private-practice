@@ -4,22 +4,20 @@ import "./index.css"
 // import Gamerimage from "../../assets/home/bg_gaming.jpg"
 // import Blob from "../../assets/blob2.png"
 // import Image4 from "../../assets/4.png"
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import CategoryCard from '../categoryCards/index';
+import { QUERY_CATEGORIES } from '../../utils/queries';
+import GamingImageBanner from '../../assets/categoryphotos/gaming.jpg';
 
 // ------------------------ Create Lesson Modal ------------------------
 import CreateLesson from '../CreateLesson/CreateLesson';
 {/* <CreateLesson />   <----------------    This still needs to be called somewhere */}
 // ---------------------------------------------------------------------
-var imageStyle = {
-  backgroundImage: `url(${Gamerimage})`
-};
+// var imageStyle = {
+//   backgroundImage: `url(${GamerImage})`
+// };
 
-import { useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import CategoryCard from '../categoryCards/index';
-import { QUERY_CATEGORIES } from '../../utils/queries';
-
-
-import GamingImageBanner from '../../assets/categoryphotos/gaming.jpg';
 // import HomeImageBanner from '../../assets/categoryphotos/';
 // import LifestyleImageBanner from '../../assets/categoryphotos/';
 // import TechImageBanner from '../../assets/categoryphotos/';
