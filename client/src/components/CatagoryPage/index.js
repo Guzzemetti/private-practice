@@ -17,7 +17,7 @@ const CatagoryPage = (props) => {
         <section className="u-clearfix u-white u-section-1" id="sec-c45a">
           <div className="u-clearfix u-sheet u-sheet-1">
             <div className="u-shape u-shape-svg u-text-custom-color-1 u-shape-1">
-              <img src={Blob} />
+              <img src={Blob} alt="Blob pic"/>
             </div>
             <div className="u-align-left u-image u-image-circle u-image-1" style={imageStyle}></div>
             <div className="u-gradient u-shape u-shape-circle u-shape-2"></div>

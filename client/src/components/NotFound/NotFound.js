@@ -2,6 +2,9 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../NotFound/notFound.css'
 
+import CreateLesson from '../CreateLesson/CreateLesson';
+
+
 import { } from 'reactstrap';
 
 
@@ -18,6 +21,7 @@ const NotFound = () => {
                     <h3>😰</h3>
                 </div>
             </div>
+            <CreateLesson />
         </>
     )
 }
