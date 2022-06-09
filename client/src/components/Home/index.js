@@ -27,7 +27,7 @@ const HomeComp = () => {
             yourself an expert? Offer your teaching services.
           </p>
           <Link to="/signup">
-            <h5 className="">Click here to sign up!</h5>
+            <button className="h-signup-button">Sign Up Today!</button>
           </Link>
           {/* </div> */}
         </div>
