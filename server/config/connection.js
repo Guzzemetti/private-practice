@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/private-practice',
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/private-practice',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -9,6 +9,3 @@ mongoose.connect(
 );
 
 module.exports = mongoose.connection;
-
-// comment to git add
-// another comment
