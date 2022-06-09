@@ -66,7 +66,6 @@ function App() {
           <StoreProvider>
             {/* The Navbar is added here to be added to every page that renders */}
             <Navbar />
-
             <Routes>
               <Route 
                 path="/" 
@@ -90,6 +89,10 @@ function App() {
               />
               <Route 
                 path="/profile" 
+                element={<Profile />} 
+              />
+              <Route 
+                path="/profile/:userId" 
                 element={<Profile />} 
               />
               {/* 404 Page */}

@@ -19,8 +19,10 @@
 .h-left {
     /* width: 45%; */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 3rem;
 }
 
 .h-left-wrapper {
@@ -31,7 +33,7 @@
     padding: 3rem;
 }
 
-.h-left-wrapper a {
+.h-left a {
     text-decoration: none;
     color: #212227;
     /* font-weight: 700; */
@@ -44,6 +46,19 @@
     margin: 1rem;
 }
 
+.h-signup-button {
+    border: 2px solid #212227;
+    background-color: transparent;
+    padding: .5rem;
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.h-signup-button:hover {
+    background-color: #212227;
+    color: white;
+}
+
 .h-right {
     /* width: 45%; */
     display: flex;
@@ -52,10 +67,10 @@
 }
 
 .bg-img {
-    background:url(../../assets/bg_coding.jpg);
+    background:url(../../assets/home/bg_coding.jpg);
     animation: chbg 15s infinite alternate;
     object-fit: contain;
-    width: 50vw;
+    width: 35vw;
     height: 40vh;
     overflow: hidden;
     border-radius: 2rem;
@@ -63,27 +78,27 @@
 
   @keyframes chbg {
     0% {
-      background:url(../../assets/bg_cooking.jpg);
+      background:url(../../assets/home/bg_cooking.jpg);
     background-size: cover;
     }
     20% {
-      background:url(../../assets/bg_gaming.jpg);
+      background:url(../../assets/home/bg_gaming.jpg);
     background-size: cover;
     }
     40% {
-      background:url(../../assets/bg_workout.jpg);
+      background:url(../../assets/home/bg_workout.jpg);
     background-size:cover
     }
     60% {
-      background:url(../../assets/bg_diy.jpg);
+      background:url(../../assets/home/bg_diy.jpg);
     background-size:cover
     }
     80% {
-      background:url(../../assets/bg_selfcare.jpg);
+      background:url(../../assets/home/bg_selfcare.jpg);
     background-size:cover
     }
     100% {
-      background:url(../../assets/bg_gardening.jpg);
+      background:url(../../assets/home/bg_gardening.jpg);
     background-size:cover
     }
   }

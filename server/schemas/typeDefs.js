@@ -68,6 +68,7 @@ const typeDefs = gql`
     
     user(_id: ID!): User
     users: [User]
+    me: User
 
     review: [Review]
     reviews(_id: ID!): Review

@@ -35,6 +35,7 @@ const Navbar = () => {
             {/* <ShowNavigation /> */}
             {Auth.loggedIn() ? (
               <div className="loggedin-or-not-navbar">
+                <Link to='/about'><button className="navbar-button">About</button></Link>
                 <Link to='/profile'><button className="navbar-button">Profile</button></Link>
                 <div className="div-padding"></div>
                 <a href="/" className="navbar-button" onClick={() => Auth.logout()}>Logout</a>
@@ -43,6 +44,7 @@ const Navbar = () => {
               </div>
             ) : (
               <div className="loggedin-or-not-navbar">
+                <Link to='/about'><button className="navbar-button">About</button></Link>
                 <Link to="/signup"><button className="navbar-button">Signup</button></Link>
                 <div className="div-padding"></div>
                 <Link to="/login"><button className="navbar-button">Login</button></Link>
