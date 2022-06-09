@@ -20,6 +20,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import CategoryPage from './pages/Category';
 import Profile from "../src/pages/Profile";
+// import Fullprofile from "../src/components/Profile/Fullprofile/index";
 // import Home from './pages/Home';
 // import Detail from './pages/Detail';
 // import NoMatch from './pages/NoMatch';
@@ -31,7 +32,8 @@ import Navbar from "../src/components/Nav/index";
 import HomeComp from "../src/components/Home/index";
 import Footer from "../src/components/Footer/index";
 import About from './components/About/About';
-import NotFound from './components/NotFound/NotFound'
+import NotFound from './components/NotFound/NotFound';
+
 // import CatagoryPage from './components/CatagoryPage';
 // import Categories from '../src/components/categoryCards/index';
 //------------------------------------------------------------------------------------------
@@ -87,10 +89,10 @@ function App() {
                 path="/category" 
                 element={<CategoryPage />} 
               />
-              <Route 
+              {/* <Route 
                 path="/profile" 
                 element={<Profile />} 
-              />
+              /> */}
               <Route 
                 path="/profile/:userId" 
                 element={<Profile />} 

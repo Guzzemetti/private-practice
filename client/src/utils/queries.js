@@ -46,14 +46,15 @@ export const QUERY_ALL_LESSONS = gql`
 // ============== Query categories and subcategories ================= //
 
 export const QUERY_SUBCATEGORIES = gql`
-  query allSubcategories {
+  query allSubcategories($subcategoryId: [ID]!) {
     subcategory,
     category,
     lessons
   }
 `;
+
 export const QUERY_SINGLE_SUBCATEGORY = gql`
-  query singleSubcategory {
+  query singleSubcategory($subcategoryId: ID!) {
     subcategory,
     category,
     lessons
@@ -62,13 +63,13 @@ export const QUERY_SINGLE_SUBCATEGORY = gql`
 
 
 export const QUERY_CATEGORIES = gql`
-  query allCategories {
+  query allCategories($categoryId: [ID]!) {
     category,
     subcategory
   }
 `;
 export const QUERY_SINGLE_CATEGORY = gql`
-  query singleCategory {
+  query singleCategory($categoryId: ID!)  {
     category,
     subcategory
   }
@@ -76,17 +77,17 @@ export const QUERY_SINGLE_CATEGORY = gql`
 
 // ============ User QUERY=================== //
 
-export const QUERY_USERS = gql`
-  query allUsers {
-    users {
-      _id
-      firstname
-      lastname
-      aboutMe
-      lessons
-    }
-  }
-`;
+// export const QUERY_USERS = gql`
+//   query allUsers {
+//     users {
+//       _id
+//       firstname
+//       lastname
+//       aboutMe
+//       lessons
+//     }
+//   }
+// `;
 
 export const QUERY_SINGLE_USER = gql`
   query singleUser($userId: ID!) {
@@ -96,7 +97,7 @@ export const QUERY_SINGLE_USER = gql`
       lastname
       aboutMe
       lessons
-      orders
+      # orders
     }
   }
 `;
@@ -118,48 +119,48 @@ export const QUERY_ME = gql`
 
 // ============== Lesson queries ================= //
 
-export const QUERY_LESSONS = gql`
-  query allLessons {
-    title,
-    description,
-    subcategory,
-    price,
-    quantity,
-    coach,
-    review
-  }
-`;
+// export const QUERY_LESSONS = gql`
+//   query allLessons {
+//     title,
+//     description,
+//     subcategory,
+//     price,
+//     quantity,
+//     coach,
+//     review
+//   }
+// `;
 
-export const QUERY_SINGLE_LESSON = gql`
-  query singleLesson {
-    title,
-    description,
-    subcategory,
-    price,
-    quantity,
-    coach,
-    review
-  }
-`;
+// export const QUERY_SINGLE_LESSON = gql`
+//   query singleLesson {
+//     title,
+//     description,
+//     subcategory,
+//     price,
+//     quantity,
+//     coach,
+//     review
+//   }
+// `;
 
 // ============== Review Queries ================= //
 
-export const QUERY_REVIEWS = gql`
-  query allReviews {
-    reviewText,
-    reviewRating,
-    user,
-    lesson
-  }
-`;
+// export const QUERY_REVIEWS = gql`
+//   query allReviews {
+//     reviewText,
+//     reviewRating,
+//     user,
+//     lesson
+//   }
+// `;
 
-export const QUERY_SINGLE_REVIEW = gql`
-  query singleReview {
-    reviewText,
-    reviewRating,
-    user,
-    lesson
-  }
-`;
+// export const QUERY_SINGLE_REVIEW = gql`
+//   query singleReview {
+//     reviewText,
+//     reviewRating,
+//     user,
+//     lesson
+//   }
+// `;
 
 // =============================== //
