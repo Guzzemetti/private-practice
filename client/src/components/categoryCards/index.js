@@ -1,9 +1,9 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './category.css';
-// import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 // import { Link } from "react-router-dom";
-// import tempPic from '../../assets/blank-profile-picture-973460__340.webp';
+import tempPic from '../../assets/blank-profile-picture-973460__340.webp';
 // import Cat1 from '../../assets/bg_gaming.jpg';
 
 // import LogoHeader from '../../assets/Private Practice-logos_transparent.png';
@@ -37,7 +37,7 @@ const Category = () => {
                                 <img src={tempPic} className='img-width-for-profile' alt='Profile img'></img>
                             </div>
                         </CardText>
-                        <button className="card-button">See more</button>
+                        <button className="card-button">Add to Cart</button>
                     </CardBody>
                 </Card>
             </div>

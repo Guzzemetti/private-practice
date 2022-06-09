@@ -51,9 +51,9 @@
   transition: all 0.2s ease-in-out;
 }
 /* Change color or take out, Possibly add a background color no matter wehat since its a call to action*/
-.card-button:hover {
+/* .card-button:hover {
   background-color: aqua;
-}
+} */
 
 /* ============================================= */
 /* John H dumb edits */
