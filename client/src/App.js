@@ -66,7 +66,6 @@ function App() {
           <StoreProvider>
             {/* The Navbar is added here to be added to every page that renders */}
             <Navbar />
-            <Categories />
             <Routes>
               <Route 
                 path="/" 
