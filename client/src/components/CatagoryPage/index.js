@@ -19,11 +19,11 @@ import CategoryCard from '../categoryCards/index';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 
 
-import GamingImageBanner from '../../assets/category/gaming.jpg';
-// import HomeImageBanner from '../../assets/category/gaming.jpg';
-// import LifestyleImageBanner from '../../assets/category/';
-// import TechImageBanner from '../../assets/category/';
-// import MiscImageBanner from '../../assets/category/';
+import GamingImageBanner from '../../assets/categoryphotos/gaming.jpg';
+// import HomeImageBanner from '../../assets/categoryphotos/';
+// import LifestyleImageBanner from '../../assets/categoryphotos/';
+// import TechImageBanner from '../../assets/categoryphotos/';
+// import MiscImageBanner from '../../assets/categoryphotos/';
 
 
 export const CatagoryPage = () => {
