@@ -35,11 +35,18 @@
     text-align: center;
 }
 
+.about-linkz img {
+    width: 80px;
+    height: auto;
+
+}
+
 .about-linkz a {
     text-decoration: none;
     font-weight: 700;
     color: #ab4ec7;
 }
+
 /* !! Still need to make images responsive !! */
 .aboutMe-img {
     width: 60%;
@@ -52,7 +59,7 @@
 }
 
 .aboutDescriptions {
-    padding: 1rem;
+    padding-top: 1rem;
 }
 
 #pics{
