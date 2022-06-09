@@ -5,11 +5,31 @@ import "./index.css"
 // import Blob from "../../assets/blob2.png"
 // import Image4 from "../../assets/4.png"
 
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import CategoryCard from '../categoryCards/index';
+import { QUERY_CATEGORIES } from '../../utils/queries';
+
 export const CatagoryPage = () => {
+  const { categoryId } = useParams();
+
+  const { loading, data } = useQuery(QUERY_CATEGORIES, {
+    variables: { categoryId: categoryId },
+  });
+
+  const category = data?.category || {};
+
   return (
-    <div className='cat-title'>
-      <h1>Category Name</h1>
-    </div>
+    <section>
+      <div className='cat-title'>
+        <h1>Category Name</h1>
+      </div>
+      <div>
+        <CategoryCard categoryId={category._id}/>
+      </div>
+    </section>
+
+
   )
 }
 

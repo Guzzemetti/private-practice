@@ -8,8 +8,8 @@ import tempPic from '../../assets/blank-profile-picture-973460__340.webp';
 
 // import LogoHeader from '../../assets/Private Practice-logos_transparent.png';
 //  title, description, price, coach, review, subcategory
-const Category = ({ Lesson }) => {
-    if (!Lesson) {
+const Category = ({ Category }) => {
+    if (!Category) {
         return <h3>No Lesson</h3>;
     }
     // In Category page Map over everything and pass props to get all the instances of whats here from the DB
@@ -21,24 +21,24 @@ const Category = ({ Lesson }) => {
                 <h1>The Category they choose</h1>
             </div>
             <div className="holds-cards">
-                {Lesson &&
-                    Lesson.map((lessons) => (
+                {Category &&
+                    Category.map((subcategory) => (
                         <Card className="card-margin-top">
                             <CardBody>
                                 <CardTitle tag="h5">
                                     {/* Replace with dynamic title */}
-                                    {lessons.title} 
-                                    {lessons.coach}
-                                    {lessons.price}
+                                    {subcategory.lessons.title} 
+                                    {subcategory.lessons.coach}
+                                    {subcategory.lessons.price}
                                 </CardTitle>
                                 {/* This might not be needed */}
                                 <CardSubtitle className="mb-2 text-muted" tag="h6">
-                                    {lessons.category}
-                                    {lessons.subcategory}
+                                    {subcategory.lessons.category}
+                                    {subcategory.lessons.subcategory}
                                 </CardSubtitle>
                                 <CardText className="card-text-with-img">
                                     <div className="card-text-side">
-                                        {lessons.description}
+                                        {subcategory.lessons.description}
                                     </div>
                                     <div className="card-img-side">
                                         <img src={tempPic} className='img-width-for-profile' alt='Profile img'></img>

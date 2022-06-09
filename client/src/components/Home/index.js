@@ -45,7 +45,7 @@ const HomeComp = () => {
 
           <div className="category-cube">
             <img src={Gaming} className="cat-img" alt="Gaming"></img>
-            <Link to="/gaming">
+            <Link to="/category/gaming">
               <div className="cube-overlay">
                 <div className="cube-text">Gaming</div>
               </div>
@@ -54,7 +54,7 @@ const HomeComp = () => {
 
           <div className="category-cube">
             <img src={Tech} className="cat-img" alt="Tech"></img>
-            <Link to="/tech">
+            <Link to="/category/tech">
               <div className="cube-overlay">
                 <div className="cube-text">Tech</div>
               </div>
@@ -63,7 +63,7 @@ const HomeComp = () => {
 
           <div className="category-cube">
             <img src={Home} className="cat-img" alt="Home"></img>
-            <Link to="/home">
+            <Link to="/category/home">
               <div className="cube-overlay">
                 <div className="cube-text">Home</div>
               </div>
@@ -72,7 +72,7 @@ const HomeComp = () => {
 
           <div className="category-cube">
             <img src={Lifestyle} className="cat-img" alt="Lifestyle"></img>
-            <Link to="/lifestyle">
+            <Link to="/category/lifestyle">
               <div className="cube-overlay">
                 <div className="cube-text">Lifestyle</div>
               </div>
@@ -81,7 +81,7 @@ const HomeComp = () => {
 
           <div className="category-cube">
             <img src={Misc} className="cat-img" alt="Misc"></img>
-            <Link to="/misc">
+            <Link to="/category/misc">
               <div className="cube-overlay">
                 <div className="cube-text">Misc</div>
               </div>
