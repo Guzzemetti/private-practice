@@ -90,7 +90,7 @@ export const QUERY_SINGLE_CATEGORY = gql`
 // `;
 
 export const QUERY_SINGLE_USER = gql`
-  query singleUser($userId: ID!) {
+  query user($userId: ID!) {
     user(userId: $userId) {
       _id
       firstname
