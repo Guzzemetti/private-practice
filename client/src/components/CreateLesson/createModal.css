@@ -7,3 +7,21 @@
 .buttonColor:hover {
     background-color: #454752 ;
 }
+
+#lessonDescription{
+    resize: none;
+}
+
+#priceInput{
+    width: 60%
+}
+
+.modal-body{
+    display: flex;
+    justify-content: center;
+}
+
+#modal-header{
+text-align: center;
+padding-top: 1rem;
+}
