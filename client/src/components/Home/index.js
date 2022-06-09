@@ -92,7 +92,9 @@ const HomeComp = () => {
       </div>
 
       <div className="h-testimonials-row">
-        <h2>See what our users have to say about their experiences</h2>
+        <div className="testimonials-header-text">
+          <h2>See what our users have to say about their experiences</h2>
+        </div>
         <div className="h-testimonials-box">
           <div className="h-testimonials-img">
             <img src={Test1} className="cat-img" alt="Misc"></img>

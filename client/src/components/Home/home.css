@@ -11,7 +11,8 @@
 .h-row {
     display: flex;
     flex-direction: row;
-    padding: 4rem;
+    /* padding: 4rem; */
+    margin-top: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -110,8 +111,8 @@
     /* height: 25vh; */
     display: flex;
     align-items: center;
-    padding: 1rem 4rem 4rem 4rem;
-    margin: 2rem;
+    /* padding: 1rem 4rem 4rem 4rem; */
+    margin: 3rem;
     /* background-color: #7B6D8D; */
 }
 .h-explore-row {
@@ -200,7 +201,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-width: 35%;
+    max-width: 40%;
     padding: 2rem;;
 }
 
@@ -227,4 +228,108 @@
 }
 .h-testimonials-row h2 {
     font-weight: 300;
+}
+
+.testimonials-header-text{
+    margin: 1rem;
+}
+
+@media screen and (max-width: 1500px) {
+    .h-testimonials-box {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 1378px) {
+    .bg-img {
+        width: 60vw;
+    }
+    .h-cats{
+        margin-top: 0rem;
+    }
+    .h-explore-row{
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .h-testimonials-box {
+        max-width: 65%;
+    }
+    .bg-img {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .h-p {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .h-testimonials-box {
+        max-width: 100%;
+    }
+    .category-cube{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+@media screen and (max-width: 625px) {
+    .category-cube{
+        width: 175px;
+        height: 175px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .h-testimonials-img img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .bg-img {
+        width: 80vw;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .category-cube{
+        width: 150px;
+        height: 150px;
+    }
+    .h-p{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    .h-testimonials-box {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .h-testimonials-img img {
+        display: none;
+    }
+    .h-testimonials-text{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .category-cube{
+        width: 130px;
+        height: 130px;
+    }
+}
+@media screen and (max-width: 490px) {
+    .h-left{ 
+        padding: 1.5rem;
+    }
 }
