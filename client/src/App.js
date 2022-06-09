@@ -87,10 +87,10 @@ function App() {
                 path="/category" 
                 element={<CategoryPage />} 
               />
-              <Route 
+              {/* <Route 
                 path="/profile" 
                 element={<Profile />} 
-              />
+              /> */}
               <Route 
                 path="/profile/:userId" 
                 element={<Profile />} 
