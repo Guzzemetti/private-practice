@@ -33,7 +33,7 @@ import Footer from "../src/components/Footer/index";
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound'
 // import CatagoryPage from './components/CatagoryPage';
-import Categories from '../src/components/categoryCards/index';
+// import Categories from '../src/components/categoryCards/index';
 //------------------------------------------------------------------------------------------
 
 
