@@ -5,6 +5,13 @@ import Gamerimage from "../../assets/bg_gaming.jpg"
 import Blob from "../../assets/blob2.png"
 import Image4 from "../../assets/4.png"
 
+// ------------------------ Create Lesson Modal ------------------------
+
+import CreateLesson from '../CreateLesson/CreateLesson';
+{/* <CreateLesson />   <----------------    This still needs to be called somewhere */}
+
+// ---------------------------------------------------------------------
+
 var imageStyle = {
   backgroundImage: `url(${Gamerimage})`
 };

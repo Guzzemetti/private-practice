@@ -2,7 +2,7 @@ import React from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './createModal.css'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, InputGroup } from 'reactstrap';
+import { Button, Modal, ModalBody, ModalFooter, InputGroup } from 'reactstrap';
 import { Label, Input, Row, Col, FormGroup, Form, InputGroupText } from 'reactstrap';
 
 
