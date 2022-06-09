@@ -8,7 +8,8 @@
 .holds-everything-form {
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
+  padding: 4rem;
 }
 
 /* Sets the overall height to the whole form */
@@ -54,19 +55,34 @@ and the logo image on the left side of the form */
 .loginLogo {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-image: linear-gradient(to bottom right, #212227, #3c3d47);
-  color: #f9eccc;
+  color: #ffffff;
   width: 60%;
   border-radius: 50px 0px 0px 50px;
 }
 
 /* Sets the dimensions for the logo Div */
-.imageBox {
-  border: 2px solid black;
+.signup-imageBox {
+  /* border: 2px solid black; */
   width: 75%;
   height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.signup-imageBox p {
+  text-align: justify;
+}
+
+.signup-imageBox img {
+  width: 300px;
+  height: auto;
+  padding: 1rem;
 }
 /* styling for the right side of the Sign Up form
 includes the input fields and the Get Started button */
@@ -98,6 +114,9 @@ includes the input fields and the Get Started button */
 /* Shifts the "click here" link to the right */
 .loginButton {
   margin-left: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #212227;
 }
 
 /* --------------------------------------------------------- */

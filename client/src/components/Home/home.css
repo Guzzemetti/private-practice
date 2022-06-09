@@ -13,6 +13,7 @@
     flex-direction: row;
     /* padding: 4rem; */
     margin-top: 2rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -112,7 +113,7 @@
     display: flex;
     align-items: center;
     /* padding: 1rem 4rem 4rem 4rem; */
-    margin: 3rem;
+    /* margin: 2rem; */
     /* background-color: #7B6D8D; */
 }
 .h-explore-row {
@@ -120,6 +121,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 2rem;
 }
 
 .h-explore-row h2 {
@@ -231,7 +233,11 @@
 }
 
 .testimonials-header-text{
-    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
 }
 
 @media screen and (max-width: 1500px) {

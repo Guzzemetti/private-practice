@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../signup/signup.css';
-
+import logo from '../../assets/PrivatePractice.png';
 import { Card, CardBody, CardTitle, Label, Input, Row, Col, FormGroup, Form } from 'reactstrap';
 
 import { useMutation } from '@apollo/client';
@@ -62,8 +62,10 @@ const Signup = () => {
           <CardBody className="cardBody">
             <div className="bodyItems">
               <div className="loginLogo">
-                <div className="imageBox">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam corrupti iste, earum nulla ut! Dignissimos accusamus dolorum omnis, aperiam distinctio maiores commodi officia. Rerum quaerat deleniti culpa eius dolor.</p>
+                <div className="signup-imageBox">
+                  <img src={logo} alt="logo"></img>
+                  <p>Want to learn a new skill? Maybe you've dipped your toes into learning something and need personalized help to take that next step? Or are an expert at a skill and want to use your knowledge to teach others?</p>
+                  <p>Than Private Practice is here to help. We offer a marketplace for teachers and learers to both offer their skills and to learn new ones. Sign up today and learn something new.</p>
                 </div>
               </div>
               {/* This might not be needed */}
@@ -166,8 +168,8 @@ const Signup = () => {
                     </Row>
                     
                   </Form>
-                  <div className="loginLink"><p>Already have an account?</p>
-                    <a href={'login'} className="loginButton">Click here!</a>
+                  <div className="loginLink"><p>Already have an account?
+                    <a href={'login'} className="loginButton">Click here!</a></p>
                   </div>
                 </div>
               )}
