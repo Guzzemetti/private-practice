@@ -36,6 +36,7 @@ const Navbar = () => {
             {Auth.loggedIn() ? (
               <div className="loggedin-or-not-navbar">
                 <Link to='/about'><button className="navbar-button">About</button></Link>
+                <div className="div-padding"></div>
                 <Link to='/profile'><button className="navbar-button">Profile</button></Link>
                 <div className="div-padding"></div>
                 <a href="/" className="navbar-button" onClick={() => Auth.logout()}>Logout</a>

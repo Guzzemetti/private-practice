@@ -52,10 +52,12 @@
   cursor: pointer;
   font-size: 1.1em;
   border: none;
+  text-decoration: none;
 }
 
 .navbar-button:hover {
   font-weight: 700;
+  color: rgb(255, 255, 255);
 }
 
 .cart-navbar-icon{
@@ -158,3 +160,11 @@
   }
 }
 
+@media screen and (max-width: 350px) {
+  .div-padding{
+    padding: 0;
+  }
+  .loggedin-or-not-navbar{
+    padding: .5rem;
+  }
+}
