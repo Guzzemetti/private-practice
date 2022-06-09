@@ -92,10 +92,11 @@ includes the input fields and the Get Started button */
 .loginLink{
   display: flex;
   margin: .5rem;
+  align-items: center;
 }
 
 /* Shifts the "click here" link to the right */
-a{
+.loginButton {
   margin-left: 5px;
 }
 
@@ -116,11 +117,15 @@ a{
 #firstName{
   width: 100%;
   border-radius: 15px;
+  height: 1rem;
+  resize: none;
 }
 
 #lastName{
   width: 100%;
   border-radius: 15px;
+  height: 1rem;
+  resize: none;
 }
 
 #aboutMe{
@@ -133,6 +138,8 @@ a{
 /* Technically sets the actual width of the input fields */
 .inputRow {
   width: 20rem;
+  display: flex;
+  flex-direction: column;
 }
 
 

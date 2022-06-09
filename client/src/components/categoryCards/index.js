@@ -10,7 +10,7 @@ import tempPic from '../../assets/blank-profile-picture-973460__340.webp';
 //  title, description, price, coach, review, subcategory
 const Category = ({ Category }) => {
     if (!Category) {
-        return <h3>No Lesson</h3>;
+        return <h3>No Lessons</h3>;
     }
     // In Category page Map over everything and pass props to get all the instances of whats here from the DB
     // Img height is in px might have to chnage to make it more dynamic

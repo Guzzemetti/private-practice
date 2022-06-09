@@ -5,10 +5,26 @@ import "./index.css"
 // import Blob from "../../assets/blob2.png"
 // import Image4 from "../../assets/4.png"
 
+// ------------------------ Create Lesson Modal ------------------------
+import CreateLesson from '../CreateLesson/CreateLesson';
+{/* <CreateLesson />   <----------------    This still needs to be called somewhere */}
+// ---------------------------------------------------------------------
+var imageStyle = {
+  backgroundImage: `url(${Gamerimage})`
+};
+
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import CategoryCard from '../categoryCards/index';
 import { QUERY_CATEGORIES } from '../../utils/queries';
+
+
+import GamingImageBanner from '../../assets/category/gaming.jpg';
+// import HomeImageBanner from '../../assets/category/gaming.jpg';
+// import LifestyleImageBanner from '../../assets/category/';
+// import TechImageBanner from '../../assets/category/';
+// import MiscImageBanner from '../../assets/category/';
+
 
 export const CatagoryPage = () => {
   const { categoryId } = useParams();
@@ -19,17 +35,59 @@ export const CatagoryPage = () => {
 
   const category = data?.category || {};
 
+  // return image based on what the user
+  // const userSelection = () => {
+  //   if('/category'){
+  //     return(
+  //       <img src={GamingImageBanner} alt='Gaming banner' className='Banner-category-page'></img>
+  //     )
+  //   } else if ('/category/home') {
+  //     return(
+  //       <img src='' alt='Gaming banner' className='Banner-category-page'></img>
+  //     )
+  //   } else if ('/category/lifestyle') {
+  //     return(
+  //       <img src='' alt='Gaming banner' className='Banner-category-page'></img>
+  //     )
+  //   } else if ('/category/tech') {
+  //     return(
+  //       <img src='' alt='Gaming banner' className='Banner-category-page'></img>
+  //     )
+  //   } else {
+  //     return(
+  //       <img src='' alt='Gaming banner' className='Banner-category-page'></img>
+  //     )
+  //   }
+  // }
+
   return (
     <section>
+      <div className='div-image-header' >
+        {/* {userSelection} */}
+        <img src={GamingImageBanner} alt='Gaming banner' className='Banner-category-page'></img>
+      </div>
       <div className='cat-title'>
+        {/* Make dynamic */}
         <h1>Category Name</h1>
       </div>
-      <div>
-        <CategoryCard categoryId={category._id}/>
+      <div className='filter-category-sub'>
+        <form action="/action_page.php" className='form-filter-category-sub'>
+          <label for="subcategories">Choose a Subcategory:</label>
+          <select id="subcategories" name="gamingsubcategories">
+            <option value="none"></option>
+            <option value="RPG">RPG</option>
+            <option value="MOBA">MOBA</option>
+            <option value="MMO">MMO</option>
+            <option value="FPS">FPS</option>
+            <option value="Other">Other</option>
+          </select>
+          <input type='submit' className='form-filter-submit-category'/>
+        </form>
+      </div>
+      <div className='category-card-lessons'>
+        <CategoryCard categoryId={category._id} />
       </div>
     </section>
-
-
   )
 }
 
@@ -78,6 +136,7 @@ export const CatagoryPage = () => {
 //       </body>
 //     </>
 //   )
+
 // }
 
 export default CatagoryPage;
