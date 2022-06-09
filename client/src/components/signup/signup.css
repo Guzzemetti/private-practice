@@ -76,7 +76,7 @@ and the logo image on the left side of the form */
 }
 
 .signup-imageBox p {
-  text-align: justify;
+  text-align: left;
 }
 
 .signup-imageBox img {
