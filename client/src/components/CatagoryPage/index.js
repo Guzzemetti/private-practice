@@ -66,12 +66,13 @@ export const CatagoryPage = () => {
         {/* Make dynamic */}
       </div>
       <div className='category-card-lessons'>
+        {/* <CategoryCard category={category}/> */}
         {/* <CategoryCard categoryId={category._id} /> */}
-        <p className="category-title">Title</p>
+        {/* <p className="category-title">Title</p>
         <p className="category-description">Description</p>
         <p className="category-price">Price</p>
         <p className="category-quantity">quantity</p>
-        <p className="category-subcategory">Subcategory</p>
+        <p className="category-subcategory">Subcategory</p> */}
       </div>
     </section>
   )

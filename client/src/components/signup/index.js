@@ -65,7 +65,7 @@ const Signup = () => {
                 <div className="signup-imageBox">
                   <img src={logo} alt="logo"></img>
                   <p>Want to learn a new skill? Maybe you've dipped your toes into learning something and need personalized help to take that next step? Or are an expert at a skill and want to use your knowledge to teach others?</p>
-                  <p>Than Private Practice is here to help. We offer a marketplace for teachers and learers to both offer their skills and to learn new ones. Sign up today and learn something new.</p>
+                  <p>Private Practice is here to help. We offer a marketplace for teachers and learers to both offer their skills and to learn new ones. Sign up today and learn something new.</p>
                 </div>
               </div>
               {/* This might not be needed */}
