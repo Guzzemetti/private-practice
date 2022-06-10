@@ -2,16 +2,16 @@ import React from 'react';
 import "./index.css"
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import CategoryCard from '../categoryCards/index';
+// import CategoryCard from '../categoryCards/index';
 import { QUERY_CATEGORIES } from '../../utils/queries';
-import GamingImageBanner from '../../assets/categoryphotos/wasd.png';
+import TechImageBanner from '../../assets/categoryphotos/tech_heroimg.jpg';
 
 // ------------------------ Create Lesson Modal ------------------------
-import CreateLesson from '../CreateLesson/CreateLesson';
+// import CreateLesson from '../CreateLesson/CreateLesson';
 {/* <CreateLesson />   <----------------    This still needs to be called somewhere */}
 // ---------------------------------------------------------------------
 var imageStyle = {
-  backgroundImage: `url(${GamingImageBanner})`
+  backgroundImage: `url(${TechImageBanner})`
 };
 
 // import HomeImageBanner from '../../assets/categoryphotos/';
@@ -20,7 +20,7 @@ var imageStyle = {
 // import MiscImageBanner from '../../assets/categoryphotos/';
 
 
-export const CatagoryPage = () => {
+export const TechPage = () => {
   const { categoryId } = useParams();
 
   const { loading, data } = useQuery(QUERY_CATEGORIES, {
@@ -59,7 +59,7 @@ export const CatagoryPage = () => {
       <div className='div-image-header' >
         {/* {userSelection} */}
         <div style={ imageStyle } className='Banner-category-page'>
-          <h1 className="categoryTitle">Gaming</h1>
+          <h1 className="categoryTitle">Tech</h1>
         </div>
       </div>
       <div className='cat-title'>
@@ -77,4 +77,4 @@ export const CatagoryPage = () => {
   )
 }
 
-export default CatagoryPage;
+export default TechPage;

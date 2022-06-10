@@ -33,8 +33,16 @@ import HomeComp from "../src/components/Home/index";
 import Footer from "../src/components/Footer/index";
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
+
+import LessonForm from '../src/pages/LessonForm';
+
 import Homepage from './pages/HomePage/Homepage';
+
 import Gamingpage from './pages/Gamingpage/Gamingpage';
+
+import LifestylePage from './pages/Lifestylepage/Lifestylepage';
+import Techpage from './pages/TechPage/Techpage';
+
 
 // import CatagoryPage from './components/CatagoryPage';
 // import Categories from '../src/components/categoryCards/index';
@@ -102,6 +110,14 @@ function App() {
               <Route 
                 path="/category" 
                 element={<CategoryPage />} 
+              />
+              <Route
+                path="/lifestylepage"
+                element={<LifestylePage />}
+              />
+              <Route
+                path="/techpage"
+                element={<Techpage />}
               />
               {/* <Route 
                 path="/profile" 

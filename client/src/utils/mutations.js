@@ -98,26 +98,28 @@ export const ADD_LESSON = gql`
   mutation addLesson(
     $title: String!, 
     $description: String!, 
-    $price: Number!, 
-    $coach: User!,
-    $review: Review,
-    $subcategory: SubCategory!,
-    ) {
-    addLesson(
+    $price: Float!, 
+    $coach: String!,
+    $subcategory: ID!,
+    ) 
+    {
+    addLesson (
       title: $title, 
       description: $description, 
       price:$price,
       coach: $coach,
-      review: $review,
-      subcategory: $subcategory
-      ) {
+      subcategory: $subcategory)
+      {
       _id
       title
       description,
       price,
-      subcategory,
-      coach,
-      review
+      coach {
+        _id
+      },
+      subcategory {
+        _id
+      }
     }
   }
 `;
