@@ -19,7 +19,7 @@
     height: 400px;
     background-position-y: center;
     background-size: cover;
-    filter: blur(4px);
+    /* filter: blur(4px); */
 }
 
 .categoryTitle {
