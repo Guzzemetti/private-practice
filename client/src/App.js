@@ -38,9 +38,9 @@ import LessonForm from '../src/pages/LessonForm';
 
 import Homepage from './pages/HomePage/Homepage';
 
-import Gamingpage from './pages/Gamingpage/Gamingpage';
+import Gamingpage from './pages/GamingPage/Gamingpage';
 
-import LifestylePage from './pages/Lifestylepage/Lifestylepage';
+import LifestylePage from './pages/LifestylePage/Lifestylepage';
 import Techpage from './pages/TechPage/Techpage';
 
 
