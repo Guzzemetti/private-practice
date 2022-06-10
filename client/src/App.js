@@ -78,10 +78,10 @@ function App() {
                 path="/miscpage"
                 element={<AllCategories />}
               />
-//               <Route
-//                 path="/miscpage"
-//                 element={<Miscpage />}
-//               />
+               {/* <Route
+                 path="/miscpage"
+                 element={<Miscpage />}
+               /> */}
               <Route
                 path="/homepage"
                 element={<Homepage />}
