@@ -33,6 +33,7 @@ import HomeComp from "../src/components/Home/index";
 import Footer from "../src/components/Footer/index";
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
+import CreateLesson from './pages/LessonForm';
 
 // import LessonForm from '../src/pages/LessonForm';
 
@@ -79,6 +80,10 @@ function App() {
             {/* The Navbar is added here to be added to every page that renders */}
             <Navbar />
             <Routes>
+              <Route
+                path="/createlesson"
+                element={<CreateLesson />}
+                />
             <Route 
                 path="/gamingpage" 
                 element={<Gamingpage />}
