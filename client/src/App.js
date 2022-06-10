@@ -34,6 +34,8 @@ import Footer from "../src/components/Footer/index";
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
 import Homepage from './pages/HomePage/Homepage';
+import LifestylePage from './pages/Lifestylepage/Lifestylepage';
+import Techpage from './pages/TechPage/Techpage';
 
 // import CatagoryPage from './components/CatagoryPage';
 // import Categories from '../src/components/categoryCards/index';
@@ -93,6 +95,14 @@ function App() {
               <Route 
                 path="/category" 
                 element={<CategoryPage />} 
+              />
+              <Route
+                path="/lifestylepage"
+                element={<LifestylePage />}
+              />
+              <Route
+                path="/techpage"
+                element={<Techpage />}
               />
               {/* <Route 
                 path="/profile" 
