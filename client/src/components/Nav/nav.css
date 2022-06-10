@@ -90,6 +90,8 @@
 }
 
 .category-options-navbar {
+  text-decoration: none;
+  font: 700;
   margin: auto;
   /* border: 2px solid black; */
   padding: .5rem;
