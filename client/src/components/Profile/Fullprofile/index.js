@@ -31,10 +31,9 @@ const  Fullprofile = () => {
       ) : (
         <>
           <div className="container">
-
             <div className="profile-header">
             </div>
-            <main>
+            <main className='main-holds-left-right'>
               <div className="row margin-0">
                 <div className="left col-lg-4">
                   <div className="photo-left">
@@ -44,8 +43,11 @@ const  Fullprofile = () => {
                   <p className="info">MERN stack developer</p>
                   <p className="info">{user.email}</p>
                   <p className="desc">{user.aboutMe}</p>
-                  <p className="desc">{user.lessons}</p>
                 </div>
+              </div>
+              <div className='right-side-profile'>
+                <h4 className="name">Your lessons...</h4>
+                <p className="desc">{user.lessons}</p>
               </div>
             </main>
           </div>
