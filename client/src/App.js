@@ -1,4 +1,4 @@
-import Miscpage from './pages/Miscpage/Miscpage';
+import Miscpage from './pages/MiscPage/Miscpage';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
