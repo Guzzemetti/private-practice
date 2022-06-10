@@ -33,6 +33,9 @@ import HomeComp from "../src/components/Home/index";
 import Footer from "../src/components/Footer/index";
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
+
+import LessonForm from '../src/pages/LessonForm';
+
 import Homepage from './pages/HomePage/Homepage';
 
 // import CatagoryPage from './components/CatagoryPage';
@@ -93,6 +96,10 @@ function App() {
               <Route 
                 path="/category" 
                 element={<CategoryPage />} 
+              />
+              <Route 
+                path="/createlesson" 
+                element={<LessonForm />} 
               />
               {/* <Route 
                 path="/profile" 
