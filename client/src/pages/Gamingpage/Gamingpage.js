@@ -2,12 +2,12 @@ import React from 'react';
 import "./index.css"
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import CategoryCard from '../categoryCards/index';
+// import CategoryCard from '../categoryCards/index';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import GamingImageBanner from '../../assets/categoryphotos/wasd.png';
 
 // ------------------------ Create Lesson Modal ------------------------
-import CreateLesson from '../CreateLesson/CreateLesson';
+// import CreateLesson from '../CreateLesson/CreateLesson';
 {/* <CreateLesson />   <----------------    This still needs to be called somewhere */}
 // ---------------------------------------------------------------------
 var imageStyle = {
@@ -20,7 +20,7 @@ var imageStyle = {
 // import MiscImageBanner from '../../assets/categoryphotos/';
 
 
-export const CatagoryPage = () => {
+export const Gamingpage = () => {
   const { categoryId } = useParams();
 
   const { loading, data } = useQuery(QUERY_CATEGORIES, {

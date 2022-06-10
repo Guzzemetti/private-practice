@@ -2,16 +2,16 @@ import React from 'react';
 import "./index.css"
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import CategoryCard from '../categoryCards/index';
+// import CategoryCard from '../categoryCards/index';
 import { QUERY_CATEGORIES } from '../../utils/queries';
-import MiscImageBanner from '../../assets/categoryphotos/MiscBackground.png';
+import MiscImageBanner from '../../assets/categoryphotos/MiscBackground.jpg';
 
 // ------------------------ Create Lesson Modal ------------------------
-import CreateLesson from '../CreateLesson/CreateLesson';
+// import CreateLesson from '../CreateLesson/CreateLesson';
 {/* <CreateLesson />   <----------------    This still needs to be called somewhere */}
 // ---------------------------------------------------------------------
 var imageStyle = {
-  backgroundImage: `url(${GamingImageBanner})`
+  backgroundImage: `url(${MiscImageBanner})`
 };
 
 // import HomeImageBanner from '../../assets/categoryphotos/';
@@ -20,7 +20,7 @@ var imageStyle = {
 // import MiscImageBanner from '../../assets/categoryphotos/';
 
 
-export const CatagoryPage = () => {
+export const Miscpage = () => {
   const { categoryId } = useParams();
 
   const { loading, data } = useQuery(QUERY_CATEGORIES, {
@@ -58,7 +58,7 @@ export const CatagoryPage = () => {
     <section>
       <div className='div-image-header'>
         {/* {userSelection} */}
-        <div style={ imageStyle } className='Banner-category-page'>
+        <div style={ imageStyle } className='Miscpage-banner-category-page'>
           <h1 className="categoryTitle">Miscellaneous</h1>
         </div>
       </div>
@@ -66,16 +66,16 @@ export const CatagoryPage = () => {
         {/* Make dynamic */}
       </div>
       <div className='category-card-lessons'>
-        <CategoryCard category={category}/>
-        {/* <CategoryCard categoryId={category._id} /> */}
-        {/* <p className="category-title">Title</p>
+        {/* <CategoryCard category={category}/>
+        <CategoryCard categoryId={category._id} /> */}
+        <p className="category-title">Title</p>
         <p className="category-description">Description</p>
         <p className="category-price">Price</p>
         <p className="category-quantity">quantity</p>
-        <p className="category-subcategory">Subcategory</p> */}
+        <p className="category-subcategory">Subcategory</p>
       </div>
     </section>
   )
 }
 
-export default CatagoryPage;
+export default Miscpage;
