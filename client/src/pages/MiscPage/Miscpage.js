@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import CategoryCard from '../categoryCards/index';
 import { QUERY_CATEGORIES } from '../../utils/queries';
-import GamingImageBanner from '../../assets/categoryphotos/wasd.png';
+import GamingImageBanner from '../../assets/categoryphotos/MiscBackground.png';
 
 // ------------------------ Create Lesson Modal ------------------------
 import CreateLesson from '../CreateLesson/CreateLesson';
@@ -56,10 +56,10 @@ export const CatagoryPage = () => {
 
   return (
     <section>
-      <div className='div-image-header' >
+      <div className='div-image-header'>
         {/* {userSelection} */}
         <div style={ imageStyle } className='Banner-category-page'>
-          <h1 className="categoryTitle">Gaming</h1>
+          <h1 className="categoryTitle">Miscellaneous</h1>
         </div>
       </div>
       <div className='cat-title'>
