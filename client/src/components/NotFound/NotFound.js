@@ -2,10 +2,6 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../NotFound/notFound.css'
 
-import { } from 'reactstrap';
-
-
-
 const NotFound = () => {
 
     return (
