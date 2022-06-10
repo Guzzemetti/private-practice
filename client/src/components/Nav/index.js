@@ -38,8 +38,6 @@ const Navbar = () => {
               <div className="loggedin-or-not-navbar">
                 <Link to='/about'><button className="navbar-button">About</button></Link>
                 <div className="div-padding"></div>
-                <CreateLesson />
-                <div className="div-padding"></div>
                 <Link to={`/profile/${Auth.getProfile().data._id} `}><button className="navbar-button">Profile</button></Link>
                 <div className="div-padding"></div>
                 <a href="/" className="navbar-button" onClick={() => Auth.logout()}>Logout</a>
