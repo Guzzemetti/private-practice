@@ -57,7 +57,7 @@ const Signup = () => {
 
   return (
     <>
-      <section className="holds-everything-form">
+      <section className="holds-everything-form" id="signUpSec">
         <Card className="card-margin-top">
           <CardBody className="cardBody">
             <div className="bodyItems">
