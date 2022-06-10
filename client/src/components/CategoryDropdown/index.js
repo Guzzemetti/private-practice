@@ -1,10 +1,12 @@
+import React from 'react';
+import { Link } from "react-router-dom";
 
 const CategoryDropdown = ({ category }) => {
   return (
       <>
         <section className="navbar-categories">
   <div className="option-for-1">
-    <p className="category-options-navbar">Gaming</p>
+    <Link to='/gamingpage'><p className="category-options-navbar">Gaming</p></Link>
     {/* <div className="on-hover-show-options">
       <Link to='/'><button className="subcategory-button-on-hover">RPG</button></Link>
       <Link to='/'><button className="subcategory-button-on-hover">MOBA</button></Link>
@@ -15,7 +17,7 @@ const CategoryDropdown = ({ category }) => {
   </div>
 
   <div className="option-for-1">
-    <p className="category-options-navbar">Home</p>
+  <Link to='/homepage'><p className="category-options-navbar">Home</p></Link>
     {/* <div className="on-hover-show-options">
       <Link to='/'><button className="subcategory-button-on-hover">Cooking</button></Link>
       <Link to='/'><button className="subcategory-button-on-hover">DIY Projects</button></Link>
@@ -26,7 +28,7 @@ const CategoryDropdown = ({ category }) => {
   </div>
 
   <div className="option-for-1">
-    <p className="category-options-navbar">Lifestyle</p>
+  <Link to='/lifestylepage'><p className="category-options-navbar">Lifestyle</p></Link>
     {/* <div className="on-hover-show-options">
       <Link to='/'><button className="subcategory-button-on-hover">Fitness</button></Link>
       <Link to='/'><button className="subcategory-button-on-hover">Fashion</button></Link>
@@ -37,7 +39,7 @@ const CategoryDropdown = ({ category }) => {
   </div>
 
   <div className="option-for-1">
-    <p className="category-options-navbar">Tech</p>
+  <Link to='techpage'><p className="category-options-navbar">Tech</p></Link>
     {/* <div className="on-hover-show-options">
       <Link to='/'><button className="subcategory-button-on-hover">Computer Learning</button></Link>
       <Link to='/'><button className="subcategory-button-on-hover">Programming</button></Link>
@@ -49,7 +51,7 @@ const CategoryDropdown = ({ category }) => {
 
 
   <div className="option-for-1">
-    <p className="category-options-navbar">Misc.</p>
+  <Link to='/miscpage'><p className="category-options-navbar">Misc.</p></Link>
     {/* <div className="on-hover-show-options">
       <Link to='/'><button className="subcategory-button-on-hover">Misty-Misc</button></Link>
     </div> */}
