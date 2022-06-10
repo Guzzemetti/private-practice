@@ -58,7 +58,7 @@ export const TechPage = () => {
     <section>
       <div className='div-image-header' >
         {/* {userSelection} */}
-        <div style={ imageStyle } className='Banner-category-page'>
+        <div style={ imageStyle } className='Banner-category-tech-page'>
           <h1 className="categoryTitle">Tech</h1>
         </div>
       </div>
