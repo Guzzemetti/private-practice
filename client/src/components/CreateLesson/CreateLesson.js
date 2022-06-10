@@ -74,6 +74,21 @@ class ModalExample extends React.Component {
                           name="catDrop"
                           placeholder="Select a Category"
                           type="select">
+                          
+                        </Input> value=""
+                      </FormGroup>
+                    </Col>
+                    {/* Dropdown to select Sub Category */}
+                    <Col md={6}>
+                      <FormGroup>
+                        <Label className="labels" for="subcatDrop">
+                          Sub-Category
+                        </Label>
+                        <Input
+                          id="subcatDrop"
+                          name="subDrop"
+                          placeholder="Select a Sub-Category"
+                          type="select">
                           <option value="62a0e8bfd8d0493694d0b6f1">RPGs</option>
                           <option value="62a0e8bfd8d0493694d0b6f4">MOBAs</option>
                           <option value="62a0e8bfd8d0493694d0b6f7">MMOs</option>
@@ -95,23 +110,6 @@ class ModalExample extends React.Component {
                           <option value="62a0e8bfd8d0493694d0b70c">Other(Home)</option>
                           <option value="62a0e8bfd8d0493694d0b71b">Other(Lifestyle)</option>
                           <option value="62a0e8bfd8d0493694d0b72a">Other(Tech)</option>
-                        </Input> value=""
-                      </FormGroup>
-                    </Col>
-                    {/* Dropdown to select Sub Category */}
-                    <Col md={6}>
-                      <FormGroup>
-                        <Label className="labels" for="subcatDrop">
-                          Sub-Category
-                        </Label>
-                        <Input
-                          id="subcatDrop"
-                          name="subDrop"
-                          placeholder="Select a Sub-Category"
-                          type="select">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
                         </Input>
                       </FormGroup>
                     </Col>
