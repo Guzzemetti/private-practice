@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 // import CategoryCard from '../categoryCards/index';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import MiscImageBanner from '../../assets/categoryphotos/MiscBackground.jpg';
+import CategoryDropdown from '../../components/CategoryDropdown';
 
 var imageStyle = {
   backgroundImage: `url(${MiscImageBanner})`
