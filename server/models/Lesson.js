@@ -20,7 +20,8 @@ const lessonSchema = new Schema({
     price: {
         type: Number,
         required: true,
-        min: 999
+        min: 1,
+        default: 1
     },
     quantity: {
         type: Number,
