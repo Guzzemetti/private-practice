@@ -58,9 +58,9 @@ const LessonForm = (props) => {
 
     return (
         <section className="holds-everything-form-lesson">
-            {Auth.loggedIn() ? (
+            {!Auth.loggedIn() ? (
                 <div>
-                    Please Login or signup to create a lesson
+                    <h3>Please Login or signup to create a lesson</h3>
                 </div>
             ) : (
                 <>
