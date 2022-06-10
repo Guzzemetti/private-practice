@@ -42,6 +42,7 @@ const typeDefs = gql`
     password: String
     profileImage: String
     aboutMe: String
+    lessons: [Lesson]
   }
   # ====================== Might not be needed/ For checkout ======================= #
   type Order {

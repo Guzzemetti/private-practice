@@ -91,7 +91,7 @@ export const QUERY_SINGLE_CATEGORY = gql`
 
 export const QUERY_SINGLE_USER = gql`
   query user($userId: ID!) {
-    user(userId: $userId) {
+    user {
       _id
       firstname
       lastname
@@ -112,7 +112,11 @@ export const QUERY_ME = gql`
       firstname
       lastname
       aboutMe
-      lessons
+      lessons {
+        title
+        description
+        price
+      }
     }
   }
 `;

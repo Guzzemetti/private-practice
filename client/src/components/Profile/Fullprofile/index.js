@@ -1,50 +1,34 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "./index.css"
 import tempPic from '../../../assets/blank-profile-picture-973460__340.webp';
 
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import Auth from "../../../utils/auth";
+// import Auth from "../../../utils/auth";
 
-import { QUERY_SINGLE_USER } from '../../../utils/queries';
+import { QUERY_ME } from '../../../utils/queries';
 // import Auth  from '../../../utils/auth';
 
-const Fullprofile = () => {
-  // const { data } = useQuery(QUERY_SINGLE_USER);
-  // let user;
+const  Fullprofile = () => {
 
-  // if (data) {
-  //   user = data.user;
-  // }
-
-  let {userId}  = useParams();
-  console.log(userId);
 
   const { loading, data } = useQuery(
     // If there is no `profileId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
-    QUERY_SINGLE_USER, {
-    // pass URL parameter
-    variables: { userId: userId },
-  });
-  console.log(data);
+    QUERY_ME
+  );
 
-  const user = data?.user || []; 
+  useEffect(() => {
+    console.log(data);
+  }, [data])
 
-  // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
-  //  const user = data?.me || data?.user || {};
-
-  // Use React Router's `<Navigate />` component to redirect to personal profile page if username is yours
-  // if (Auth.loggedIn() && Auth.getProfile().data._id === userId) {
-  //   return <Navigate to="/profile" />;
-  // }
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  const user = data?.me || {}; 
 
   return (
     <section>
-      {user ? (
+      {loading ? 
+      (
+        <div>Loading...</div>
+      ) : (
         <>
           <div className="container">
 
@@ -60,16 +44,15 @@ const Fullprofile = () => {
                   <p className="info">MERN stack developer</p>
                   <p className="info">{user.email}</p>
                   <p className="desc">{user.aboutMe}</p>
+                  <p className="desc">{user.lessons}</p>
                 </div>
               </div>
             </main>
           </div>
 
         </>
-      ) : null}
+      )}
     </section>
-
-
   )
 }
 
