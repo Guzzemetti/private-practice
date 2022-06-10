@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../lessonform/style.css'
-// import { Card, CardBody, CardTitle } from 'reactstrap';
 import { Label, Input, Row, Col, FormGroup, Form } from 'reactstrap';
-
 import { useMutation } from '@apollo/client';
 import { ADD_LESSON } from '../../utils/mutations';
 import { Route, Navigate } from 'react-router-dom';
-
 import Auth from '../../utils/auth';
-// import Profile from "../../pages/Profile";
-import Fullprofile from "../Profile/Fullprofile";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../lessonform/style.css'
 
 const LessonForm = (props) => {
 
@@ -49,8 +44,8 @@ const LessonForm = (props) => {
             Auth.loggedIn(data.token);
             {
                 <Route exact path="/">
-                {<Navigate to="/profile/:userId" />}
-            </Route>
+                    {<Navigate to="/profile/:userId" />}
+                </Route>
             }
         } catch (e) {
             console.error(e);
