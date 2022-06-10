@@ -60,38 +60,38 @@ function App() {
               <Route
                 path="/createlesson"
                 element={<CreateLesson />}
-                />
-            <Route 
-                path="/gamingpage" 
+              />
+              <Route
+                path="/gamingpage"
                 element={<Gamingpage />}
-              /> 
-            <Route 
-                path="/miscpage" 
+              />
+              <Route
+                path="/miscpage"
                 element={<Miscpage />}
-              /> 
-            <Route 
-                path="/homepage" 
+              />
+              <Route
+                path="/homepage"
                 element={<Homepage />}
-              /> 
-              <Route 
-                path="/" 
-                element={<HomeComp />} 
               />
-              <Route 
-                path="/login" 
-                element={<Login />} 
+              <Route
+                path="/"
+                element={<HomeComp />}
               />
-              <Route 
-                path="/signup" 
-                element={<Signup />} 
+              <Route
+                path="/login"
+                element={<Login />}
               />
-               <Route 
-                path="/about" 
-                element={<About />} 
+              <Route
+                path="/signup"
+                element={<Signup />}
               />
-              <Route 
-                path="/category" 
-                element={<CategoryPage />} 
+              <Route
+                path="/about"
+                element={<About />}
+              />
+              <Route
+                path="/category"
+                element={<CategoryPage />}
               />
               <Route
                 path="/lifestylepage"
@@ -105,14 +105,14 @@ function App() {
                 path="/profile" 
                 element={<Profile />} 
               /> */}
-              <Route 
-                path="/profile/:userId" 
-                element={<Profile />} 
+              <Route
+                path="/profile/:userId"
+                element={<Profile />}
               />
               {/* 404 Page */}
               <Route
-                path="*" 
-                element={<NotFound />} 
+                path="*"
+                element={<NotFound />}
               />
               {/* 
               <Route 
@@ -126,7 +126,7 @@ function App() {
             </Routes>
           </StoreProvider>
           {/* Renders the footer to the bottom of each page */}
-          <Footer/>
+          <Footer />
         </main>
       </Router>
     </ApolloProvider>
