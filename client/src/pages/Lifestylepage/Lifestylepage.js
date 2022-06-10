@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 // import CategoryCard from '../categoryCards/index';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import LifestyleImageBanner from '../../assets/categoryphotos/lifestyle_heroimg.jpg';
+import CategoryDropdown from '../../components/CategoryDropdown';
 
 var imageStyle = {
   backgroundImage: `url(${LifestyleImageBanner})`
