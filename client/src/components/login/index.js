@@ -1,14 +1,11 @@
 import React, { useState } from "react";
+import { Card, CardBody, CardTitle, Label, Input, Row, Col, FormGroup, Form  } from 'reactstrap';
+import { useMutation } from '@apollo/client';
+import { LOGIN } from '../../utils/mutations';
+import Auth from '../../utils/auth';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../login/login.css';
 import logo from '../../assets/PrivatePractice.png';
-import { Card, CardBody, CardTitle } from 'reactstrap';
-import { Label, Input, Row, Col, FormGroup, Form } from 'reactstrap';
-
-import { useMutation } from '@apollo/client';
-import { LOGIN } from '../../utils/mutations';
-
-import Auth from '../../utils/auth';
 
 const Loginpage = (props) => {
   // state for login
@@ -53,7 +50,7 @@ const Loginpage = (props) => {
           <div className="bodyItems">
             <div className="loginLogo">
               <div className="imageBox">
-              <img src={logo} alt="logo"></img>
+                <img src={logo} alt="logo"></img>
                 <p>Welcome back.</p>
               </div>
             </div>
@@ -63,8 +60,6 @@ const Loginpage = (props) => {
                 Success!
               </p>
             ) : (
-
-
               <div className="formBody">
                 <CardTitle tag="h3" id="login">
                   Login
