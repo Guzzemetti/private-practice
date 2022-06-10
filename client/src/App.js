@@ -1,4 +1,4 @@
-
+import Miscpage from './pages/Miscpage/Miscpage';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
@@ -34,6 +34,7 @@ import Footer from "../src/components/Footer/index";
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
 import Homepage from './pages/HomePage/Homepage';
+import Gamingpage from './pages/Gamingpage/Gamingpage';
 
 // import CatagoryPage from './components/CatagoryPage';
 // import Categories from '../src/components/categoryCards/index';
@@ -71,7 +72,15 @@ function App() {
             <Navbar />
             <Routes>
             <Route 
-                path="/Homepage" 
+                path="/gamingpage" 
+                element={<Gamingpage />}
+              /> 
+            <Route 
+                path="/miscpage" 
+                element={<Miscpage />}
+              /> 
+            <Route 
+                path="/homepage" 
                 element={<Homepage />}
               /> 
               <Route 
