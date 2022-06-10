@@ -1,16 +1,12 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../About/aboutStyle.css'
-
-import { } from 'reactstrap';
-
 import Austin from '../../assets/about/austin.png';
 import JohnG from '../../assets/about/johnG.png';
 import JohnH from '../../assets/about/johnH.png';
 import Phillip from '../../assets/about/phillip.png';
 import LIlogo from '../../assets/about/LinkedIn_logo.png'
 import GHlogo from '../../assets/about/GitHub_logo.png'
-// import { Link } from "react-router-dom";
 
 
 const About = () => {

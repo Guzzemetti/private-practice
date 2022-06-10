@@ -1,13 +1,7 @@
 import Miscpage from './pages/MiscPage/Miscpage';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
-
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { StoreProvider } from './utils/GlobalState';
 
@@ -20,6 +14,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import CategoryPage from './pages/Category';
 import Profile from "../src/pages/Profile";
+
 import AllCategories from '../src/pages/AllCategories/index';
 // import Fullprofile from "../src/components/Profile/Fullprofile/index";
 // import Home from './pages/Home';
@@ -28,6 +23,11 @@ import AllCategories from '../src/pages/AllCategories/index';
 // import Success from './pages/Success';
 // import OrderHistory from './pages/OrderHistory';
 
+import Homepage from './pages/HomePage/Homepage';
+import Gamingpage from './pages/GamingPage/Gamingpage';
+import LifestylePage from './pages/LifestylePage/Lifestylepage';
+import Techpage from './pages/TechPage/Techpage';
+
 // Components to import
 import Navbar from "../src/components/Nav/index";
 import HomeComp from "../src/components/Home/index";
@@ -35,21 +35,7 @@ import Footer from "../src/components/Footer/index";
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
 import CreateLesson from './pages/LessonForm';
-
-// import LessonForm from '../src/pages/LessonForm';
-
-import Homepage from './pages/HomePage/Homepage';
-
-import Gamingpage from './pages/GamingPage/Gamingpage';
-
-import LifestylePage from './pages/LifestylePage/Lifestylepage';
-import Techpage from './pages/TechPage/Techpage';
-
-
-// import CatagoryPage from './components/CatagoryPage';
-// import Categories from '../src/components/categoryCards/index';
 //------------------------------------------------------------------------------------------
-
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -69,7 +55,6 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
 
 //-------------------------------- App function that builds our webpages ------------------------------------
 function App() {
@@ -93,6 +78,10 @@ function App() {
                 path="/miscpage"
                 element={<AllCategories />}
               />
+//               <Route
+//                 path="/miscpage"
+//                 element={<Miscpage />}
+//               />
               <Route
                 path="/homepage"
                 element={<Homepage />}
