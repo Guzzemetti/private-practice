@@ -14,6 +14,15 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import CategoryPage from './pages/Category';
 import Profile from "../src/pages/Profile";
+
+import AllCategories from '../src/pages/AllCategories/index';
+// import Fullprofile from "../src/components/Profile/Fullprofile/index";
+// import Home from './pages/Home';
+// import Detail from './pages/Detail';
+// import NoMatch from './pages/NoMatch';
+// import Success from './pages/Success';
+// import OrderHistory from './pages/OrderHistory';
+
 import Homepage from './pages/HomePage/Homepage';
 import Gamingpage from './pages/GamingPage/Gamingpage';
 import LifestylePage from './pages/LifestylePage/Lifestylepage';
@@ -63,12 +72,16 @@ function App() {
               />
               <Route
                 path="/gamingpage"
-                element={<Gamingpage />}
+                element={<AllCategories />}
               />
               <Route
                 path="/miscpage"
-                element={<Miscpage />}
+                element={<AllCategories />}
               />
+//               <Route
+//                 path="/miscpage"
+//                 element={<Miscpage />}
+//               />
               <Route
                 path="/homepage"
                 element={<Homepage />}
@@ -95,11 +108,11 @@ function App() {
               />
               <Route
                 path="/lifestylepage"
-                element={<LifestylePage />}
+                element={<AllCategories />}
               />
               <Route
                 path="/techpage"
-                element={<Techpage />}
+                element={<AllCategories />}
               />
               {/* <Route 
                 path="/profile" 
@@ -108,6 +121,10 @@ function App() {
               <Route
                 path="/profile/:userId"
                 element={<Profile />}
+              />
+              <Route
+                path="/allcategories"
+                element={<AllCategories />}
               />
               {/* 404 Page */}
               <Route

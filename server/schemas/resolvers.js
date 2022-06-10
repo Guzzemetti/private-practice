@@ -37,7 +37,7 @@ const resolvers = {
     // find all lessons 
     lessons: async () => {
 
-      return await Lesson.find().populate('subcategory').populate('coach');
+      return await Lesson.find().populate('coach');
     },
     // Find all users
     users: async (parent, args) => {
