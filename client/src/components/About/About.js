@@ -10,7 +10,7 @@ import JohnH from '../../assets/about/johnH.png';
 import Phillip from '../../assets/about/phillip.png';
 import LIlogo from '../../assets/about/LinkedIn_logo.png'
 import GHlogo from '../../assets/about/GitHub_logo.png'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 const About = () => {
@@ -27,14 +27,14 @@ const About = () => {
                                     <h3 className="aboutNames">Austin Donovan</h3>
                                     <img src={Austin} className="aboutMe-img" alt="Austin" />
                                     <p className="aboutDescriptions">Likes league. Goes to nightclubs.</p>
-                                    <div className="about-linkz"><a href="https://github.com/AustinLD" target="_blank"><img src={GHlogo}></img></a></div>
-                                    <div className="about-linkz"><a href="https://www.linkedin.com/in/austin-donovan-b39151102/" target="_blank"><img src={LIlogo}></img></a></div>
+                                    <div className="about-linkz"><a href="https://github.com/AustinLD" rel="noreferrer" target="_blank"><img src={GHlogo} alt="link"></img></a></div>
+                                    <div className="about-linkz"><a href="https://www.linkedin.com/in/austin-donovan-b39151102/" rel="noreferrer" target="_blank"><img alt="link" src={LIlogo}></img></a></div>
                                     {/* ------------------------------------------ */}
                                     <h3 className="aboutNames">John Guzzetta</h3>
                                     <img src={JohnG} className="aboutMe-img" alt="JohnG" />
                                     <p className="aboutDescriptions">Also likes league. Has cats.</p>
-                                    <div className="about-linkz"><a href="https://github.com/guzzemetti" target="_blank"><img src={GHlogo}></img></a></div>
-                                    <div className="about-linkz"><a href="https://www.linkedin.com/in/johnguzzettaiv/" target="_blank"><img src={LIlogo}></img></a></div>
+                                    <div className="about-linkz"><a href="https://github.com/guzzemetti" rel="noreferrer" target="_blank"><img src={GHlogo} alt="link"></img></a></div>
+                                    <div className="about-linkz"><a href="https://www.linkedin.com/in/johnguzzettaiv/" rel="noreferrer" target="_blank"><img src={LIlogo} alt="link"></img></a></div>
                                 </div>
                             </div>
                         </div>
@@ -44,14 +44,14 @@ const About = () => {
                                     <h3 className="aboutNames">John Hysong</h3>
                                     <img src={JohnH} className="aboutMe-img" alt="JohnH" />
                                     <p className="aboutDescriptions">Does not like league. Is tall.</p>
-                                    <div className="about-linkz"><a href="https://github.com/johnatticus" target="_blank"><img src={GHlogo}></img></a></div>
-                                    <div className="about-linkz"><a href="https://www.linkedin.com/in/johnhysong/" target="_blank"><img src={LIlogo}></img></a></div>
+                                    <div className="about-linkz"><a href="https://github.com/johnatticus" rel="noreferrer" target="_blank"><img src={GHlogo} alt="link"></img></a></div>
+                                    <div className="about-linkz"><a href="https://www.linkedin.com/in/johnhysong/" rel="noreferrer" target="_blank"><img alt="link" src={LIlogo}></img></a></div>
                                     {/* ------------------------------------------ */}
                                     <h3 className="aboutNames">Phillip Pereira</h3>
                                     <img src={Phillip} className="aboutMe-img" alt="Phillip" />
                                     <p className="aboutDescriptions">Works out. Not sure if he likes league.</p>
-                                    <div className="about-linkz"><a href="https://github.com/phillip48" target="_blank"><img src={GHlogo}></img></a></div>
-                                    <div className="about-linkz"><a href="https://www.linkedin.com/in/phillip-pereira-719985232/" target="_blank"><img src={LIlogo}></img></a></div>
+                                    <div className="about-linkz"><a href="https://github.com/phillip48" rel="noreferrer" target="_blank"><img alt="link" src={GHlogo}></img></a></div>
+                                    <div className="about-linkz"><a href="https://www.linkedin.com/in/phillip-pereira-719985232/" rel="noreferrer" target="_blank"><img alt="link" src={LIlogo}></img></a></div>
                                 </div>
                             </div>
                         </div>

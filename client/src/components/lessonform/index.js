@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../lessonform/style.css'
 // import { Card, CardBody, CardTitle } from 'reactstrap';
-import { Label, Input, Row, Col, FormGroup, Form, InputGroup, InputGroupText } from 'reactstrap';
+import { Label, Input, Row, Col, FormGroup, Form } from 'reactstrap';
 
 import { useMutation } from '@apollo/client';
 import { ADD_LESSON } from '../../utils/mutations';
