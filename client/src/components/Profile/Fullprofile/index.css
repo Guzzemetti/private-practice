@@ -88,3 +88,14 @@
 /* .main-holds-left-right{
   display: flex;
 } */
+
+.card-center-lessons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body-margin{
+  margin: 1rem;
+}

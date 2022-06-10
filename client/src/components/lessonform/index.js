@@ -6,6 +6,7 @@ import { Label, Input, Row, Col, FormGroup, Form } from 'reactstrap';
 
 import { useMutation } from '@apollo/client';
 import { ADD_LESSON } from '../../utils/mutations';
+import {Route, Navigate} from 'react-router-dom';
 
 import Auth from '../../utils/auth';
 // import Profile from "../../pages/Profile";
@@ -47,7 +48,7 @@ const LessonForm = (props) => {
 
             Auth.loggedIn(data.token);
             {<Route exact path="/">
-            {<Redirect to="/profile/:userId" /> }
+            {<Navigate to="/profile/:userId" /> }
             </Route>}
         } catch (e) {
             console.error(e);
