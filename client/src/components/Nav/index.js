@@ -4,11 +4,7 @@ import LogoHeader from '../../assets/PrivatePractice.png';
 import { Link } from "react-router-dom";
 import '../Nav/nav.css';
 import CreateLesson from '../CreateLesson/CreateLesson';
-// import ShowNavigation from "../showNav";
-
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-
-
 
 const Navbar = () => {
   // This function checks if the user is logged in.
@@ -22,18 +18,11 @@ const Navbar = () => {
       <header>
         {/* Header that has logo and calls the showNaviagtion function for what buttons are displayed */}
         <section className="navbar-section-holds-everything">
-
           <div className="navbar-section-img">
             <Link to="/"><img src={LogoHeader} className='logo-navbar' alt='logo'></img></Link>
           </div>
           {/* this is default navbar, just for visual sake. Will edit for login status */}
           <div className="navbar-section-nav">
-            {/* <Link to="/signup"><button className="navbar-button">Signup</button></Link>
-          <div className="div-padding"></div> */}
-            {/* <Link to="/about"><button className="navbar-button">About</button></Link>
-          <Link to="/login"><button className="navbar-button">Login</button></Link>
-          <AiOutlineShoppingCart className="cart-navbar-icon" /> */}
-            {/* <ShowNavigation /> */}
             {Auth.loggedIn() ? (
               <div className="loggedin-or-not-navbar">
                 <Link to='/about'><button className="navbar-button">About</button></Link>
@@ -56,69 +45,10 @@ const Navbar = () => {
               </div>
             )}
           </div>
-
         </section>
-        {/* Category and sub category options */}
-
       </header>
     </>
   )
 };
-
-
-
-
-// function Navbar() {
-
-//   function showNavigation() {
-//     if (Auth.loggedIn()) {
-//       return (
-//         <ul className="flex-row">
-//           <li className="mx-1">
-//             <Link to="/orderHistory">
-//               Order History
-//             </Link>
-//           </li>
-//           <li className="mx-1">
-//             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-//             <a href="/" onClick={() => Auth.logout()}>
-//               Logout
-//             </a>
-//           </li>
-//         </ul>
-//       );
-//     } else {
-//       return (
-//         <ul className="flex-row">
-//           <li className="mx-1">
-//             <Link to="/signup">
-//               Signup
-//             </Link>
-//           </li>
-//           <li className="mx-1">
-//             <Link to="/login">
-//               Login
-//             </Link>
-//           </li>
-//         </ul>
-//       );
-//     }
-//   }
-
-//   return (
-//     <header className="flex-row px-1">
-//       <h1>
-//         <Link to="/">
-//           <span role="img" aria-label="shopping bag">🛍️</span>
-//           -Shop-Shop
-//         </Link>
-//       </h1>
-
-//       <nav>
-//         {showNavigation()}
-//       </nav>
-//     </header>
-//   );
-// }
 
 export default Navbar;
