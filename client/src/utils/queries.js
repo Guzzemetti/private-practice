@@ -38,6 +38,10 @@ export const QUERY_ALL_LESSONS = gql`
       subcategory {
         name
       }
+      coach {
+        firstname
+        lastname
+      }
     }
   }
 `;
@@ -46,10 +50,18 @@ export const QUERY_ALL_LESSONS = gql`
 // ============== Query categories and subcategories ================= //
 
 export const QUERY_SUBCATEGORIES = gql`
-  query allSubcategories($subcategoryId: [ID]!) {
-    subcategory,
-    category,
-    lessons
+  query subcategories {
+    subcategory{
+      _id
+      name
+      lessons {
+      _id
+      title
+      description
+      # price
+    }
+    }
+    # category,
   }
 `;
 
@@ -63,9 +75,13 @@ export const QUERY_SINGLE_SUBCATEGORY = gql`
 
 
 export const QUERY_CATEGORIES = gql`
-  query allCategories($categoryId: [ID]!) {
-    category,
-    subcategory
+  query categories {
+    category {
+      name
+      subcategory{
+        name
+      }
+    }
   }
 `;
 export const QUERY_SINGLE_CATEGORY = gql`

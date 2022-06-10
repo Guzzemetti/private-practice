@@ -20,6 +20,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import CategoryPage from './pages/Category';
 import Profile from "../src/pages/Profile";
+import AllCategories from '../src/pages/AllCategories/index';
 // import Fullprofile from "../src/components/Profile/Fullprofile/index";
 // import Home from './pages/Home';
 // import Detail from './pages/Detail';
@@ -83,59 +84,63 @@ function App() {
               <Route
                 path="/createlesson"
                 element={<CreateLesson />}
-                />
-            <Route 
-                path="/gamingpage" 
-                element={<Gamingpage />}
-              /> 
-            <Route 
-                path="/miscpage" 
-                element={<Miscpage />}
-              /> 
-            <Route 
-                path="/homepage" 
+              />
+              <Route
+                path="/gamingpage"
+                element={<AllCategories />}
+              />
+              <Route
+                path="/miscpage"
+                element={<AllCategories />}
+              />
+              <Route
+                path="/homepage"
                 element={<Homepage />}
-              /> 
-              <Route 
-                path="/" 
-                element={<HomeComp />} 
               />
-              <Route 
-                path="/login" 
-                element={<Login />} 
+              <Route
+                path="/"
+                element={<HomeComp />}
               />
-              <Route 
-                path="/signup" 
-                element={<Signup />} 
+              <Route
+                path="/login"
+                element={<Login />}
               />
-               <Route 
-                path="/about" 
-                element={<About />} 
+              <Route
+                path="/signup"
+                element={<Signup />}
               />
-              <Route 
-                path="/category" 
-                element={<CategoryPage />} 
+              <Route
+                path="/about"
+                element={<About />}
+              />
+              <Route
+                path="/category"
+                element={<CategoryPage />}
               />
               <Route
                 path="/lifestylepage"
-                element={<LifestylePage />}
+                element={<AllCategories />}
               />
               <Route
                 path="/techpage"
-                element={<Techpage />}
+                element={<AllCategories />}
               />
               {/* <Route 
                 path="/profile" 
                 element={<Profile />} 
               /> */}
-              <Route 
-                path="/profile/:userId" 
-                element={<Profile />} 
+              <Route
+                path="/profile/:userId"
+                element={<Profile />}
+              />
+              <Route
+                path="/allcategories"
+                element={<AllCategories />}
               />
               {/* 404 Page */}
               <Route
-                path="*" 
-                element={<NotFound />} 
+                path="*"
+                element={<NotFound />}
               />
               {/* 
               <Route 
@@ -149,7 +154,7 @@ function App() {
             </Routes>
           </StoreProvider>
           {/* Renders the footer to the bottom of each page */}
-          <Footer/>
+          <Footer />
         </main>
       </Router>
     </ApolloProvider>
