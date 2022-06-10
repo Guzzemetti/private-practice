@@ -6,7 +6,7 @@ import { Label, Input, Row, Col, FormGroup, Form } from 'reactstrap';
 
 import { useMutation } from '@apollo/client';
 import { ADD_LESSON } from '../../utils/mutations';
-import {Route, Navigate} from 'react-router-dom';
+import { Route, Navigate } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
 // import Profile from "../../pages/Profile";
@@ -47,9 +47,11 @@ const LessonForm = (props) => {
             });
 
             Auth.loggedIn(data.token);
-            {<Route exact path="/">
-            {<Navigate to="/profile/:userId" /> }
-            </Route>}
+            {
+                <Route exact path="/">
+                {<Navigate to="/profile/:userId" />}
+            </Route>
+            }
         } catch (e) {
             console.error(e);
         }
@@ -122,10 +124,27 @@ const LessonForm = (props) => {
                                                     type="select"
                                                     onChange={handleChange}>
                                                     <option></option>
-                                                    <option onChange={handleChange} >RPG</option>
-                                                    <option onChange={handleChange} >FPS</option>
-                                                    {/*  */}
-                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b72a">Other Gaming Category</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b6f1">RPGs</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b6f4">MOBAs</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b6f7">MMOs</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b6fa">FPS</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b700">Cooking</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b703">DIY Projects</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b706">Gardening</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b709">Maintenance</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b70f">Fitness</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b712">Fashion</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b715">Self-Care</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b718">Life Coaching</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b71e">Computer Learning</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b721">Programming</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b724">IT</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b727">Streaming</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b72d">Misc</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b6fd">Other(Gaming)</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b70c">Other(Home)</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b71b">Other(Lifestyle)</option>
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b72a">Other(Tech)</option>
                                                 </Input>
                                             </FormGroup>
                                         </Col>
@@ -151,7 +170,7 @@ const LessonForm = (props) => {
                     </div>
                 </>
             )}
-            
+
         </section>
     )
 }
