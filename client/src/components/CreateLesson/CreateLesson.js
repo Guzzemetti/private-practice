@@ -74,28 +74,8 @@ class ModalExample extends React.Component {
                           name="catDrop"
                           placeholder="Select a Category"
                           type="select">
-                          <option>RPGs</option>
-                          <option>MOBAs</option>
-                          <option>MMOs</option>
-                          <option>FPS</option>
-                          <option>Cooking</option>
-                          <option>DIY Projects</option>
-                          <option>Gardening</option>
-                          <option>Maintenance</option>
-                          <option>Fitness</option>
-                          <option>Fashion</option>
-                          <option>Self-Care</option>
-                          <option>Life Coaching</option>
-                          <option>Computer Learning</option>
-                          <option>Programming</option>
-                          <option>IT</option>
-                          <option>Streaming</option>
-                          <option>Misc</option>
-                          <option>Other(Gaming)</option>
-                          <option>Other(Home)</option>
-                          <option>Other(Lifestyle)</option>
-                          <option>Other(Tech)</option>
-                        </Input>
+                          
+                        </Input> value=""
                       </FormGroup>
                     </Col>
                     {/* Dropdown to select Sub Category */}
@@ -109,9 +89,27 @@ class ModalExample extends React.Component {
                           name="subDrop"
                           placeholder="Select a Sub-Category"
                           type="select">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
+                          <option value="62a0e8bfd8d0493694d0b6f1">RPGs</option>
+                          <option value="62a0e8bfd8d0493694d0b6f4">MOBAs</option>
+                          <option value="62a0e8bfd8d0493694d0b6f7">MMOs</option>
+                          <option value="62a0e8bfd8d0493694d0b6fa">FPS</option>
+                          <option value="62a0e8bfd8d0493694d0b700">Cooking</option>
+                          <option value="62a0e8bfd8d0493694d0b703">DIY Projects</option>
+                          <option value="62a0e8bfd8d0493694d0b706">Gardening</option>
+                          <option value="62a0e8bfd8d0493694d0b709">Maintenance</option>
+                          <option value="62a0e8bfd8d0493694d0b70f">Fitness</option>
+                          <option value="62a0e8bfd8d0493694d0b712">Fashion</option>
+                          <option value="62a0e8bfd8d0493694d0b715">Self-Care</option>
+                          <option value="62a0e8bfd8d0493694d0b718">Life Coaching</option>
+                          <option value="62a0e8bfd8d0493694d0b71e">Computer Learning</option>
+                          <option value="62a0e8bfd8d0493694d0b721">Programming</option>
+                          <option value="62a0e8bfd8d0493694d0b724">IT</option>
+                          <option value="62a0e8bfd8d0493694d0b727">Streaming</option>
+                          <option value="62a0e8bfd8d0493694d0b72d">Misc</option>
+                          <option value="62a0e8bfd8d0493694d0b6fd">Other(Gaming)</option>
+                          <option value="62a0e8bfd8d0493694d0b70c">Other(Home)</option>
+                          <option value="62a0e8bfd8d0493694d0b71b">Other(Lifestyle)</option>
+                          <option value="62a0e8bfd8d0493694d0b72a">Other(Tech)</option>
                         </Input>
                       </FormGroup>
                     </Col>
