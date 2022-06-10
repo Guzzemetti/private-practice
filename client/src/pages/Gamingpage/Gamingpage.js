@@ -26,6 +26,7 @@ export const Gamingpage = () => {
           <div>Loading...</div>
         ) : (
           <>
+          <CategoryDropdown />
             <div className='div-image-header' >
               {/* {userSelection} */}
               <div style={imageStyle} className='Banner-category-page'>
