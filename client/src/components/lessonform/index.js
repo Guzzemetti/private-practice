@@ -8,6 +8,8 @@ import { useMutation } from '@apollo/client';
 import { ADD_LESSON } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
+// import Profile from "../../pages/Profile";
+import Fullprofile from "../Profile/Fullprofile";
 
 const LessonForm = (props) => {
 
@@ -44,6 +46,9 @@ const LessonForm = (props) => {
             });
 
             Auth.loggedIn(data.token);
+            {<Route exact path="/">
+            {<Redirect to="/profile/:userId" /> }
+            </Route>}
         } catch (e) {
             console.error(e);
         }
