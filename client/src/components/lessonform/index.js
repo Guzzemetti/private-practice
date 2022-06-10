@@ -31,7 +31,7 @@ const LessonForm = (props) => {
             [name]: value,
         });
         console.log(formState);
-        
+
     };
 
     // submit form
@@ -58,68 +58,74 @@ const LessonForm = (props) => {
 
     return (
         <section className="holds-everything-form-lesson">
-            <div>
-                <h4> Create a lesson!</h4>
-            </div>
-            <div className="holds-lesson-form">
-                <Form onSubmit={handleFormSubmit}>
-                    <Row>
-                        <div className="inputRow">
-                            {/* Title name input */}
-                            <Col md={12}>
-                                <FormGroup >
-                                    <Label className="labels" for="lessonTitle">
-                                        Lesson Title
-                                    </Label>
-                                    <Input
-                                        id="lessonTitle"
-                                        name="title"
-                                        placeholder="Lesson name"
-                                        type="title"
-                                        onChange={handleChange}
-                                    />
-                                </FormGroup>
-                            </Col>
-                            {/* Description input */}
-                            <Col md={12}>
-                                <FormGroup>
-                                    <Label className="labels" for="lessonDescription">
-                                        Description
-                                    </Label>
-                                    <Input
-                                        id="lessonDescription"
-                                        name="description"
-                                        placeholder="Enter a brief description for this lesson"
-                                        type="textarea"
-                                        onChange={handleChange}
-                                    />
-                                </FormGroup>
-                            </Col>
-                            {/* Drop-down to select the Category */}
+            {Auth.loggedIn() ? (
+                <div>
+                    Please Login or signup to create a lesson
+                </div>
+            ) : (
+                <>
+                    <div>
+                        <h4> Create a lesson!</h4>
+                    </div>
+                    <div className="holds-lesson-form">
+                        <Form onSubmit={handleFormSubmit}>
                             <Row>
-                                {/* Dropdown to select Sub Category */}
-                                <Col md={12}>
-                                    <FormGroup>
-                                        <Label className="labels" for="subcatDrop">
-                                            Sub-Category
-                                        </Label>
-                                        <Input
-                                            id="subcatDrop"
-                                            name="subcategory"
-                                            placeholder="Select a Sub-Category"
-                                            type="select"
-                                            onChange={handleChange}>
-                                            <option></option>
-                                            <option onChange={handleChange} >RPG</option>
-                                            <option onChange={handleChange} >FPS</option>
-                                            {/*  */}
-                                            <option onChange={handleChange} value="62a0e8bfd8d0493694d0b72a">Other Gaming Category</option>
-                                        </Input>
-                                    </FormGroup>
-                                </Col>
-                            </Row>
-                            {/* Price Input */}
-                            {/* <Col md={12}>
+                                <div className="inputRow">
+                                    {/* Title name input */}
+                                    <Col md={12}>
+                                        <FormGroup >
+                                            <Label className="labels" for="lessonTitle">
+                                                Lesson Title
+                                            </Label>
+                                            <Input
+                                                id="lessonTitle"
+                                                name="title"
+                                                placeholder="Lesson name"
+                                                type="title"
+                                                onChange={handleChange}
+                                            />
+                                        </FormGroup>
+                                    </Col>
+                                    {/* Description input */}
+                                    <Col md={12}>
+                                        <FormGroup>
+                                            <Label className="labels" for="lessonDescription">
+                                                Description
+                                            </Label>
+                                            <Input
+                                                id="lessonDescription"
+                                                name="description"
+                                                placeholder="Enter a brief description for this lesson"
+                                                type="textarea"
+                                                onChange={handleChange}
+                                            />
+                                        </FormGroup>
+                                    </Col>
+                                    {/* Drop-down to select the Category */}
+                                    <Row>
+                                        {/* Dropdown to select Sub Category */}
+                                        <Col md={12}>
+                                            <FormGroup>
+                                                <Label className="labels" for="subcatDrop">
+                                                    Sub-Category
+                                                </Label>
+                                                <Input
+                                                    id="subcatDrop"
+                                                    name="subcategory"
+                                                    placeholder="Select a Sub-Category"
+                                                    type="select"
+                                                    onChange={handleChange}>
+                                                    <option></option>
+                                                    <option onChange={handleChange} >RPG</option>
+                                                    <option onChange={handleChange} >FPS</option>
+                                                    {/*  */}
+                                                    <option onChange={handleChange} value="62a0e8bfd8d0493694d0b72a">Other Gaming Category</option>
+                                                </Input>
+                                            </FormGroup>
+                                        </Col>
+                                    </Row>
+                                    {/* Price Input */}
+                                    {/* <Col md={12}>
                                 <FormGroup>
                                     <Label className="labels" for="priceInput">
                                         Pricing
@@ -132,11 +138,14 @@ const LessonForm = (props) => {
                                     </InputGroup>
                                 </FormGroup>
                             </Col> */}
-                            <button className="card-button" type="submit">Create Lesson!</button>
-                        </div>
-                    </Row>
-                </Form>
-            </div>
+                                    <button className="card-button" type="submit">Create Lesson!</button>
+                                </div>
+                            </Row>
+                        </Form>
+                    </div>
+                </>
+            )}
+            
         </section>
     )
 }
