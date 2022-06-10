@@ -21,8 +21,7 @@ const Category = ({ category }) => {
                 <h1>The Category they choose</h1>
             </div>
             <div className="holds-cards">
-                {category &&
-                    category.map((category) => (
+                    {category.map((category) => (
                         <Card className="card-margin-top">
                             <CardBody>
                                 <CardTitle tag="h5">

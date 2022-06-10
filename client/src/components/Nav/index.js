@@ -3,6 +3,7 @@ import Auth from "../../utils/auth";
 import LogoHeader from '../../assets/PrivatePractice.png';
 import { Link } from "react-router-dom";
 import '../Nav/nav.css';
+import CreateLesson from '../CreateLesson/CreateLesson';
 // import ShowNavigation from "../showNav";
 
 import { AiOutlineShoppingCart } from 'react-icons/ai';
@@ -37,8 +38,9 @@ const Navbar = () => {
               <div className="loggedin-or-not-navbar">
                 <Link to='/about'><button className="navbar-button">About</button></Link>
                 <div className="div-padding"></div>
+                <CreateLesson />
+                <div className="div-padding"></div>
                 <Link to={`/profile/${Auth.getProfile().data._id} `}><button className="navbar-button">Profile</button></Link>
-                
                 <div className="div-padding"></div>
                 <a href="/" className="navbar-button" onClick={() => Auth.logout()}>Logout</a>
                 <div className="div-padding"></div>
