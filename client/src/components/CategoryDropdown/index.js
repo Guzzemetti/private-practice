@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Nav/nav.css'
 import { Link } from "react-router-dom";
 
 const CategoryDropdown = ({ category }) => {
@@ -6,7 +7,7 @@ const CategoryDropdown = ({ category }) => {
     <>
       <section className="navbar-categories">
         <div className="option-for-1">
-          <Link to='/gamingpage'><p className="category-options-navbar">Gaming</p></Link>
+          <Link to='/gamingpage' className='dropdown-link'><p className="category-options-navbar">Gaming</p></Link>
           {/* <div className="on-hover-show-options">
       <Link to='/'><button className="subcategory-button-on-hover">RPG</button></Link>
       <Link to='/'><button className="subcategory-button-on-hover">MOBA</button></Link>
@@ -17,7 +18,7 @@ const CategoryDropdown = ({ category }) => {
         </div>
 
         <div className="option-for-1">
-          <Link to='/homepage'><p className="category-options-navbar">Home</p></Link>
+          <Link to='/homepage' className='dropdown-link'><p className="category-options-navbar">Home</p></Link>
           {/* <div className="on-hover-show-options">
       <Link to='/'><button className="subcategory-button-on-hover">Cooking</button></Link>
       <Link to='/'><button className="subcategory-button-on-hover">DIY Projects</button></Link>
@@ -28,7 +29,7 @@ const CategoryDropdown = ({ category }) => {
         </div>
 
         <div className="option-for-1">
-          <Link to='/lifestylepage'><p className="category-options-navbar">Lifestyle</p></Link>
+          <Link to='/lifestylepage' className='dropdown-link'><p className="category-options-navbar">Lifestyle</p></Link>
           {/* <div className="on-hover-show-options">
       <Link to='/'><button className="subcategory-button-on-hover">Fitness</button></Link>
       <Link to='/'><button className="subcategory-button-on-hover">Fashion</button></Link>
@@ -39,7 +40,7 @@ const CategoryDropdown = ({ category }) => {
         </div>
 
         <div className="option-for-1">
-          <Link to='/techpage'><p className="category-options-navbar">Tech</p></Link>
+          <Link to='/techpage' className='dropdown-link'><p className="category-options-navbar">Tech</p></Link>
           {/* <div className="on-hover-show-options">
       <Link to='/'><button className="subcategory-button-on-hover">Computer Learning</button></Link>
       <Link to='/'><button className="subcategory-button-on-hover">Programming</button></Link>
@@ -51,7 +52,7 @@ const CategoryDropdown = ({ category }) => {
 
 
         <div className="option-for-1">
-          <Link to='/miscpage'><p className="category-options-navbar">Misc.</p></Link>
+          <Link to='/miscpage' className='dropdown-link'><p className="category-options-navbar">Misc.</p></Link>
           {/* <div className="on-hover-show-options">
       <Link to='/'><button className="subcategory-button-on-hover">Misty-Misc</button></Link>
     </div> */}

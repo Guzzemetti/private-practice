@@ -91,11 +91,21 @@
 
 .category-options-navbar {
   text-decoration: none;
-  font: 700;
+  color: black;
   margin: auto;
   /* border: 2px solid black; */
   padding: .5rem;
   cursor: pointer;
+}
+
+.category-options-navbar:hover{
+  font-weight: 700;
+}
+
+.dropdown-link{
+  text-decoration: none;
+  color: black;
+  border: none;
 }
 
 .category-options-navbar:hover + .on-hover-show-options{
