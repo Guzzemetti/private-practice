@@ -183,9 +183,12 @@ includes the input fields and the Get Started button */
   .inputRow {
     width: 15rem;
   }
+  #signUpSec{
+    width: fit-content;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1015px) {
   .bodyItems {
     flex-direction: column;
   }
@@ -196,7 +199,9 @@ includes the input fields and the Get Started button */
   }
 
   .formBody {
-    width: 100%;
+    display: flex;
+    align-self: center;
+    width: 70%;
   }
 
   .inputRow {
