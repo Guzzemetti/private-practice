@@ -35,7 +35,7 @@ const  Fullprofile = () => {
             </div>
             <main className='main-holds-left-right'>
               <div className="row margin-0">
-                <div className="left col-lg-4">
+                <div className="left">
                   <div className="photo-left">
                     <img className="photo" alt="temp propfile pic" src={tempPic} />
                   </div>
