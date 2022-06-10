@@ -74,9 +74,27 @@ class ModalExample extends React.Component {
                           name="catDrop"
                           placeholder="Select a Category"
                           type="select">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
+                          <option>RPGs</option>
+                          <option>MOBAs</option>
+                          <option>MMOs</option>
+                          <option>FPS</option>
+                          <option>Cooking</option>
+                          <option>DIY Projects</option>
+                          <option>Gardening</option>
+                          <option>Maintenance</option>
+                          <option>Fitness</option>
+                          <option>Fashion</option>
+                          <option>Self-Care</option>
+                          <option>Life Coaching</option>
+                          <option>Computer Learning</option>
+                          <option>Programming</option>
+                          <option>IT</option>
+                          <option>Streaming</option>
+                          <option>Misc</option>
+                          <option>Other(Gaming)</option>
+                          <option>Other(Home)</option>
+                          <option>Other(Lifestyle)</option>
+                          <option>Other(Tech)</option>
                         </Input>
                       </FormGroup>
                     </Col>
